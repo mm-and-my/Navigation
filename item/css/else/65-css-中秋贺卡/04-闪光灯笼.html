@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      30deg, 
+      #707dda 0, #707dda 30%, 
+      transparent 30%
+    ), 
+    linear-gradient(
+      -30deg, 
+      #707dda 0, #707dda 30%, 
+      transparent 30%
+    ), 
+    radial-gradient(at center bottom,
+      #09135e 0%,
+      #707dda 2%,#707dda 6%,
+      #09135e 6%,#09135e 8%,
+      #707dda 8%,#707dda 12%,
+      #09135e 12%,#09135e 15%,
+      #707dda 15%,#707dda 19%,
+      #09135e 19%,#09135e 23%,
+      #707dda 23%,#707dda 28%,
+      #09135e 28%,#09135e 32%,
+      #707dda 32%,#707dda 37%,
+      #09135e 37%,#09135e 42%,
+      #707dda 42%,#707dda 48%,
+      #09135e 48%,#09135e 54%,
+      #707dda 54%,#707dda 61%,
+      #09135e 61%,#09135e 70%,
+      #707dda 70%,#707dda 100%
+  );
+  background-size: 100px 50px;
+}
+
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      30deg, 
+      #707dda 0, #707dda 30%, 
+      transparent 30%
+    ), 
+    linear-gradient(
+      -30deg, 
+      #707dda 0, #707dda 30%, 
+      transparent 30%
+    ), 
+    radial-gradient(at center bottom,
+      #09135e 0%,
+      #707dda 2%,#707dda 6%,
+      #09135e 6%,#09135e 8%,
+      #707dda 8%,#707dda 12%,
+      #09135e 12%,#09135e 15%,
+      #707dda 15%,#707dda 19%,
+      #09135e 19%,#09135e 23%,
+      #707dda 23%,#707dda 28%,
+      #09135e 28%,#09135e 32%,
+      #707dda 32%,#707dda 37%,
+      #09135e 37%,#09135e 42%,
+      #707dda 42%,#707dda 48%,
+      #09135e 48%,#09135e 54%,
+      #707dda 54%,#707dda 61%,
+      #09135e 61%,#09135e 70%,
+      #707dda 70%,#707dda 100%
+  );
+  background-size: 100px 50px;
+}
+body::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background:   
+    linear-gradient(
+      30deg, 
+      #707dda 0, #707dda 30%, 
+      transparent 30%
+    ), 
+    linear-gradient(
+      -30deg, 
+      #707dda 0, #707dda 30%, 
+      transparent 30%
+    ), 
+    radial-gradient(at center bottom,
+      #09135e 0%,
+      #707dda 2%,#707dda 6%,
+      #09135e 6%,#09135e 8%,
+      #707dda 8%,#707dda 12%,
+      #09135e 12%,#09135e 15%,
+      #707dda 15%,#707dda 19%,
+      #09135e 19%,#09135e 23%,
+      #707dda 23%,#707dda 28%,
+      #09135e 28%,#09135e 32%,
+      #707dda 32%,#707dda 37%,
+      #09135e 37%,#09135e 42%,
+      #707dda 42%,#707dda 48%,
+      #09135e 48%,#09135e 54%,
+      #707dda 54%,#707dda 61%,
+      #09135e 61%,#09135e 70%,
+      #707dda 70%,#707dda 100%
+  );
+  background-size: 100px 50px;
+  background-position: 50px 25px;
+  mix-blend-mode: multiply;
+}
+
+
+.circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vmin;
+  height: 70vmin;
+  border-radius: 50%;
+}
+#moon_behind {
+  background: #faca23;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  mix-blend-mode: screen;
+}
+h1 {
+  position: absolute;
+  left: 12%;
+  top: 6%;
+  font-family: '隶书';
+  font-size: 36vmin;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  pointer-events: none;
+}
+h1:last-of-type {
+  left: 32%;
+  top: 40%;
+}
+
+
+#moon_yellow {
+  z-index: 2;
+  background: linear-gradient(#FF0, #FC0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  mix-blend-mode: multiply;
+}
+#moon_yellow h1 {
+  color: #fff;
+}
+.heyu {
+  position: absolute;
+  top: 40%;
+  right: 10%;
+  font-family: '隶书';
+  font-size: 2.5vmin;
+  font-weight: bold;
+  line-height: 1;
+  color: #09135e;
+}
+
+
+
+.lantern {
+  position: absolute;
+  left: var(--l);
+  top: var(--t);
+  right: var(--r);
+  transform: scale(var(--scale));
+  width: 7vw;
+  height: 12.5vw;
+  border-radius: 12px 12px 12px 12px / 10px 10px 10px 10px;
+  
+  background: radial-gradient(circle at center, 
+    #febb75 0%, 
+    transparent var(--radius)
+  ), 
+    repeating-linear-gradient(to right, 
+      transparent 0%, transparent 15%, 
+      #d7061f 15%, #d7061f 25%
+  ); 
+  background-color: #fd3c4e;
+  background-position: center, calc(7vw / 6) 0;
+  animation: lantern 1s linear infinite alternate;
+}
+@property --radius {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 35%;
+}
+@keyframes lantern {
+  to {
+    --radius: 50%;
+  }
+}
+.lantern::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -8px;
+  width: 45%;
+  height: 8px;
+  background: #aa0317;
+}
+.lantern::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(0px - 7vw * 3 / 5);
+  width: 40%;
+  height: calc(7vw * 3 / 5);
+  background: repeating-linear-gradient(to right, 
+    #d7061f 0%, #d7061f 5%, 
+    transparent 5%, transparent 10%
+  );
+} 
+
+
+  </style>
+</head>
+
+<body>
+
+<!-- 月亮底图镂空文字 -->
+<div id="moon_behind" class="circle">
+  <h1>中</h1>
+  <h1>秋</h1>
+</div>
+
+
+<!-- 月亮上色 -->
+<div id="moon_yellow" class="circle">
+  <h1>中</h1>
+  <h1>秋</h1>
+  <div class="heyu">
+    <p>但愿人长久千里共婵娟</p>
+    <p>MID-Autumn Festival</p>
+  </div>
+</div>
+
+<!-- 灯笼 -->
+<div class="lantern" style="--l: 15%;--t: 7%;--scale: .9"></div>
+<div class="lantern" style="--r: 15%;--t: 5%;--scale: 1"></div>
+<div class="lantern" style="--l: 8%;--t: 30%;--scale: .3"></div>
+<div class="lantern" style="--r: 6%;--t: 20%;--scale: .6"></div>
+<div class="lantern" style="--r: 12%;--t: 38%;--scale: .2"></div>
+
+
+</body>
+
+</html>

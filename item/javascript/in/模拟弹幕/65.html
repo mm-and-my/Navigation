@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <script src="./js/jquery-3.7.0.min.js"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .zong {
+        width: 1024px;
+        margin: auto;
+    }
+    #pic {
+        height: 500px;
+        background: url(./images/bg.jpg);
+        position: relative;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+    .kozhi input{
+        text-align: center;
+        margin: auto;
+        vertical-align: middle;
+        height: 30px;
+    }
+    #pic div {
+        position: absolute;
+    }
+    #text1 {
+        width: 350px;
+    }
+    #size {
+        width: 150px;
+    }
+    #btn{
+        height: 30px;
+        width: 200px;
+    }
+</style>
+
+<body>
+    <div class="zong">
+        <div id="pic"></div>
+        <div class="kozhi">
+            <input type="text" name="text" id="text1" placeholder="请输入弹幕内容">
+            <input type="color" name="color" id="col" >
+            <input type="number" name="number" id="size" placeholder="请输入弹幕文字大小">
+           <input type="text" name="text" id="text2" placeholder="请输入弹幕移动时间">
+            <button id="btn">发送</button>
+        </div>
+    </div>
+</body>
+<script>
+    $("#btn").click(function () {
+        let text = $("#text1").val();
+        let div = $(`<div>${text}</div>`);
+        let colors = $("#col").val();
+        let size = $("#size").val() == "" ? 20 : $("#size").val();
+        let times = $("#text2").val() == "" ? 3 : $("#text2").val();
+        div.css({
+            fontSize: size + "px",
+            color: colors,
+            // 离上面的距离
+            top: parseInt($("#pic").height() * 0.8 * Math.random()),
+            right: 0,
+        });
+        $("#pic").append(div);
+        // 从最右边移动到最左边
+        div.animate({
+            right: "+=" + $("#pic").width(),
+        }, times * 1000, function () {
+            $(this).remove();
+        });
+    });
+</script>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>3D彩票</p>
+    <p>请选择三个数字：<select name="a" id="a">
+        </select>
+        <select name="b" id="b">
+        </select>
+        <select name="c" id="c">
+        </select>
+        <input type="button" value="开奖" id="btn">
+    </p>
+    <p>本期的开奖号码：<span id="kj"></span></p>
+    <p>您的中奖情况：<span id="zj"></span></p>
+    <script>
+        function opt(obj, min, max) {
+            for (let i = min; i <= max; i++) {
+                var opt = new Option(i, i);
+                obj.add(opt);
+            }
+        }
+        var aobj = document.querySelector('#a');
+        var bobj = document.querySelector('#b');
+        var cobj = document.querySelector('#c');
+        opt(aobj, 0, 9);
+        opt(bobj, 0, 9);
+        opt(cobj, 0, 9);
+
+
+        btn.onclick = function () {
+            var kja = document.querySelector('#a').value;
+            var kjb = document.querySelector('#b').value;
+            var kjc = document.querySelector('#c').value;
+            var zj1 = Math.floor(Math.random() * 10);
+            var zj2 = Math.floor(Math.random() * 10);
+            var zj3 = Math.floor(Math.random() * 10);
+            var n = 0;
+            if (kja == zj1) {
+                n++;
+            }
+            if (kjb == zj2) {
+                n++;
+            }
+            if (kjc == zj3) {
+                n++;
+            }
+            var str = '';
+            switch (n) {
+                case 0:
+                    str = '很遗憾，您没有中奖'
+                    break;
+                case 1:
+                    str = '恭喜您，您中了一个号码，奖金为10元'
+                    break;
+                case 2:
+                    str = '恭喜您，您中了二个号码，奖金为100元'
+                    break;
+                case 3:
+                    str = '恭喜您，您中了三个号码，奖金为1000元'
+                    break;
+            }
+            document.querySelector('#kj').innerHTML = `${zj1},${zj2},${zj3}`;
+            document.querySelector('#zj').innerHTML = str;
+
+
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9.11-2</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>总价格：{{totalPrice | vipprice}}</p>
+        <!-- v-model双向绑定 -->
+        <p>单价：<input type="text" v-model="price"></p>
+        <p>数量：{{num}}</p>
+        <p>折扣率：<input type="text" v-model="zhiko"></p>
+        <!-- <p>会员默认折扣为:0.8</p> -->
+        <div><button @click="num == 0?0:num--">减少数量</button>
+            <button @click="num++">增加数量</button>
+        </div>
+    </div>
+    <script>
+
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                price: 20,
+                num: 0,
+                zhiko: 1
+            },
+            computed: {
+                totalPrice() {
+                    return this.price * this.num * this.zhiko;
+                }
+            },
+            watch: {
+                price(newprice, oldprice) {
+                    console.log("调整前：" + oldprice + "调整后：" + newprice)
+                }
+            },
+            // 会员默认折扣
+           /*   filters: {
+                vipprice(value) {
+                    return value * 0.8;
+                }
+            }  */
+        });
+    </script>
+</body>
+
+</html>

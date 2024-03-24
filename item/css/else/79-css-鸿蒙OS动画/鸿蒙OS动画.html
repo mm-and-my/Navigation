@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harmony</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial;
+      background-color: black;
+      overflow: hidden;
+    }
+
+    .container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      font-size: 100px;
+      color: white;
+      transform: scale(2.5);
+      transform-origin: 100% 50%;
+      animation: move 0.8s 1.5s cubic-bezier(0.1, 0.6, 0, 1) forwards;
+    }
+
+    .delay {
+      opacity: 0;
+      animation: fade_in 2s 0.5s forwards;
+    }
+
+    .letter {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .letter .ul {
+      position: relative;
+      width: 70px;
+      height: 35px;
+      padding: 10px;
+      list-style: none;
+      overflow: hidden;
+    }
+
+    .letter .ul:first-of-type {
+      padding-bottom: 0;
+    }
+
+    .letter .ul:last-of-type {
+      padding-top: 0;
+    }
+
+    .letter .ul .harmony {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 50px;
+      height: 50px;
+      border: 10px solid white;
+      border-radius: 50%;
+      transform: translateY(50%);
+      box-shadow: 0px 0px 15px 0px white, inset 0 0 10px white;
+      animation: move 1.2s forwards, shadow 1.5s 1.2s forwards;
+    }
+
+    .letter .ul:last-of-type>.harmony {
+      top: auto;
+      bottom: 10px;
+      transform: translateY(-50%);
+      filter: url(#blur);
+    }
+
+    .letter svg {
+      position: absolute;
+      width: 0;
+      height: 0;
+    }
+
+    .letter .line {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .letter .line::after {
+      content: '';
+      width: 0%;
+      background-color: #146df7;
+      animation: line 0.5s 1.7s forwards;
+    }
+
+    .shadow__spot {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, transparent 60px, black 200px);
+      animation: fade_spot 1s 1.5s forwards;
+    }
+
+    @keyframes move {
+      to {
+        transform: none;
+      }
+    }
+
+    @keyframes shadow {
+      to {
+        box-shadow: none;
+      }
+    }
+
+    @keyframes fade_spot {
+      to {
+        transform: translateX(100px) scale(5);
+      }
+    }
+
+@keyframes fade_in {
+  to {
+    opacity: 1;
+  }
+}
+
+    @keyframes line {
+      to {
+        width: 60%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <span class="delay">Harmony</span>
+    <div class="letter">
+      <ul class="ul">
+        <li class="harmony"></li>
+      </ul>
+      <ul class="ul">
+        <li class="harmony"></li>
+      </ul>
+      <svg>
+        <filter id="blur">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="0 6" />
+        </filter>
+      </svg>
+      <div class="line"></div>
+    </div>
+    <span class="delay">S</span>
+  </div>
+
+  <div class="shadow__spot"></div>
+
+  <script>
+    const filterElem = document.querySelector('feGaussianBlur')
+    const clearFilter = () => {
+      const value = parseFloat(filterElem.getAttribute('stdDeviation').split(' ')[1]) - 0.06
+      if (value > 0) {
+        filterElem.setAttribute('stdDeviation', `0 ${value}`)
+        requestAnimationFrame(clearFilter)
+      } else {
+        return
+      }
+    }
+
+    setTimeout(clearFilter, 300)
+  </script>
+</body>
+
+</html>

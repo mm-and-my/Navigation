@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+li,
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: yellowgreen;
+    height: 3vw;
+}
+
+nav>P {
+    font-family: "楷体", Arial, Helvetica, sans-serif;
+    font-size: 2vw;
+    color: rgb(78, 150, 213);
+    line-height: 3vw;
+
+}
+
+nav>P::before {
+    content: "";
+    display: block;
+    /* box-sizing: border-box; */
+    /* border: 1px solid #fff; */
+    margin: auto;
+    box-shadow: 1vw 1vw 0.8vw 2vw #e6d2d2;
+}

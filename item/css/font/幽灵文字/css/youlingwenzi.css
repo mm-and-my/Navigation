@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@keyframes a{
+    0%{
+        opacity: 1;
+        filter: blur(0px);
+        transform: scale(1);
+    }
+    30%{
+        opacity: 0;
+        filter: blur(20px);
+        transform: scale(2);
+    }
+    60%,100%{
+        opacity: 1;
+        filter: blur(0px);
+        transform: scale(1);
+    }
+}
+.mask{
+    height: 100vh;
+    background-color: #000;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150px;
+}
+.mask span{
+    animation: a 4s ease-in-out infinite;
+    animation-delay: calc(0.2s*var(--i));
+}

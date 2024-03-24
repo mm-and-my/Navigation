@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜字游戏</title>
+    <style>
+        #btn,#num,p {
+            text-align: center;
+            margin-top: 3%;
+        }
+        #show {
+            color: rgb(72, 66, 79);
+            font-size: 18px;
+            font-family: '楷体';
+            border: 2px solid rgb(39, 115, 140);
+            background: rgb(234, 232, 232);
+            text-align: center;
+            box-shadow: 3px 3px 2px rgb(154, 201, 235);
+            height: 50px;
+            width: 320px;
+            margin-left: 37%;
+        }
+        p {
+            color: blue;
+            font-family: '楷体';
+            font-size: 18px;
+        }
+        #btn {
+            font-family: '楷体';
+            font-size: 20px;
+            border: #ccc;
+            border-radius: 8px;
+        }
+
+        #num {
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <p>请输入要猜的数字:&nbsp;&nbsp;<input type="text" name="num" id="num">
+        <input type="button" value="猜" id="btn">
+    </p>
+    <div id="show">请输入一个1-100之间的数字</div>
+    <script>
+        var num = document.querySelector('#num');
+        var show = document.querySelector('#show');
+        num.focus();
+        num.select();
+        var guess = Math.floor(Math.random() * 100 + 1);
+        var max = 100;
+        var min = 1;
+        var n = 0;
+
+        btn.onclick = function () {
+            let numss = document.querySelector('#num');
+            let num = parseInt(numss.value);
+            numss.focus();
+            numss.select();
+            let str = '';
+            if (num < min || num > max) {
+                str = `你输入的数字不符合范围，范围为${min}-${max}`;
+                alert(`你输入的数字不符合范围，范围为${min}-${max}`);
+            }
+            else if (num > guess) {
+                max = num;
+                n++;
+                str = `你猜的数字太大了，范围为${min}-${max},<br>共猜了${n}次`;
+            }
+            else if (num < guess) {
+                min = num;
+                n++;
+                str = `你猜的数字太小了，范围为${min}-${max},<br>共猜了${n}次`;
+            }
+            else if (num == guess) {
+                n++;
+                str = `你猜对了，共猜了${n}次<br>可以点击进行下一次游戏`;
+
+                guess = Math.floor(Math.random() * 100 + 1);
+                max = 100;
+                min = 1;
+                n = 0;
+
+            }
+            document.querySelector('#show').innerHTML = str;
+        }
+    </script>
+</body>
+
+</html>

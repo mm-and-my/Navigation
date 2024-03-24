@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>111</title>
+    <style>
+        .list-item {
+            width: 25px;
+            height: 25px;
+            background-color: red;
+            display: block;
+            float: left;
+            border-radius: 50%;
+            color: #fff;
+            margin-right: 10px;
+            text-align: center;
+            line-height: 25px;
+            margin-top: 20px;
+        }
+
+        .list-enter-active,
+        .list-leave-active {
+            transition: all 1s;
+        }
+
+        .list-enter,
+        .list-leave-to {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        .list-move{
+            transition: transform 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+
+        <button @click="add">插入随机数</button>
+        <button @click="remove">删除随机数</button>
+        <button @click="shuffle">洗牌</button>
+        <transition-group name="list" tag="div">
+            <span v-for="item in itemlist" :key="item" class="list-item">
+                {{item}}
+            </span>
+        </transition-group>
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script src="./lodash.js"></script>
+<script>
+
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            itemlist: [1, 2, 3, 4, 5],
+            nextNum: 6
+        },
+        methods: {
+            randomIndex() {
+                return Math.floor(Math.random() * this.itemlist.length);
+            },
+            add() {
+                this.itemlist.splice(this.randomIndex(), 0, this.nextNum++);
+            },
+            remove() {
+                this.itemlist.splice(this.randomIndex(), 1);
+            },
+            shuffle(){
+                this.itemlist = _.shuffle(this.itemlist);
+            }
+        }
+    });
+
+</script>
+
+</html>

@@ -1,0 +1,228 @@
+
+/* 公共样式表css */
+html,body {
+    color: #333;
+    margin: 0;
+    height: 100%;
+    font-family: "Myriad Set Pro","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    border: 0;
+}
+
+body {
+    background: #fff;
+    color: #666;
+    font-family: "Myriad Set Pro","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+}
+
+html, body, div, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, p, blockquote, pre, button, fieldset, form, input, legend, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #08acee;
+}
+
+button {
+    outline: 0;
+}
+
+img {
+    border: 0;
+}
+
+button,input,optgroup,select,textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #666;
+}
+
+a:hover {
+    color: #eee;
+}
+
+.clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.clearfix {
+}
+
+/* 必要布局样式css */
+.pattern-box {
+    background: #eee;
+    padding: 80px 0;
+    box-sizing: border-box;
+}
+
+.pattern-head h2 {
+    position: relative;
+    font-weight: normal;
+    text-align: center;
+    font-size: 38px;
+    color: #353535;
+    z-index: 50;
+}
+
+.pattern-wrap {
+    width: 1200px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.pattern-list {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.pattern-wrap .pattern-list .pattern-item {
+    opacity: 0;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    width: 264px;
+    height: 360px;
+    text-align: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 12px 36px 0px rgba(238, 78, 0, 0.3);
+}
+
+.pattern-wrap .pattern-list .item-1 {
+    margin-left: -132px;
+    z-index: 50;
+}
+
+.pattern-wrap .pattern-list .item-2 {
+    margin-left: -363.8px;
+    -webkit-transform: translateX(220px);
+    -moz-transform: translateX(220px);
+    transform: translateX(220px);
+    width: 237.6px;
+    height: 324px;
+    top: 60px;
+    z-index: 40;
+}
+
+.pattern-wrap .pattern-list .item-3 {
+    margin-left: 126.2px;
+    -webkit-transform: translateX(-220px);
+    -moz-transform: translateX(-220px);
+    transform: translateX(-220px);
+    width: 237.6px;
+    height: 324px;
+    top: 60px;
+    z-index: 40;
+}
+
+.pattern-wrap .pattern-list .item-4 {
+    margin-left: -568.92px;
+    -webkit-transform: translateX(280px);
+    -moz-transform: translateX(280px);
+    transform: translateX(280px);
+    width: 213.84px;
+    height: 291.6px;
+    top: 75px;
+    z-index: 30;
+}
+
+.pattern-wrap .pattern-list .item-5 {
+    margin-left: 355.08px;
+    -webkit-transform: translateX(-280px);
+    -moz-transform: translateX(-280px);
+    transform: translateX(-280px);
+    width: 213.84px;
+    height: 291.6px;
+    top: 75px;
+    z-index: 30;
+}
+
+.show .pattern-list .pattern-item {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: all .9s;
+    -moz-transition: all .9s;
+    transition: all .9s;
+}
+
+.pattern-item-title {
+    width: 100%;
+    height: 240px;
+    padding-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px 8px 0 0;
+    background-color: #ff6d01;
+    background-image: -moz-linear-gradient(180deg, #ff3e33 0%, #ff6f33 53%, #ff8933 100%);
+    background-image: -webkit-linear-gradient(180deg, #ff3e33 0%, #ff6f33 53%, #ff8933 100%);
+    background-image: -ms-linear-gradient(180deg, #ff3e33 0%, #ff6f33 53%, #ff8933 100%);
+    background-image: linear-gradient(180deg, #ff3e33 0%, #ff6f33 53%, #ff8933 100%);
+}
+
+.pattern-item-title img {
+    vertical-align: top;
+    display: inline-block;
+    background-color: transparent;
+}
+
+.pattern-item-title h3 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.pattern-item p {
+    line-height: 1.6;
+    color: #353535;
+    font-size: 14px;
+}
+
+.item-2 .pattern-item-title {
+    padding-top: 27px;
+    height: 216px;
+}
+
+.item-3 .pattern-item-title {
+    padding-top: 27px;
+    height:216px;
+}
+
+.item-4 .pattern-item-title {
+    padding-top: 24.3px;
+    height: 194.4px;
+}
+
+.item-5 .pattern-item-title {
+    padding-top: 24.3px;
+    height: 194.4px;
+}

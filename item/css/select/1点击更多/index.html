@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery点击弹出更多分享按钮代码演示-前端元素eleui.cn</title>
+
+<link rel="stylesheet" href="css/style.css" />
+<link href="css/font-awesome.css" rel="stylesheet" />
+ 
+<script type="text/javascript" src="js/jquery.min.js" ></script>
+<script>
+$(function(){
+	$('#btn_content').on('click',function(){
+		$('#btn_extend').toggleClass('btn');
+		var btn_class=	$(this).attr('class');
+		if(btn_class=='btn_content'){
+			setTimeout(function(){$('.sub_btn_pannel').removeClass('hide');},100);
+			$(this).removeClass('btn_content');
+			$(this).addClass('btn_content_fz');
+			return btn_class;
+		
+		}
+		else if(btn_class=='btn_content_fz'){
+		
+				setTimeout(function(){
+				$('.sub_btn_pannel').addClass('hide');
+			},100);
+		$(this).removeClass('btn_content_fz');
+		$(this).addClass('btn_content');
+		return btn_class;
+		}
+	})
+});
+</script>
+
+</head>
+<body>
+<!-- 代码 开始 -->
+<section class="containor">
+	<a class="btn_extend" id="btn_extend">
+		<span id="btn_content" class="btn_content">
+		<i class="fa fa-plus" aria-hidden="true" style="margin: 0 auto;	font-size: 22px;"></i>
+		</span>
+		<div class="sub_btn_pannel hide">
+		<i id="sub_btn_one" class="fa fa-qq" aria-hidden="true" style="	font-size: 22px;"></i>
+		<i id="sub_btn_two" class="fa fa-facebook-official" aria-hidden="true" style="	font-size: 22px;"></i>
+		<i id="sub_btn_three" class="fa fa-weixin" aria-hidden="true" style="	font-size: 22px;"></i>
+		</div>
+	</a>
+</section>
+<!-- 代码 结束 -->
+
+<div style="text-align:center;margin:30px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+
+
+ 
+</div>
+
+</body>
+</html>

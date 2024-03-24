@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滚屏</title>
+    <script src="./js/jquery-3.7.0.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .apple {
+            width: 400px;
+            height: 50px;
+            margin: 50px auto;
+            border: 2px solid blue;
+            /* margin-top: 10%; */
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .apple ul {
+            list-style: none;
+            /* margin-top: -50px; */
+        }
+        .apple ul li {
+            height: 50px;
+            line-height: 50px;
+            /* color: rgb(114, 114, 243); */
+            color: red;
+            font-size: 24px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="apple">
+        <ul>
+            <li>你是我的小丫小苹果</li>
+            <li>怎么爱你都不嫌多</li>
+            <li>红红的小脸儿温暖我的心窝</li>
+            <li>点亮我生命的火 火火火火</li>
+            <li>你是我的小丫小苹果 </li>
+            <li>就像天边最美的云朵</li>
+            <li>春天又来到了花开满山坡 </li>
+            <li>种下希望就会收获</li>
+        </ul>
+    </div>
+</body>
+<script>
+    setInterval(function () {
+        $('.apple>ul').animate({ marginTop: -50 }, 500, function () {
+            $(this).append($(this).children(":first"))
+                .css({ marginTop: 0 });
+        });
+    }, 2000);
+</script>
+
+</html>

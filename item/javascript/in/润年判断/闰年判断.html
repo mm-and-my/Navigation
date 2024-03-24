@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+
+</style>
+<body>
+    <script>
+
+        /*var fenShu = parseInt(prompt("请输入您的分数"));
+        if(fenShu>=60){
+           document.write(`您的分数为${fenShu},及格`);
+   }
+   else{
+    document.write(`您的分数为${fenShu},不及格`);
+   }*/
+
+        /* var anHao = prompt('你是谁的狗');
+        if (anHao == '我是神里凌华的狗') {
+            document.write(`您的暗号为${anHao},暗号正确`);
+        }
+        else {
+            document.write(`您的暗号为${anHao},暗号错误`);
+        } */
+
+
+
+    </script>
+    <form action="">
+        请输入要计算的年份：<input type="number" name="year" id="year">
+        <input type="button" value="判断是否为闰年" id="btn">
+    </form>
+
+    <script>
+        var year = document.querySelector('#year');//通过ID获取网页元素
+        var btn = document.querySelector('#btn');
+        btn.onclick = function () {//点这个按钮时，触发操作
+            var rui = year.value;//得到所填写的年份
+            if (rui % 100 != 0 && rui % 4 == 0 || rui % 400 == 0) {
+                alert(`${rui}年为闰年`);
+            }
+            else {
+                alert(`${rui}年不是闰年`);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

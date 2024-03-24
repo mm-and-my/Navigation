@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>111</title>
+    <script src="./vue.js"></script>
+    <style>
+        #box {
+            text-align: center;
+        }
+
+        #box>input {
+            margin-top: 100px;
+        }
+
+        .inner {
+            width: 80px;
+            height: 80px;
+            background-color: green;
+            border: 2px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div v-bind:style="{width:divwidth,height: divheight,backgroundColor: bgcolor}" id="box">
+        {{myname}}
+        <input type="text" v-model="bgcolor"><!-- 双向绑定 -->
+        <!-- 鼠标进入触发mouse_in事件，鼠标离开触发mouse_out事件， -->
+        <div v-bind:style="mydiv" v-on:mouseover="mouse_in" v-on:mouseout="mouse_out" id="box_second"></div>
+        <div v-bind:class="{inner}" v-if="isshow"></div>
+        <!-- 点击触发btn_click事件 -->
+        <button @mouseover="btn_click">按钮</button>
+        <p v-text="mytext"></p>
+        <p v-html="myhtml"></p>
+        <!-- 遍历 -->
+        <div v-for="(item,key) in list">
+            索引是:{{key}},元素内容是:{{item}}
+        </div>
+        <button @click="isshow=!isshow">显示|隐藏</button>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#box",
+            data: {
+                divheight: "100px",
+                divwidth: "200px",
+                bgcolor: "red",
+                myname: "yyds",
+                mydiv: { width: "50px", height: "50px", backgroundColor: "blue" },
+                inner: "inner",//绑定样式类
+                mytext: "<h2>这是文本内容</h2>",
+                myhtml: "<h2>这是二级标题</h2>",
+                list: [1, 2, 3],
+                isshow: true
+            },
+            methods: {
+                btn_click() {
+                    alert("您进入了按钮");
+                },
+                mouse_in() {
+                    this.bgcolor = "green";
+                },
+                mouse_out() {
+                    this.bgcolor = "red";
+                }
+            }
+
+
+
+
+
+        });
+    </script>
+</body>
+
+</html>

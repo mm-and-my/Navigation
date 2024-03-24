@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>格物致知，叩问苍穹</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .tab {
+            width: 500px;
+            margin: auto;
+        }
+        h3{
+            text-align: center;
+        }
+
+        .tab-nav-div {
+            width: 16.66%;
+            height: 50px;
+            float: left;
+            background-color: rgb(76, 155, 244);
+            font-size: 12px;
+            color: #fff;
+            text-align: center;
+            padding-top: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .tab-body-div {
+            width: 99.96%;
+            display: none;
+        }
+
+        .tab-nav-current {
+            background-color: #fff;
+            color: rgb(163, 163, 223);
+        }
+
+        .tab-body-current {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h3>4月24日是中国航天日，过去一年中国航天创造了一个又一个举世瞩目的成就，逐梦星辰的脚步迈得更稳、更远</h3>
+    <div class="tab">
+        <div class="tab-nav">
+            <div class="tab-nav-div tab-nav-current">共筑<br>航天新时代</div>
+            <div class="tab-nav-div">逐梦航天<br>合作共赢</div>
+            <div class="tab-nav-div">弘扬航天精神<br>拥抱星辰大海</div>
+            <div class="tab-nav-div">扬帆起航<br>逐梦九天</div>
+            <div class="tab-nav-div">航天<br>点亮梦想</div>
+            <div class="tab-nav-div">格物致知<br>叩问苍穹</div>
+        </div>
+        <div class="tab-body">
+            <div class="tab-body-div tab-body-current"><img src="./images/2018.jpg" width="100%" alt="" /></div>
+            <div class="tab-body-div"><img src="./images/2019.jpg" width="100%" alt="" /></div>
+            <div class="tab-body-div"><img src="./images/2020.jpg" width="100%" alt="" /></div>
+            <div class="tab-body-div"><img src="./images/2021.jpg" width="100%" alt="" /></div>
+            <div class="tab-body-div"><img src="./images/2022.jpg" width="100%" alt="" /></div>
+            <div class="tab-body-div"><img src="./images/2023.jpg" width="100%" alt="" /></div>
+        </div>
+    </div>
+
+    <script>
+        var tab_nav = document.querySelectorAll(".tab-nav-div");
+        var tab_body = document.querySelectorAll(".tab-body-div");
+        for(let i = 0; i < tab_nav.length; i++) {
+            tab_nav[i].onmouseover = function () {
+                for (let l = 0; l < tab_nav.length; l++) {
+                    tab_nav[l].classList.remove("tab-nav-current");
+                    tab_body[l].classList.remove("tab-body-current");
+                }
+                tab_nav[i].classList.add("tab-nav-current");
+                tab_body[i].classList.add("tab-body-current");
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box { 
+            width: 250px;
+            height: 540px;
+            margin: auto;
+            position: relative;
+            cursor: pointer;
+        }
+        #mask {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            background-color: #fff;
+            top: 0;
+            left: 0;
+            display: none;
+            overflow: hidden;
+        }
+
+        #pic {
+            filter: blur(10px);
+        }
+
+        #mask_pic {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #biao{
+            border: 1px solid rgb(180, 180, 246);
+            position: absolute;
+            float: none;
+            margin-top:10%;
+            margin-left: 18%;
+            width: 200px;
+            height: 150px;
+            text-align: center;
+            border-radius: 18px;
+        }
+        #tet{
+            border-radius:8px;
+            text-align: center;
+        }
+        #btn{
+            margin-top: 13px;
+            padding-left: 50px;
+            padding-right: 50px;
+            border: 1px solid #ccc;
+        }
+        #sel{
+            margin-top: 10px;
+            color: blue;
+            border: #fff;
+        }
+        p{
+            color: red;
+        }
+    
+    </style>
+
+    <script>
+
+        window.onload = function () {
+            var tuji = [
+                ['第一张图片', '可莉'],
+                ['第二张图片', '四神'],
+                ['第三张图片', '达达利亚'],
+                ['第四张图片', '神里凌华'],
+                ['第五张图片', '白术'],
+                ['第六张图片', '甘雨'],
+                ['第七张图片', '艾尔海森'],
+                ['第八张图片', '钟离'],
+                ['第九张图片', '纳西妲'],
+                ['第十张图片', '八重神子'],
+            ];
+
+            var box = document.querySelector("#box");
+            var mask = document.querySelector("#mask");
+            var mask_pic = document.querySelector('#mask_pic');
+            var pic = document.querySelector('#pic');
+            box.addEventListener("mouseover", function (e) {
+                mask.style.display = 'block';
+            })
+            box.addEventListener("mouseout", function (e) {
+                mask.style.display = 'none';
+            })
+            
+            box.addEventListener("mousemove", function (e) {
+                var x = e.pageX - box.offsetLeft - mask.offsetWidth / 2;
+                var y = e.pageY - box.offsetTop - mask.offsetHeight / 2;
+                if (x < 0) {
+                    x = 0;
+                }
+                if (x > (box.offsetWidth - mask.offsetWidth)) {
+                    x = box.offsetWidth - mask.offsetWidth;
+                }
+                if (y < 0) {
+                    y = 0;
+                }
+                if (y > (box.offsetHeight - mask.offsetHeight)) {
+                    y = box.offsetHeight - mask.offsetHeight;
+                }
+                mask.style.left = x + 'px';
+                mask.style.top = y + 'px';
+
+                mask_pic.style.left = -x + 'px';
+                mask_pic.style.top = -y + 'px';
+            })
+
+            for (index in tuji) {
+                /* console.log(index); */
+                var opt = new Option(tuji[index][0], index);
+                sel.add(opt);
+            }
+
+            document.querySelector("#pic").value = '可莉';
+            var text = document.querySelector('#tet');
+            text.focus();
+            text.select();
+            document.querySelector('#sel').onchange = function () {
+                pic.style.filter =`blur(10px)`;
+                var f = this.value;
+                document.querySelector("#pic").src = `images/${f}.jpg`;
+                document.querySelector("#mask_pic").src = `images/${f}.jpg`;
+                var da = tuji[f][1];
+                /*  console.log(da);  */
+                document.querySelector("#pic").value = da;
+                text.value = '';
+                text.focus();
+                text.select();
+            }
+
+            document.querySelector('#btn').onclick = function () {
+                var tets = text.value;
+                /* console.log(tet); */
+                var daan = document.querySelector("#pic").value;
+                if (tets == daan) {
+                    pic.style.filter =`blur(0px)`;
+                    alert('恭喜你，猜对了');
+                }
+                else {
+                    alert(`猜错了，答案是${daan}哦`);
+                    pic.style.filter =`blur(0px)`;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+   
+    <form action="" id="biao">
+        <select name="sel" id="sel"></select><br>
+       <p>请输入左图中人物</p>
+       <input type="text" name="tet" id="tet"><br>
+       <input type="button" value="确认" id="btn">
+    </form>
+    
+    <div id="box">
+        <img src="./images/0.jpg" width="250px" id="pic" alt="" value="可莉">
+        <div id="mask">
+            <img src="./images/0.jpg" width="250px" id="mask_pic" alt="">
+        </div>
+    </div>
+</body>
+
+
+</html>

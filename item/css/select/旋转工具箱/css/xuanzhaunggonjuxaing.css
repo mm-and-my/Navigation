@@ -1,0 +1,90 @@
+@media screen and (min-width:500px) and (max-width:1600px) {
+    body {
+        zoom:150%;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, deeppink, skyblue);
+}
+
+.menu {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    /* background-color: orange; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.btn {
+    position: absolute;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+}
+
+.btn i {
+    font-size: 32px;
+}
+
+.menu span {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.menu span {
+    transform-origin: 100px;
+    transition-delay: calc(0.1s*var(--i));
+    transition: 0.5s;
+}
+
+.menu:hover span {
+    transform: rotate(calc(360deg/8*var(--i)));
+}
+
+.menu span {
+    transform: rotate(0deg) translateX(80px);
+}
+
+.menu span i {
+    transform: rotate(calc(360deg/-8*var(--i)));
+}
+
+.btn {
+    cursor: pointer;
+    transition: all 1.25s;
+}
+
+.menu:hover .btn {
+    transform: rotate(315deg);
+}

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>jquery新建文件夹子文件展开收缩代码演示-前端元素eleui.cn</title>
+
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/xm.css">
+
+<body>
+
+<div id="folioModal" class="modal fade" tabindex="11" role="dialog" style="top: 90px;">
+    <div class="modal-dialog" role="document" style="width: 500px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h5 class="modal-title">文件创建</h5>
+            </div>
+            <div class="modal-body">
+                <div id="folioModalBody">
+                    <div data-parentDir="0" class="folioAll childrenDiv">
+                        <div class="p active-p" style="border-color: rgb(154, 205, 253);">
+                            <i class="fa fa1 fa-minus-square-o" data-folioid="0"></i>
+                            <i class="fa fa2 fa-folder-open"></i>
+                            <span>全部文件</span>
+                            <!--<i class="fa fa-plus-square-o" aria-hidden="true"></i>+
+                            <i class="fa fa-minus-square-o" aria-hidden="true"></i>-
+                            <i class="fa fa-spinner" aria-hidden="true"></i>0
+                            <i class="fa fa-folder"></i>
+                            <i class="fa fa-folder-open" aria-hidden="true"></i>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="creatFolio" class="btn btn-default">新建文件夹</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/xm.js"></script>
+
+</body>
+</html>

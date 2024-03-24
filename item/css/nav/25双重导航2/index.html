@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery带导航和幻灯版轮播海报效果-前端元素eleui.cn</title>
+
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+<link rel="stylesheet" type="text/css" href="css/xm.css" />
+
+</head>
+<body>
+
+<div class="top-bar">
+	<div class="wrap">
+		<div class="top-left">
+			<a href="">前端元素</a>
+			<a href="">脚本首页</a>
+		</div>
+		<div class="top-right">
+			购买热线(9:00-18:00)：<b>400-123-1234</b>
+		</div>
+	</div>
+</div>
+
+<div class="nav">
+	<div class="wrap">
+		<a href="#" class="logo">
+			<img src="images/logo.jpg">
+		</a>
+		<ul class="menu">
+			<li>
+				<a href="#">首页</a>
+			</li>
+			<li>
+				<a href="#">软件下载</a>
+			</li>
+			<li>
+				<a href="#">商业授权</a>
+			</li>
+			<li>
+				<a href="#">模板插件</a>
+			</li>
+			<li>
+				<a href="#">配套服务</a>
+			</li>
+			<li>
+				<a href="#">互动论坛</a>
+			</li>
+			<li>
+				<a href="#">伙伴招募</a>
+			</li>
+		</ul>
+		<div class="search-box">
+			<form action="">
+				<input name="url" class="search-url" value="前端元素" type="text">&nbsp;
+				<input name="" class="search-btn" value="查询" type="submit">
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="banner">
+	<div class="swiper-container gallery-top">
+		<div class="swiper-wrapper">
+			<a class="swiper-slide" href="#"></a>
+			<a class="swiper-slide" href="#"></a>
+			<a class="swiper-slide" href="#"></a>
+			<a class="swiper-slide" href="#"></a>
+			<a class="swiper-slide" href="#"></a>
+			<a class="swiper-slide" href="#"></a>
+		</div>
+
+		<div class="wrap pr">
+			<div class="gallery-left pa">
+				<h3>产品服务</h3>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+
+		<div class="swiper-button-next swiper-button-white"></div>
+		<div class="swiper-button-prev swiper-button-white"></div>
+	</div>
+
+</div>
+
+<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	var galleryTop = new Swiper('.gallery-top', {
+		pagination: '.swiper-pagination',
+		nextButton: '.swiper-button-next',
+		prevButton: '.swiper-button-prev',
+		paginationClickable: true,
+		autoplay: 5000,
+		paginationBulletRender: function(index, className) {
+			switch(index) {
+				case 0:
+					name = '开源网店系统';
+					break;
+				case 1:
+					name = '原生APP商城';
+					break;
+				case 2:
+					name = '开源H5微商城';
+					break;
+				case 3:
+					name = '微信小程序';
+					break;
+				case 4:
+					name = '配套服务';
+					break;
+				case 5:
+					name = '商业授权';
+					break;
+				default:
+					name = '';
+			}
+			return '<span class="' + className + '">' + name + '</span>';
+		}
+	});
+</script>
+
+</body>
+</html>

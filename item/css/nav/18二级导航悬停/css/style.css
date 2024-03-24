@@ -1,0 +1,118 @@
+*{margin: 0;padding: 0;font-family: "微软雅黑";}
+
+
+
+html{width: 100%;height: 100%;overflow: auto;}
+
+body{width: 100%;min-width: 1200px; padding-top: 60px;position: absolute;height: 100%;overflow: hidden;box-sizing: border-box;}
+
+.wraps{height: 100%;overflow-x: hidden;overflow-y: auto;}
+
+.clearfloat:after{display: block;content: "";clear: both;overflow: hidden;}
+
+.clearfloat{*zoom:1;}
+
+.clearfloat:before,.clearfloat:after{content:""; display:table; line-height:0;visibility:hidden;}
+
+.clearfloat:after{ clear:both;}
+
+.topbox{position: absolute; width: 100%;min-width: 1200px; height: 60px; background-color: rgba(7, 7, 15, 1);z-index: 600;left: 0;top: 0;}
+
+.head{width: 1200px;margin: auto;}
+
+.logo{width: 250px;float: left;}
+
+.logo span{display: block;margin-top: 20px;margin-left: 17px; float: left; width: 201px;height: 23px;line-height: 23px;color: rgba(255, 255, 255, 1);font-size: 20px;text-align: left;}
+
+.logo em{display: block;float: left;margin-top: 12.39px;  width: 30px;height: 36px;background:url(../images/logo.png)no-repeat;background-size: 100%;}
+
+.nav{float: right;}
+
+.nav li{float: left;position: relative;margin: 0 29px; line-height: 60px;font-size: 14px;height: 60px; }
+
+.nav li>a{display: block;color: #ffffff;}
+
+.nav li:after{transition: all .3s ease-in; display: block;content: "";position: absolute;bottom: 0; left: 0;height: 3px; width: 100%;background: none;}
+
+.nav li.active:after{background:-webkit-linear-gradient(left,#0D70FE,#05A9FF); background:-moz-linear-gradient(left,#0D70FE,#05A9FF); background:-ms-linear-gradient(left,#0D70FE,#05A9FF); background:-o-linear-gradient(left,#0D70FE,#05A9FF); background:linear-gradient(left,#0D70FE,#05A9FF);}
+
+.nav li:hover:after{background:-webkit-linear-gradient(left,#0D70FE,#05A9FF); background:-moz-linear-gradient(left,#0D70FE,#05A9FF); background:-ms-linear-gradient(left,#0D70FE,#05A9FF); background:-o-linear-gradient(left,#0D70FE,#05A9FF); background:linear-gradient(left,#0D70FE,#05A9FF);}
+
+.nav .active>a{color: #048EF6;}
+
+.nav li:hover a{color: #048EF6;}
+
+.nav_down{display: none; position: absolute;line-height: 38px;padding: 22px 36px 30px;box-sizing: border-box; top: 60px;left: 50%;width: 240px;background: #07070F;margin-left: -120px;}
+
+.nav_down a{color: #FFFFFF;font-size: 14px;}
+
+.nav li:hover .nav_down a{color: #FFFFFF;}
+
+.nav_down a{display: block;}
+
+.nav li .nav_down a:hover{color: #048EF6;}
+
+/*top*/
+
+.banner{width: 100%;height: 480px;overflow: hidden;position: relative;z-index: 10;}
+
+.bannerul li{height: 480px;position: relative;float: left;overflow: hidden;}
+
+.bannerul img{width: auto;display: block;z-index: 10; height: 100%;position: absolute;left: 50%;top: 0;transform: translateX(-50%);}
+
+.ban_text{position: absolute;left: 0;top: 0;width: 100%;height: 100%;z-index: 100;}
+
+.ban_text h2{margin-top: 142px;left: 708px;margin-bottom: 30px; font-weight: 300; text-align: center; height: 78px;line-height: 78px;color: rgba(255, 255, 255, 1);font-size: 56px;}
+
+.ban_info{margin:0 auto 32px;text-align: center; width: 461px;height: 60px;line-height: 30px;color: rgba(255, 255, 255, 1);font-size: 16px;}
+
+.ban_more a{display: block;margin: auto; width: 120px;height: 36px;font-size: 16px;color: #FFFFFF;line-height: 36px;text-align: center; border-radius: 4px; background: -webkit-linear-gradient(left, #00A1FF, #0680FF,#0B61FF); /* Safari 5.1 - 6.0 */background: -o-linear-gradient(right, #00A1FF, #0680FF,#0B61FF); /* Opera 11.1 - 12.0 */background: -moz-linear-gradient(right, #00A1FF, #0680FF,#0B61FF); /* Firefox 3.6 - 15 */background: linear-gradient(to right, #00A1FF, #0680FF,#0B61FF); /* 标准的语法 */}
+
+.bannerul{width: 20000px;position: relative;z-index: 10;}
+
+.num { position: absolute; bottom: 20px; left: 50% ;z-index: 20;transform: translateX(-50%); }
+
+.num li {position: relative;border-radius: 50%; float: left; margin-right: 10px; width: 16px;cursor: pointer; height: 16px; }
+
+.num li:after{display: block;content: "";width: 100%;height: 100%;border-radius: 50%;box-sizing: border-box; border: 2px solid rgba(255,255,255,0.5);}
+
+.num li.active:after{border: 2px solid /*transparent*/rgba(255,255,255,0.5);}
+
+.num li.active svg{opacity: 1;}
+
+.num li svg{opacity: 0; position: absolute !important;left: -1px !important;top: -1px !important;}
+
+/*banner*/
+
+
+
+
+
+.pro_box{margin-top: 53px;margin-bottom: 19px;width: 100%;overflow: hidden;}
+
+.pro_tit{margin: auto;margin-bottom: 18px;text-align: center; height: 42px;line-height: 42px;color: rgba(51, 51, 51, 1);font-size: 30px;}
+
+.pro_info{text-align: center; height: 22px;line-height: 22px;opacity: 0.77;color: rgba(102, 102, 102, 1);font-size: 16px;}
+
+.pro_list{margin-top: 60px;width: 1250px;margin: 60px auto 0;}
+
+.pro_list li{width: 25%;float: left;}
+
+.pro_top{transition: all .3s ease-in; background: url(../images/probj1.png)no-repeat;width: 63px;height: 72px;margin: auto;}
+
+.pro_top a{font-size: 25px;display: block;width: 100%;height: 100%;color: #cccccc; line-height: 72px;text-align: center;font-family:"iconfont" !important; font-style:normal; -webkit-font-smoothing: antialiased;-webkit-text-stroke-width: 0.2px; -moz-osx-font-smoothing: grayscale;}
+
+.pro_list li.active a{color: #048EF6;}
+
+.pro_top:hover a{color: #048EF6;}
+
+.pro_top:hover {color: #048EF6;background: url(../images/probj2.png)no-repeat;background-size: 100%;}
+
+.pro_list li.active .pro_top{color: #048EF6;background: url(../images/probj2.png)no-repeat;background-size: 100%;}
+
+.pro_name{transition: all .3s ease-in;text-align: center;margin-top: 16px; height: 22px;line-height: 22px;color: rgba(153, 153, 153, 1);font-size: 16px;}
+
+.pro_list li:hover .pro_name{color: #048EF6;}
+
+.pro_list li.active .pro_name{color: #048EF6;}
+

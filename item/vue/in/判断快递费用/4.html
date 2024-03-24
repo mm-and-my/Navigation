@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+</head>
+
+<body>
+    <div id="app">
+        <p>请输入快递重量:<input type="text" v-model="n"></p>
+        <p>需支付的快递费用:</p>
+            <span v-if="n<=5">{{msg}}</span>
+            <span v-else-if="n<=10">{{msgs}}</span>
+            <span v-else="n>10">{{msgss}}</span>
+    </div>
+
+</body>
+<script src="./vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            n:""
+        },
+        computed:{
+            msg(){
+                return 3*this.n;
+            },
+            msgs(){
+                return 5*this.n;
+            },
+            msgss(){
+                return 6*this.n;
+            }
+        }
+    });
+</script>
+</html>

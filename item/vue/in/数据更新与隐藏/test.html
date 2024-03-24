@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    {{msg}}
+    <div v-if="isShow" ref="self">测试显示隐藏</div>
+    <button @click="isShow=!isShow">更新数据</button>
+
+
+
+  </div>
+  <script>
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        msg: "哈哈哈哈哈哈哈哈哈",
+        isShow: true
+      },
+      //vue对象创建前的钩子函数
+      beforeCreate() {
+        console.log("vue 创建前：");
+        //对象创建前不能访问数据
+        // console.log(this.$data.msg);
+      },
+      //vue对象创建后的钩子函数
+      created() {
+        console.log("vue 创建后：");
+        console.log(this.$data.msg);
+      },
+      //vue 对象挂载到页面前
+      beforeMount() {
+        console.log("vue 挂载前：");
+        console.log(this.$el.innerHTML);
+      },
+      //vue 对象挂载到页面之后
+      mounted() {
+        console.log("vue 挂载后：");
+        console.log(this.$el.innerHTML);
+      },
+      //更新前
+      beforeUpdate() {
+        console.log("更新之前");
+        console.log(this.$refs.self);
+      },
+      //更新后
+      updated() {
+        console.log("更新之后");
+        console.log(this.$refs.self);
+      },
+      //销毁前
+      beforeDestroy () {
+        console.log('销毁之前');
+        console.log(this.$refs.self);
+        console.log(this.msg);
+        console.log(vm);
+      },
+      //销毁后
+      destroyed () {
+        console.log('销毁之后');
+        console.log(this.$refs.self);
+        console.log(this.msg);
+        console.log(vm);
+      }
+    });
+  </script>
+</body>
+
+</html>

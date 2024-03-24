@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+
+<body>
+    <div id="app">
+        <a href="#" @click.prevent="comName='login'">登录</a>
+        <a href="#" @click.prevent="comName='register'">注册</a>
+        <a href="#" @click.prevent="comName='xiugai'">修改</a>
+        <component v-bind:is="comName"></component>
+
+    </div>
+</body>
+<script src="./vue.js"></script>
+<script>
+    Vue.component('login',{
+        template:'<div>登录页面</div>'
+    });
+    Vue.component('register',{
+        template:'<div>注册页面</div>'
+    });
+    Vue.component('xiugai',{
+        template:'<div>修改页面</div>'
+    });
+
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            comName:""
+        }
+    });
+</script>
+
+</html>

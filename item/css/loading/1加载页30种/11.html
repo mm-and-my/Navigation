@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="static/css/11.css" type="text/css">
+    <style>
+        #Content {
+            visibility: hidden
+        }
+    </style>
+</head>
+
+<body onload="Initialize()">
+
+    <div class="loadinger" id="Preloader">
+        <div class="loadinger-center">
+            <div class="loadinger-center-absolute">
+                <div class="objecter" id="object_four"></div>
+                <div class="objecter" id="object_three"></div>
+                <div class="objecter" id="object_two"></div>
+                <div class="objecter" id="object_one"></div>
+            </div>
+        </div>
+    </div>
+
+    <main id="Content">
+        <h1>Taiizor</h1>
+    </main>
+
+</body>
+
+<script>
+    function Initialize() {
+        //window.onload = Preloaded()
+    }
+
+    function Preloaded() {
+        document.getElementById("Preloader").style.display = "none";
+        document.getElementById("Content").style.visibility = "visible";
+    }
+</script>
+
+</html>

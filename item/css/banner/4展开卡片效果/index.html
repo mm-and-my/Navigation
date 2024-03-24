@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jquery页面滚动动画显示区块叠加样式-前端元素eleui.cn</title>
+
+<link href="css/xm.css" rel="stylesheet" type="text/css">
+
+<script src="js/jquery-1.7.2.min.js"></script>
+
+</head>
+<body>
+
+<div style="height:400px;"></div> <!--  滚动显示 里面的内容 默认需要在“pattern-box”上面加上高度 需向下滑动 才可显示内容 -->
+<div class="pattern-box">
+	<div class="pattern-head">
+		<h2>多种多样的商业盈利模式</h2>
+	</div>
+	<div class="pattern-wrap">
+		<div class="pattern-list">
+			<div class="pattern-item item-1">
+				<div class="pattern-item-title">
+					<img src="images/app-store-biz1.png" about="" title="" alt="">
+					<h3>自营电商</h3>
+				</div>
+				<p>适用于各行各业电商买卖<br>服装、生鲜、电器、家居等</p>
+			</div>
+			<div class="pattern-item item-2">
+				<div class="pattern-item-title">
+					<img src="images/app-store-biz2.png" about="" title="" alt="">
+					<h3>招商入驻</h3>
+				</div>
+				<p>打造网上综合商场<br>入驻费、佣金折扣、广告费</p>
+			</div>
+			<div class="pattern-item item-3">
+				<div class="pattern-item-title">
+					<img src="images/app-store-biz3.png" about="" title="" alt="">
+					<h3>O2O营销</h3>
+				</div>
+				<p>线上线下联动营销<br>线上预约／买单，线下消费</p>
+			</div>
+			<div class="pattern-item item-4">
+				<div class="pattern-item-title">
+					<img src="images/app-store-biz4.png" about="" title="" alt="">
+					<h3>付费阅读</h3>
+				</div>
+				<p>打造各行业新闻自媒体<br>集聚粉丝，付费阅读</p>
+			</div>
+			<div class="pattern-item item-5">
+				<div class="pattern-item-title">
+					<img src="images/app-store-biz5.png" about="" title="" alt="">
+					<h3>付费发布</h3>
+				</div>
+				<p>二手、招聘、房产、宠物等<br>用户付费发布相关信息</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div style="height:200px;"></div>
+
+<script type="text/javascript">
+var $mod = $(".pattern-box");
+document.addEventListener('scroll',function(){
+	//滚动条高度+视窗高度 = 可见区域底部高度
+	var visibleBottom = window.scrollY + document.documentElement.clientHeight;
+	//可见区域顶部高度
+	var visibleTop = window.scrollY;
+	for (var i = 0; i < $mod.length; i++) {
+		var centerY = $mod.eq(i).offset().top+($mod.eq(i).outerHeight()/2);
+		//console.log($mod.eq(i).outerHeight());
+		if(centerY>visibleTop&&centerY<visibleBottom){
+			$mod.eq(i).addClass("show");
+			//console.log('第'+i+'个区域可见');
+		}else{
+			//$mod.eq(i).removeClass("show");
+			//console.log('第'+i+'个区域不可见');
+		}
+	}
+});
+</script>
+
+</body>
+</html>

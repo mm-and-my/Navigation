@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11111</title>
+    <link rel="stylesheet" href="./animate.css">
+<style>
+
+    .aaa{
+        width: 100px;
+        height: 50px;
+        background: pink;
+    }
+    .row-enter { width: 0px; }
+    .row-enter-active { transition: width 3s;  }
+    .row-enter-to{ width: 200px; }
+    .red { background: red; height: 20px; }
+    .blue { background: blue; height: 20px;  }
+    .yellow { background: yellow; height: 20px;  }
+</style>
+</head>
+
+<body>
+
+    <div id="app">
+        <input type="text" v-model="show">
+        <transition name="row">
+            <div class="red" v-if="show == 'a'" key= 'a'></div>
+            <div class="blue" v-if="show == 'b'" key= 'b'></div>
+            <div class="yellow" v-if="show == 'c'"  key= 'c'></div>
+        </transition>
+
+
+
+
+
+
+
+        <button @click="qiehuan">切换状态</button>
+        <transition appear appear-active-class="animated swing" enter-active-class="animated bounceIn"  leave-active-class="animated bounceOut">
+<div class="aaa" v-bind:key="isSaving"></div>
+        </transition>
+        
+        <button @click="add_btn">添加</button>
+        <input type="text" v-model="inputting">
+        <button @click="remove_btn">删除</button>
+        <transition appear appear-active-class="animated swing" enter-active-class="animated bounceIn"  leave-active-class="animated bounceOut">
+            <div v-if="items.length>0" key="itemlist">
+                <ul>
+                    <li v-for="item in items">
+                        {{item}}
+                    </li>
+                </ul>
+            </div>
+            <p v-else="" key="null">数组为空</p>
+        </transition>
+      
+
+    </div>
+
+
+</body>
+<script src="./vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            inputting: '',
+            isSaving:true,
+            items: ["1", "2", "3"],
+            show:''
+        },
+        methods: {
+            add_btn() {
+                this.items.push(this.inputting);
+            },
+            remove_btn() {
+                this.items.pop();
+            },
+            qiehuan(){
+               this.isSaving=!this.isSaving;
+            }
+        }
+    });
+</script>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            background-color: rgb(242, 239, 239);
+        }
+
+        #biao {
+            border: 1px solid rgb(239, 140, 140);
+            border-radius: 8px;
+            height: 200px;
+            width: 500px;
+            text-align: center;
+            margin-top: 10%;
+            margin-left: 12%;
+            box-shadow: 3px 4px 4px 3px rgb(242, 189, 189);
+            background-color: rgb(244, 209, 194);
+        }
+
+        p {
+            font-family: '楷体';
+            font-size: 20px;
+            color: blue;
+            background-color: rgb(244, 209, 194);
+        }
+
+        #money,
+        #n {
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        #btn1,
+        #btn2,
+        #chong {
+            border-color: rgb(135, 135, 135);
+            border-radius: 5px;
+            color: red;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        #xian {
+            border: 1px solidrgb(251, 239, 239);
+            border-radius: 8px;
+            height: 500px;
+            width: 500px;
+            text-align: center;
+            margin-top: -16%;
+            margin-left: 55%;
+        }
+
+        #xian {
+            font-family: '楷体';
+            font-size: 20px;
+        }
+
+        #red {
+            color: red;
+        }
+
+        #sheng {
+            color: blue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form action="" id="biao">
+        <p>输入红包的金额：&nbsp;<input type="number" name="money" id="money">&nbsp;&nbsp;元</p>
+        <p>输入红包的个数：&nbsp;<input type="number" name="name" id="n">&nbsp;&nbsp;个</p>
+        <p><input type="button" value="发红包" id="btn1">
+            <input type="button" value="抢红包" id="btn2">
+        </p>
+        <input type="reset" value="重置" id="chong">
+    </form>
+
+    <div id="xian">
+        <div id="red"></div>
+        <div id="sheng"></div>
+        <div id="qian"></div>
+    </div>
+    <script>
+        money = document.querySelector('#money');
+        money.focus();
+        var money, n;
+        function fa() {
+            money = document.querySelector('#money').value;
+            n = document.querySelector('#n').value;
+            document.querySelector('#red').innerHTML = `您发了${money}元红包，总共${n}个`;
+            document.querySelector('#sheng').innerHTML = '';
+            document.querySelector('#qian').innerHTML = '';
+        }
+        function qian() {
+            var qian = 0;
+            if (n == 0) {
+                alert('红包已经抢完，下次请早');
+                return false;
+            }
+            else if (n == 1) {
+                qian = money;
+            }
+            else {
+                qian = (money / n * 2 * Math.random()).toFixed(2);
+            }
+            money = money - qian;
+            n--;
+            document.querySelector('#sheng').innerHTML = `剩下${money.toFixed(2)}元，还有${n}个红包`;
+            document.querySelector('#qian').innerHTML += `您抢了${qian}元<br>`;
+        }
+        document.querySelector('#btn1').onclick = function () {
+            fa();
+        }
+        document.querySelector('#btn2').onclick = function () {
+            qian();
+        }
+        document.querySelector('#chong').onclick = function () {
+            money = document.querySelector('#money');
+            money.focus();
+            document.querySelector('#red').innerHTML = '';
+            document.querySelector('#sheng').innerHTML = '';
+            document.querySelector('#qian').innerHTML = '';
+        }
+    </script>
+</body>
+
+</html>

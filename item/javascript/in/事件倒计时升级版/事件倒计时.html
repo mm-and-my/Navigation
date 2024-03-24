@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>大事倒计时</title>
+    <style>
+        #box {
+            width: 500px;
+            margin: auto;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        #img {
+            width: 300px;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        #times span {
+            display: block;
+            color: #F00;
+            font-size: 18px;
+            font-weight: bolder;
+            padding-top: 10px;
+        }
+
+        #times div {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: 1px solid #F00;
+            margin-top: 20px;
+            margin-right: 20px;
+            line-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <select name="sel" id="sel"></select>
+        <div id="img"><img id="pic" src="images/2023-4-20.jpg" width="100%" alt="" /></div>
+        <div id="times">
+            <span id="info">距雅安地震10周年祭：2023年4月20日，还有：</span>
+            <div id="d">0天</div>
+            <div id="h">0时</div>
+            <div id="m">0分</div>
+            <div id="s">0秒</div>
+        </div>
+    </div>
+    <script>
+        var endTime = new Date("2023-4-20").getTime();
+        var d = h = m = s = 0;
+        var t = setInterval(daojishi, 1000);
+        function daojishi() {
+            var nowTime = new Date().getTime();
+            var times = parseInt((endTime - nowTime) / 1000);
+            if (times > 0) {
+                d = parseInt(times / (60 * 60 * 24));
+                h = parseInt((times / (60 * 60)) % 24);
+                m = parseInt((times / 60) % 60);
+                s = parseInt(times % 60);
+
+                d = d < 10 ? `0${d}` : d;
+                h = h < 10 ? `0${h}` : h;
+                m = m < 10 ? `0${m}` : m;
+                s = s < 10 ? `0${s}` : s;
+            }
+            else {
+                clearInterval(t);
+                d = h = m = s = 0;
+            }
+            document.querySelector("#d").innerHTML = `${d}天`;
+            document.querySelector("#h").innerHTML = `${h}时`;
+            document.querySelector("#m").innerHTML = `${m}分`;
+            document.querySelector("#s").innerHTML = `${s}秒`;
+        }
+
+        var event = [
+            ['雅安地震10周年祭', '2023-4-20'],
+            ['星穹铁道公测', '2023-4-26'],
+            ['放灾减灾日', '2023-5-12'],
+            ['CHENGDU 2021 ', '2023-7-28'],
+            ['中国人民解放军建军纪念日', '2023-8-1'],
+            ['杭州亚运会', '2023-9-23'],
+            ['国庆', '2023-10-1'],
+            ['红色档案', '2023-12-26']
+        ];
+
+        function sels() {
+            for (index in event) {
+                console.log(index);
+                var opt = new Option(event[index][0], event[index][1]);
+                sel.add(opt);
+            };
+        }
+        document.querySelector('#sel');
+        sels(sel);
+
+        sel.onchange = function () {
+            var a = this.value;
+            console.log(a);
+            document.querySelector('#pic').src = `images/${a}.jpg`;
+            endTime = new Date(a).getTime();
+            var d = a.split('-');
+            document.querySelector('#info').innerHTML = `距${this[this.selectedIndex].text}：${d[0]}年${d[1]}月${d[2]}日，还有：`;
+        };
+
+    </script>
+</body>
+
+</html>

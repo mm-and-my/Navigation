@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+a标签中添加target='_blank'
+
+<br><br>
+    如何使用jQuery在新窗口或选项卡中打开href？
+ <br>
+
+1、您需要打开一个新窗口：
+<br>
+window.open(url);<br>
+文档：https://developer.mozilla.org/zh-CN/docs/DOM/window.open<br>
+
+ 
+<br>
+2、 另一个问题：是否有办法告诉浏览器打开新标签页而不是新窗口？
+<br>
+我认为这取决于浏览器的配置方式(即在标签页或窗口中打开弹出窗口的设置)。
+<br>
+ 
+
+可以用以下代码：
+<br>
+var url = $(this).attr('href');<br>
+window.open(url, '_blank');
+ 
+
+注意：<br>
+
+href最好用prop检索，因为它将返回完整的url，并且速度稍快。<br>
+
+var url = $(this).prop('href');<br>
+ 
+<br>
+3、问题：jQuery如何使用在新窗口或选项卡中打开href？<br>
+
+var url = $(this).attr('href').attr('target','_blank');<br>
+ 
+
+注意：<br>
+
+检测是否使用了目标属性并包含" _blank"。对于不喜欢" _blank"的移动设备，这是一种可靠的选择。<br>
+<br>
+ $('.someSelector').bind('touchend click', function() {<br>
+
+        var url = $('a', this).prop('href');<br>
+        var target = $('a', this).prop('target');<br>
+
+        if(url) {<br>
+            // # open in new window if"_blank" used<br>
+            if(target == '_blank') {<br>
+                window.open(url, target);<br>
+            } else {<br>
+                window.location = url;<br>
+            }<br>
+        }          <br>
+    });<br>
+ 
+    <br>
+4、.ready函数用于在页面加载完成后插入属性。<br>
+
+$(document).ready(function() {<br>
+     $("class name or id a.your class name").attr({"target" :"_blank"})<br>
+})<br>
+注意：<br>
+
+我使用jQuery("a").prop("target","_blank");时没有将其包含在$document.ready中，并且它在Chrome中不起作用，但是一旦将其包含在$document.ready()调用中，它便开始工作。
+<br>
+ 
+<br>
+5、如果要通过jQuery创建弹出窗口，则需要使用插件。这似乎可以满足您的要求：<br>
+
+http://rip747.github.com/popupwindow/<br>
+
+或者<br>
+
+您始终可以使用JavaScript的window.open函数。<br>
+
+请注意，无论采用哪种方法，都必须响应用户的输入/操作(例如，单击链接或按钮)来打开新窗口。否则，浏览器的弹出窗口阻止程序将仅阻止弹出窗口。
+<br>
+ 
+
+可尝试使用以下代码：
+<br>
+$(document).ready(function(){<br>
+    $("a[@href^='http']").attr('target','_blank');<br>
+});<br>
+</body>
+</html>

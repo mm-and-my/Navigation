@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            color: #000;
+            font-size: 1em;
+        }
+        span{
+            color: red;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+
+<body>
+    <p>选择对应项目文件（鼠标右键）</p>
+    <span>open git bash here</span>
+    <br>
+    <p>设置名字邮箱</p> 
+    <span>git config --global user.name ""</span> <br>
+    <hr>
+    <span>git config --global user.email ""</span> <br>
+
+    <p>查看信息</p> 
+    <span>git config -l</span> <br>
+
+    <p>创建本地仓库</p>
+    <span>git init</span> <br>
+
+    <p>全选本地仓库文件</p> 
+    <span>git add * </span><br>
+
+    <p>第一次进入</p> 
+    <span>git commit -m "first commit"</span>  <br>
+
+    <p>改名为main</p> 
+    <span>git branch -m master main </span> <br>
+
+    <p>设置远程仓库地址(从github上复制)</p> 
+    <span>git remote add origin https://github.com/mm-and-my/daohang3.git</span> <br>
+
+    <p>开始上传</p> 
+    <span>git push -u origin main </span><br>
+
+    <p>--错误unable to get local issuer certificate</p>
+
+    <p>关闭验证功能</p>
+    <span>git config --global http.sslVerify false</span> <br>
+    <p>开启验证功能</p> 
+    <span>git config --global http.sslVerify true</span> <br>
+
+    <p>选择账户并授权即可</p>
+
+
+    <span>-- 本地服务html配置（github）</span> <br>
+
+    <span>--settings</span> <br>
+    <span>--pages</span> <br>
+    <span>--source--选择 github actions</span> <br>
+    <span>--选择 html静态</span> <br>
+    <span>--保存--保存--等待配置--复制链接</span> <br>
+
+
+
+
+
+</body>
+
+</html>

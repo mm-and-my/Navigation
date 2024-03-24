@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>ftp://172.31.30.100</h3><br>
+    <h3>启动：php artisan serve</h3><br>
+    <h3>清除缓存：php aritsan cache:clear</h3><br>
+    <h3>新建控制器：php artisan make:controller 控制器的名字</h3><br>
+
+    <h3>设置composer镜像</h3>
+    <p>composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/</p>
+    <h3>查看当前镜像composer config -gl</h3><br>
+    <h3>建立项目：composer create-project --prefer-dist laravel/laravel 项目名 </h3><br>
+<a href="https://blog.csdn.net/a549654065/article/details/120573158?spm=1001.2101.3001.6650.4&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EESLANDING%7Edefault-4-120573158-blog-125458431.pc_relevant_landingrelevant&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EESLANDING%7Edefault-4-120573158-blog-125458431.pc_relevant_landingrelevant&utm_relevant_index=9">Artisan命令大全</a>
+<h3>可用命令</h3>
+<p>clear-compiled 删除编译后的类文件<br>
+db 启动一个新的数据库 CLI 会话<br>
+down 将应用程序置于维护/演示模式<br>
+env 显示当前框架环境<br>
+help 显示命令的帮助<br>
+inspire 显示鼓舞人心的名言<br>
+list 列出命令<br>
+migrate 运行数据库迁移<br>
+optimize 缓存框架引导文件<br>
+serve 在 PHP 开发服务器上为应用程序提供服务<br>
+test 运行应用程序测试<br>
+tinker 与您的应用程序交互<br>
+up 使应用程序退出维护模式<br></p><br>
+<h2>授权</h2>
+<p>auth:clear-resets 刷新过期的密码重置令牌<br></p><br>
+<h2>缓存</h2>
+<p>cache:clear 刷新应用程序缓存<br>
+cache:forget 从缓存中删除一个项目<br>
+cache:table 为缓存数据库表创建迁移<br></p><br>
+<h2>命令</h2>
+<p>command:test 命令说明</p><br><br>
+<h2>配置</h2>
+<p>config:cache 创建缓存文件以加快配置加载<br>
+config:clear 移除配置缓存文件</p><br><br>
+<h2>数据库</h2>
+<p>db:seed 用记录播种数据库</p>
+<p>db:wipe 删除所有表、视图和类型</p><br><br>
+<h2>调试栏</h2>
+<p>debugbar:clear 清除调试栏存储</p><br><br>
+<h2>事件</h2>
+<p>event:cache 发现并缓存应用程序的事件和侦听器<br>
+event:clear 清除所有缓存的事件和侦听器<br>
+event:generate 根据注册生成缺失的事件和监听器<br>
+event:list 列出应用程序的事件和侦听器</p><br><br>
+<h2>密钥</h2>
+<p>key:generate 设置应用密钥</p><br><br>
+<h2>创建</h2>
+<p>make:cast 创建一个新的自定义 Eloquent 类型转换<br>
+make:channel 创建一个新的频道类<br>
+make:command 创建一个新的 Artisan 命令<br>
+make:component 创建一个新的视图组件类<br>
+make:controller 创建一个新的控制器类<br>
+make:event 创建一个新的事件类<br>
+make:exception 创建一个新的自定义异常类<br>
+make:factory 创建一个新的模型工厂<br>
+make:job 创建一个新的作业类<br>
+make:listener 创建一个新的事件监听器类<br>
+make:mail 创建一个新的电子邮件类<br>
+make:middleware 创建一个新的中间件类<br>
+make:migration 创建一个新的迁移文件<br>
+make:model 创建一个新的 Eloquent 模型类<br>
+make:notification 创建一个新的通知类<br>
+make:observer 创建一个新的观察者类<br>
+make:policy 创建一个新的策略类<br>
+make:provider 创建一个新的服务提供者类<br>
+make:request 创建一个新的表单请求类<br>
+make:resource 创建一个新资源<br>
+make:rule 创建新的验证规则<br>
+make:seder 创建一个新的播种机类<br>
+make:test 创建一个新的测试类</p><br><br>
+<h2>迁移</h2>
+<p>migrate:fresh 删除所有表并重新运行所有迁移<br>
+migrate:install 创建迁移存储库<br>
+migrate:refresh 重置并重新运行所有迁移<br>
+migrate:reset 回滚所有数据库迁移<br>
+migrate:rollback 回滚上次的数据库迁移<br>
+migrate:status 显示每次迁移的状态</p><br><br>
+<h2>模型</h2>
+<p>model:prune 修剪不再需要的模型</p><br><br>
+<h2>通知</h2>
+<p>notifications:table 为通知表创建迁移</p><br><br>
+<h2>优化</h2>
+<p>optimize:clear 删除缓存的引导程序文件</p><br><br>
+<h2>打包</h2>
+<p>package:discover 重建缓存的包清单</p><br><br>
+<h2>队列</h2>
+<p>queue:batches-table 为batches 数据库表创建迁移<br>
+queue:clear 从指定队列中删除所有作业<br>
+queue:failed 列出所有失败的队列作业<br>
+queue:failed-table 为失败的队列作业数据库表创建迁移<br>
+queue:flush 刷新所有失败的队列作业<br>
+queue:forget 删除失败的队列作业<br>
+queue:listen 收听给定的队列<br>
+queue:monitor 监控指定队列的大小<br>
+queue:prune-batches 从批处理数据库中删除陈旧条目<br>
+queue:prune-failed 从失败的作业表中修剪陈旧的条目<br>
+queue:restart 在当前工作后重新启动队列工作进程<br>
+queue:retry 重试失败的队列作业<br>
+queue:retry-batch 重试批处理失败的作业<br>
+queue:table 为队列作业数据库表创建迁移<br>
+queue:work 作为守护进程开始处理队列上的作业</p><br><br>
+<h2>路由</h2>
+<p>route:cache 创建路由缓存文件以加快路由注册<br>
+route:clear 删除路由缓存文件<br>
+route:list 列出所有注册的路由</p><br><br>
+<h2>日程</h2>
+<p>schedule:list 列出调度的命令<br>
+schedule:run 运行预定的通信<br>
+</p>
+
+</body>
+
+</html>

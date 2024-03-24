@@ -1,0 +1,56 @@
+.index_container {
+	background-image: url(../img/index/bg.png);
+	background-size: 100% 100%;
+	flex-direction: column;	
+	gap: 4vw;
+}
+
+
+.index_btn {
+	position: absolute;
+	background-image: url(../img/index/button.png);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	font-family: "微软雅黑";
+	color: #ffe9be;
+	font-size: 5vw;
+	line-height: 14vw;
+	padding: 4vw 11vw;
+	bottom: 20vw;
+	left: 50%;
+	transform: translateX(-50%);
+	animation: left_move 1s linear .5s 1 normal forwards;
+}
+
+.denglon {
+	position: absolute;
+	width: 20vw;
+	transform-origin: top; 
+	animation: denlon 4s linear 0s infinite normal forwards;
+	z-index: 10;
+}
+
+.denlon_left {
+	top: 17vw;
+	left: 12vw;
+	animation-delay: -2s;
+}
+.denlon_right {
+	top: 60vw;
+	right: 14vw;
+}
+
+.index_baozhu {
+	right: 8vw;
+	top: 120vw;
+	width: 16vw;
+}
+
+.index_yanhua3 {
+	top: 4vw;
+}
+
+.index_yanhua2 {
+	left: 10vw;
+	top: 100vw;
+}

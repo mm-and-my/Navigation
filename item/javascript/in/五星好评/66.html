@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <script src="./js/jquery-3.7.0.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .x>ul li {
+            float: left;
+            color: red;
+            font-size: 60px;
+            cursor: pointer;
+        }
+        .x span{
+            font-size: 36px;
+            line-height: 80px;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="x">
+        <ul>
+            <li>☆</li>
+            <li>☆</li>
+            <li>☆</li>
+            <li>☆</li>
+            <li>☆</li>
+        </ul>
+        <span></span>
+    </div>
+</body>
+<script>
+    var k = "☆";
+    var s = "★";
+    var index;
+    $('.x>ul li').on({
+        "mouseover": function () {
+            $(this).text(s).prevAll('li').text(s);
+            $(this).nextAll("li").text(k);
+            // console.log($(this).index());
+            level($(this).index());//函数调用索引
+        },
+        "mouseout": function () {
+            $(".x>ul>li").text(k);
+            //添加aa类样式
+            $('.x>ul>li.aa').text(s).prevAll('li').text(s);
+            level(index);
+        },
+        "click": function () {
+            $(this).addClass('aa').siblings('li').removeClass('aa');
+            index = $(this).index();
+            level(index);
+        }
+    });
+    function level(index) {
+        let str = "";
+        let color = "";
+        switch (index) {
+            case 0:
+                str = "1分，垃圾";
+                color = "#ccc";
+                break;
+            case 1:
+                str = "2分，差评";
+                color = "#000";
+                break;
+            case 2:
+                str = "3分，中等";
+                color = "yellowgreen";
+                break;
+            case 3:
+                str = "4分，好评";
+                color = "orange";
+                break;
+            case 4:
+                str = "5分，非常满意";
+                color = "red";
+                break;
+        }
+        $(".x>span").text(str).css("color", color);
+        $(".x>ul>li").css("color", color);
+    }
+</script>
+
+</html>

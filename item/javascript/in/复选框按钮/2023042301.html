@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="check">
+        <input type="checkbox" value="a" name="test" id="test1">选项一
+        <input type="checkbox" value="b" name="test" id="test2">选项二
+        <input type="checkbox" value="c" name="test" id="test3">选项三
+        <input type="checkbox" value="d" name="test" id="test4">选项四
+        <p>
+            <input type="button" value="全选" id="btn1">
+            <input type="button" value="反选" id="btn2">
+            <input type="button" value="全不选" id="btn3">
+            <input type="button" value="确认" id="btn4">
+        </p>
+    </div>
+    <script>
+        var test = document.querySelectorAll('input[name = test]');
+        document.querySelector('#btn1').onclick = function () {
+            for (let i = 0; i < test.length; i++) {
+                test[i].checked = true;
+            }
+        }
+
+        document.querySelector('#btn2').onclick = function () {
+            for (let i = 0; i < test.length; i++) {
+                if(test[i].checked){
+                    //运算符，取反，true变flase
+                    test[i].checked = ! test[i].checked;
+                }
+               /*  if (test[i].checked = 'true') {
+                    test[i].checked = false;
+                }
+                else {
+                    test[i].checked = true;
+                }*/
+            } 
+        }
+        
+        document.querySelector('#btn3').onclick = function () {
+            for (let i = 0; i < test.length; i++) {
+                test[i].checked = false;
+            }
+        }
+        document.querySelector('#btn4').onclick = function () {
+            for (let i = 0; i < test.length; i++) {
+                if (test[i].checked) {
+                    console.log(test[i].value);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

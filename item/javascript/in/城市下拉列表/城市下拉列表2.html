@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <p>来自：
+        <select name="sheng" id="sheng">
+            <option value="-1">请选择......</option>
+        </select>
+        <select name="shi" id="shi"></select>
+        <select name="qu" id="qu"></select>
+    </p>
+    <input type="button" value="提交" id="btn">
+
+    <script>
+        var provinceArr = ["广东省", "江苏省", "河北省"];//省
+        var cityArr = [//市
+            ["广州市", "珠海市", "深圳市", "东莞市", "佛山市", "中山市", "惠州市",
+                "汕头市", "江门市", "湛江市", "肇庆市", "梅州市", "茂名市", "阳江市",
+                "清远市", "韶关市", "揭阳市", "汕尾市", "潮州市", "河源市", "云浮市",],
+            ["南京市", "苏州市", "扬州市"],
+            ["石家庄", "秦皇岛", "张家口"]
+        ];
+        var countryArr = [//区
+            [
+                ['荔湾区', '越秀区', '海珠区', '天河区', '白云区', '黄浦区',
+                    '番禺区', '花都区', '南沙区', '从化区', '增城区'],//广州
+                ['香洲区', '斗门区', '金湾区'],//珠海市
+                ['罗湖区', '福田区', '南山区', '宝安区',
+                    '龙岗区', '盐田', '龙华', '坪山区'],//深圳市
+                ['莞城区', '东城区', '南城区', '万江区'],//东莞
+                ['禅城区', '南海区', '顺德区', '三水区', '高明区'],//佛山
+                ['无'],//中山
+                ['惠城区', '惠阳区'],//惠州市
+                ['龙湖区', '金平区', '濠江区', '潮阳区', '潮南区', '澄海区'],//汕头市
+                ['蓬江区', '江海区', '新会区'],//江门市
+                ['赤坎区', '霞山区', '坡头区', '麻章区'],//湛江市
+                ['端州区', '鼎湖区', '高要区'],//肇庆市
+                ['梅江区', '梅县区'],//梅州市
+                ['茂南区', '电白区'],//茂名市
+                ['江城区', '阳东区'],//阳江市
+                ['清城区', '清新区'],//清远市
+                ['武江区', '浈江区', '曲江区'],//韶关市
+                ['榕城区', '揭东区'],// 揭阳市
+                ['汕城区'],//汕尾市
+                ['湘桥区', '潮安区'],//潮州市
+                ['源城区'],//河源市
+                ['云安区', '云城区'],//云浮市
+            ],
+            [
+                ['虎丘区', '吴中区', '相城区', '姑苏区', '吴江区'],
+                ['玄武区', '秦淮区', '建邺区', '鼓楼区', '浦口区'],
+                ['邗江区', '广陵区', '江都区']
+            ],
+            [
+                ['长安区', '桥西区', '新华区', '井陉矿区'],
+                ['海港区', '山海关区', '北戴河区', '抚宁区'],
+                ['桥东区', '桥西区', '宣化区', '下花园区']
+            ]
+        ];
+
+        function createOpt(obj, arr) {
+            for (index in arr) {
+                var opt = new Option(arr[index], index);
+                obj.add(opt);
+            }
+        };
+
+        var sheng = document.querySelector('#sheng');
+        var shi = document.querySelector('#shi');
+        var qu = document.querySelector('#qu');
+
+        createOpt(sheng, provinceArr);
+        sheng.onchange = function () {
+            shi.options.length = 0;
+            createOpt(shi, cityArr[sheng.value]);
+            if (sheng.value == -1) {
+                qu.options.length = 0;
+            }
+            else {
+                shi.onchange();
+            }
+        };
+        shi.onchange = function () {
+            qu.options.length = 0;
+            createOpt(qu, countryArr[sheng.value][shi.value]);
+        };
+
+        document.querySelector('#btn').onclick = function () {
+            //直接获取文本
+            alert(`您来自：${sheng.options[sheng.selectedIndex].text}
+            ${shi.options[shi.selectedIndex].text}
+            ${qu.options[qu.selectedIndex].text}`);
+            //通过每一个所选中选项的索引，从相应的数组里面来获取文本
+            /*  alert(`${provinceArr[sheng.value]}
+             ${cityArr[sheng.value][shi.value]}
+             ${ countryArr[sheng.value][shi.value][qu.value]}`); */
+        };
+    </script>
+</body>
+
+</html>

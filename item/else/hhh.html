@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p>今晚为:<div id="show"></div></p>
+   <p><input type="button" value="开始" id="btn"></p>
+
+    <script>
+
+btn.onclick=function(){
+function getRandomInclusive(min,max){
+    return min + Math.floor(Math.random()*max-min+1);
+}
+var arr=['罗xj','李m','钟xc','谢yf','洪jq','形sl','张wj','庄h','丁j','翁xz','翁j','杜yr','菜xq','李yt','曾xy','杨ry','苏jr，钟yh，其他',]
+console.log(arr[getRandomInclusive(0,arr.length-1)]);
+var str='';
+ str = arr[getRandomInclusive(0,arr.length-1)];
+ document.querySelector('#show').innerHTML=str;
+}
+
+    </script>
+</body>
+</html>

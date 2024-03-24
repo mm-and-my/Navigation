@@ -1,0 +1,484 @@
+html {
+	background: #F2F2F2;
+}
+* { touch-action: pan-y; }
+.container {
+	padding: 0;
+	background: #F7F7F7;
+}
+
+.container .searchNav {
+	position: fixed;
+	background: #fff;
+	width: 100%;
+}
+
+.container .searchWra {
+	position: relative;
+	padding: .2rem 4%;
+	background: #fff;
+}
+
+.container .searchWra input {
+	width: 100%;
+	height: .6rem;
+	background: rgba(247, 247, 247, 1);
+	border-radius: .27rem;
+	font-size: .24rem;
+	font-family: PingFangSC-Regular, PingFang SC;
+	font-weight: 400;
+	color: rgba(34, 34, 34, 1);
+	border: 0;
+	outline: none;
+	padding: 0 .3rem 0 .6rem;
+}
+
+.container .searchWra img {
+	width: .26rem;
+	height: .26rem;
+	position: absolute;
+	top: .37rem;
+	left: .5rem;
+}
+
+.container .typeScroll {
+	padding: .1rem 0 .3rem .2rem;
+	background: #fff;
+	overflow-x: scroll;
+	white-space: nowrap;
+}
+
+.container .typeScroll div {
+	padding: .1rem .25rem;
+	background: rgba(247, 248, 249, 1);
+	border-radius: .19rem;
+	font-size: .24rem;
+	font-family: PingFangSC-Regular, PingFang SC;
+	font-weight: 400;
+	color: rgba(136, 136, 136, 1);
+	margin-right: .2rem;
+	display: inline-block;
+}
+
+.container .typeScroll .activeColor {
+	background: rgba(255, 240, 230, 1);
+	font-size: .24rem;
+	font-family: PingFangSC-Regular, PingFang SC;
+	font-weight: 400;
+	color: rgba(254, 135, 90, 1);
+}
+
+.container .contentInfo {
+	padding: 2.2rem .2rem 1.2rem .2rem;
+	background: #F2F2F2;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.container .contentInfo .infoLine {
+	width: 48%;
+	background: #fff;
+	border-radius: .1rem;
+	margin-bottom: .2rem;
+	overflow: hidden;
+}
+
+.container .contentInfo .infoLine img {
+	width: 100%;
+	height: 3.35rem;
+}
+
+.container .contentInfo .infoLine h4 {
+	font-size: .26rem;
+	font-family: PingFangSC-Regular, PingFang SC;
+	font-weight: 400;
+	color: rgba(34, 34, 34, 1);
+	padding: .2rem .2rem 0 .2rem;
+	margin: 0;
+	text-overflow: -o-ellipsis-lastline;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+.container .contentInfo .infoLine .infoMoney {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: .2rem .2rem;
+}
+
+.container .contentInfo .infoLine .infoMoney span {
+	display: inline-block;
+	font-size: .26rem;
+	font-family: PingFangSC-Semibold, PingFang SC;
+	font-weight: 600;
+	color: rgba(243, 93, 69, 1);
+}
+
+.container .contentInfo .infoLine .infoMoney span em {
+	font-size: .22rem;
+	font-family: PingFangSC-Regular, PingFang SC;
+	font-weight: 400;
+	color: rgba(136, 136, 136, 1);
+	font-style: normal;
+	padding-left: .2rem;
+	text-decoration: line-through;
+}
+
+.container .contentInfo .infoLine .infoMoney img {
+	width: .48rem;
+	height: .48rem;
+}
+
+.modal-dialog {
+	position: fixed;
+	bottom: 0;
+	background: #fff;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background: none;
+}
+
+.modal-dialog .modal-content {
+	box-shadow: 0;
+	border-radius: 0;
+	border: 0;
+	border-top-left-radius: .2rem;
+	border-top-right-radius: .2rem;
+	background: #fff;
+	padding: 0 .2rem;
+}
+
+.modal-dialog .modal-content .close{
+	color: #000;
+	font-size: .4rem;
+	padding: .1rem 0;
+	text-align: right;
+	width: 100%;
+	opacity: 1;
+	font-weight: normal;
+}
+.modal-dialog .modal-content .close span{
+	display: inline-block;
+	width: .6rem;
+}
+
+.modal-dialog .modal-content .cartInfo {
+	display: flex;
+	justify-content: flex-start;
+	padding: 0 0 .3rem 0;
+	width: 100%;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+.modal-dialog .modal-content .cartInfo .infoLeft {
+	width: 25%;
+}
+
+.modal-dialog .modal-content .cartInfo .infoLeft img {
+	width: 1.6rem;
+	height: 1.6rem;
+}
+
+.modal-dialog .modal-content .cartInfo .infoRight p:nth-child(1) {
+	font-size: .26rem;
+	font-family: PingFangSC-Regular, PingFang SC;
+	font-weight: 400;
+	color: rgba(34, 34, 34, 1);
+}
+
+.modal-dialog .modal-content .cartInfo .infoRight p:nth-child(2) {
+	font-size: .22rem;
+	font-family: PingFangSC-Semibold, PingFang SC;
+	font-weight: 600;
+	color: rgba(136, 136, 136, 1);
+}
+
+.modal-dialog .modal-content .cartInfo .infoRight p span {
+	font-size: .26rem;
+	font-family: PingFangSC-Semibold, PingFang SC;
+	font-weight: 600;
+	color: rgba(243, 93, 69, 1);
+}
+
+.modal-dialog .modal-content .countInput {
+	padding: .2rem 0;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+.modal-dialog .modal-content .countInput span {
+	display: inline-block;
+	font-size: .3rem;
+	font-family: PingFangSC-Regular, PingFang SC;
+	font-weight: 400;
+	color: rgba(34, 34, 34, 1);
+	padding-right: .2rem;
+}
+input{
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	-webkit-user-select: none;
+	-moz-user-focus: none;
+	-moz-user-select: none;
+	-webkit-appearance: none;
+	outline: none;
+	border: none;
+}
+.modal-dialog .modal-content .countInput input {
+	padding: .1rem 0;
+	width: 70%;
+	border: 0;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	-webkit-user-select: none;
+	-moz-user-focus: none;
+	-moz-user-select: none;
+	-webkit-appearance: none;
+	outline: none;
+	border: none;
+}
+
+.modal-dialog .modal-content .upButn {
+	padding: 1rem .2rem .3rem .2rem;
+}
+
+.modal-dialog .modal-content .upButn button {
+	width: 100%;
+	height: .78rem;
+	line-height: .78rem;
+	background: rgba(191, 17, 17, 1);
+	border-radius: .39rem;
+	font-size: .3rem;
+	font-family: PingFangSC-Regular, PingFang SC;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+	border: 0;
+	outline: none;
+}
+
+
+/**************  购物车 ***************/
+.cartList{
+	width: 100%;
+}
+.cartList .cartCenter{
+	width: 100%;
+	border-radius:.1rem;
+	margin-bottom: 3rem;
+}
+.cartList .cartCenter .cartItem{
+	/*margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+    width: 120%;
+    -webkit-transition: all 0.1s linear;*/
+}
+.cartList .cartCenter .cartItem .ticket_list{
+	margin-top: .2rem;
+    overflow: hidden;
+    position: relative;
+    width: 120%;
+    -webkit-transition: all 0.1s linear;
+}
+.cartList .cartCenter .cartItem .ticket_list .ticket_box{
+	padding: .2rem .2rem;
+    border-radius: .1rem;
+    margin: 0 15px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+}
+.cartList .cartCenter .cartItem .itemLeft{
+	width: 10%;
+}
+.cartList .cartCenter .cartItem .itemLeft img{
+	width: .33rem;
+	height: .33rem;
+}
+.cartList .cartCenter .cartItem .itemRight{
+	width: 90%;
+	display: flex;
+	justify-content: flex-start;
+	border-bottom: 1px solid #EEEEEE;
+	padding: 0 0 .3rem 0;
+}
+.cartList .cartCenter .cartItem:last-child .itemRight{
+	border:0;
+}
+.cartList .cartCenter .cartItem .itemRight .rightImg{
+	
+}
+.cartList .cartCenter .cartItem .itemRight .rightImg img{
+	width:1.3rem;
+	height:1.3rem;
+}
+.cartList .cartCenter .cartItem .itemRight .rightInfo{
+	padding-left: .2rem;
+	width: 80%;
+}
+.cartList .cartCenter .cartItem .itemRight .rightInfo .title{
+	font-size:.26rem;
+	font-family:PingFangSC-Regular,PingFang SC;
+	font-weight:400;
+	color:rgba(34,34,34,1);
+	height: .78rem;
+	text-overflow: -o-ellipsis-lastline;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.cartList .cartCenter .cartItem .itemRight .rightInfo .payCount{
+	font-size:.22rem;
+	font-family:PingFangSC-Regular,PingFang SC;
+	font-weight:400;
+	color:rgba(136,136,136,1);
+}
+.cartList .cartCenter .cartItem .itemRight .rightInfo .payCount i{
+	font-size:.26rem;
+	font-family:PingFangSC-Semibold,PingFang SC;
+	font-weight:600;
+	color:rgba(243,93,69,1);
+	font-style: normal;
+}
+.cartList .cartCenter .cartItem .itemRight .rightInfo .countInp{
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+} 
+.cartList .cartCenter .cartItem .itemRight .rightInfo .countInp .inpRight{
+	position: relative;
+	width: 30%;
+}
+.cartList .cartCenter .cartItem .itemRight .rightInfo .countInp input{
+	width: 80%;
+	border-radius:.04rem;
+	padding: .06rem .1rem;
+	border:.01px solid rgba(223,223,225,1);
+	color: #222222;
+}
+.cartList .cartCenter .cartItem .itemRight .rightInfo .countInp em{
+	font-style: normal;
+	display: inline-block;
+	width:.5rem;
+	height:.5rem;
+	text-align: center;
+	line-height: .5rem;
+	background:rgba(247,247,247,1);
+	border-radius:0px .04rem .04rem 0px;
+	border:1px solid rgba(223,223,225,1);
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.allChecked{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	bottom: 1.2rem;
+	background: #fff;
+	padding: 0 .2rem;
+}
+.allChecked .checkedLeft{
+	padding: .2rem .2rem;
+}
+.allChecked .checkedLeft img{
+	width: .33rem;
+	height: .33rem;
+}
+.allChecked .checkedLeft span{
+	display: inline-block;
+	font-size:.26rem;
+	font-family:PingFangSC-Regular,PingFang SC;
+	font-weight:400;
+	color:rgba(34,34,34,1);
+	padding: 0 .1rem;
+}
+.allChecked .checkedLeft p{
+	margin: 0;
+}
+.allChecked .checkedLeft p:nth-child(2){
+	font-size:.22rem;
+	font-family:PingFangSC-Regular,PingFang SC;
+	font-weight:400;
+	color:rgba(136,136,136,1);
+	padding-top: .1rem;
+}
+.allChecked .checkedRight{
+	font-size:.24rem;
+	font-family:PingFangSC-Regular,PingFang SC;
+	font-weight:400;
+	color:rgba(34,34,34,1);
+	display: flex;
+	align-items: center;
+} 
+.allChecked .checkedRight span{
+	display: inline-block;
+	padding-right: .2rem;
+}
+.allChecked .checkedRight i{
+	font-size:.3rem;
+	font-family:PingFangSC-Semibold,PingFang SC;
+	font-weight:600;
+	color:rgba(250,119,100,1);
+	font-style: normal;
+}
+.allChecked .checkedRight button{
+	width:1.91rem;
+	height:.78rem;
+	background:rgba(191,17,17,1);
+	border-radius:39px;
+	font-size:.3rem;
+	font-family:PingFangSC-Semibold,PingFang SC;
+	font-weight:600;
+	color:rgba(255,255,255,1);
+	border: 0;
+	outline: none;
+}
+.allChecked .checkedRight em{
+	font-style: normal;
+}
+
+.swipe_rdiv{
+	z-index: 200;
+    position: absolute;
+    right: 12px;
+    text-align: center;
+}
+.swipe{
+	-webkit-transform: translate(-16%,0);
+	-webkit-transition:all 0.1s linear;
+}
+.swipe_rdiv{
+    z-index: 200;
+	position:absolute ;
+	right: 12px;
+	text-align: center;
+	/*width: 18%;*/
+	height: 2rem;
+	line-height: 2rem;
+	background: #FA7764;
+	font-size:.24rem;
+	font-family:PingFangSC-Regular,PingFang SC;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+}
+.swipe_rdiv img{
+	height: 36px;
+}
+.swipe_rline{
+	float: left;
+	background-color: #3CB3C3;
+	width: 2px;
+	margin-top: 3%;
+}
+.ui-loader-default{ display:none}
+.ui-mobile-viewport{ border:none;}
+.ui-page {padding: 0; margin: 0; outline: 0}*/

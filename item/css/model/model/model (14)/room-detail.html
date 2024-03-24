@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+<!-- Basic Page Needs
+ 	================================================== -->
+<meta charset="utf-8">
+<title>www.putaojiayuan.com Eden Hotel - Responsive Hotel Template</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Mobile Specific Metas
+ 	================================================== -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- CSS
+  	================================================== -->
+<link href='http://fonts.googleapis.com/css?family=Neuton' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/flexslider.css">
+<link rel="stylesheet" href="css/icon-font.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive-custom.css">
+<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+<!-- Favicons
+	================================================== -->
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+<!-- Script
+	================================================== -->
+<script src="../../ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/superfish.js" type="text/javascript"></script>
+<script src="js/selectnav.js" type="text/javascript"></script>
+<script src="js/custom.js" type="text/javascript"></script>
+<script>
+$(window).load(function() {
+  // The slider being synced must be initialized first
+  $('#room-carousel').flexslider({
+    animation: "slide",
+    controlNav: false,
+    animationLoop: false,
+    slideshow: false,
+    itemWidth: 210,
+    itemMargin: 5,
+    asNavFor: '#room-slider'
+  });
+   
+  $('#room-slider').flexslider({
+    animation: "slide",
+    controlNav: false,
+    animationLoop: false,
+    slideshow: false,
+    sync: "#room-carousel"
+  });
+});
+</script>
+</head>
+<body>
+<!-- Primary Page Layout
+	================================================== -->
+<header>
+  <div class="header-fixed">
+    <div class="social-links top"> <a href="#" class="icon-facebook"></a> <a href="#" class="icon-twitter-3"></a> <a href="#" class="icon-dribbble"></a> <a href="#" class="icon-flickr"></a> <a href="#" class="icon-pinterest"></a> </div>
+    <a href="#" id="logo"><img src="images/eden-logo.png" class="scale-with-grid" alt="Eden Hotel" /></a>
+    <nav id="top-nav-container">
+      <div class="left-ribbon"></div>
+      <div class="right-ribbon"></div>
+      <ul id="top-nav" class="sf-menu">
+        <li><a id="current" href="index-2.html">Home</a>
+          <ul>
+            <li><a href="index-3.html">Home 2</a></li>
+            <li><a href="index-4.html">Home 3</a></li>
+            <li><a href="index-5.html">Home 4</a></li>
+            <li><a href="slider-2.html">Slider 2</a></li>
+          </ul>
+        </li>
+        <li><a href="rooms.html">Rooms</a>
+          <ul>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="room-detail.html">Room Detail</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Pages</a>
+          <ul>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="404error.html">404 Error</a></li>
+            <li><a href="full-width.html">Full Width</a></li>
+          </ul>
+        </li>
+        <li>&nbsp;</li>
+        <li><a href="#">Features</a>
+          <ul>
+            <li><a href="blog.html">Blog</a>
+              <ul>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="blog-post.html">Blog Post</a></li>
+              </ul>
+            </li>
+            <li><a href="elements.html">Elements</a></li>
+            <li><a href="icon-font.html">Icons</a></li>
+            <li><a href="typography.html">Typography</a></li>
+            <li><a href="tables.html">Tables</a></li>
+            <li><a href="#">Third Level Item</a>
+              <ul>
+                <li><a href="#">Sub Item 1</a></li>
+                <li><a href="#">Sub Item 2</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="gallery-4.html">Gallery</a>
+          <ul>
+            <li><a href="gallery-4.html">4 Columns</a></li>
+            <li><a href="gallery-3.html">3 Columns</a></li>
+            <li><a href="gallery-2.html">2 Columns</a></li>
+          </ul>
+        </li>
+        <li class="last-item"><a data-description="get in touch" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="clearfix"></div>
+    </nav>
+    <div class="clearfix"></div>
+  </div>
+</header>
+<!-- Begin Slider -->
+<section id="page-background"> <img alt="" src="images/page-background.jpg"> </section>
+<!-- End Slider -->
+<!-- Begin Main Content -->
+<section id="wrapper-content" class="page-content">
+  <!-- Page Bar -->
+  <div id="page-bar" class="container"></div>
+  <!-- All Content -->
+  <div id="main-content" class="container">
+    <!-- Page Title-->
+    <div class="sixteen columns">
+      <div class="page-title">
+        <h2>Room Detail</h2>
+      </div>
+    </div>
+    <div class="project-detail clearfix">
+      <div class="ten columns">
+        <div id="room-slider" class="flexslider">
+          <ul class="slides">
+            <li>
+              <div class="overlay-img overview-img"> <a href="images/room-detail.jpg" rel="prettyPhoto" title="The Deluxe Room" alt=""> <img alt="" src="images/room-detail.jpg" />
+                <div class="overlay"> <span class="hover-icon icon-search"></span> </div>
+                </a> </div>
+            </li>
+            <li>
+              <div class="overlay-img overview-img"> <a href="images/room-detail.jpg" rel="prettyPhoto" title="The Deluxe Room" alt=""> <img alt="" src="images/room-detail2.jpg" />
+                <div class="overlay"> <span class="hover-icon icon-search"></span> </div>
+                </a> </div>
+            </li>
+            <li>
+              <div class="overlay-img overview-img"> <a href="images/room-detail.jpg" rel="prettyPhoto" title="The Deluxe Room" alt=""> <img alt="" src="images/room-detail3.jpg" />
+                <div class="overlay"> <span class="hover-icon icon-search"></span> </div>
+                </a> </div>
+            </li>
+            <li>
+              <div class="overlay-img overview-img"> <a href="images/room-detail.jpg" rel="prettyPhoto" title="The Deluxe Room" alt=""> <img alt="" src="images/room-detail4.jpg" />
+                <div class="overlay"> <span class="hover-icon icon-search"></span> </div>
+                </a> </div>
+            </li>
+            <li>
+              <div class="overlay-img overview-img"> <a href="images/room-detail.jpg" rel="prettyPhoto" title="The Deluxe Room" alt=""> <img alt="" src="images/room-detail5.jpg" />
+                <div class="overlay"> <span class="hover-icon icon-search"></span> </div>
+                </a> </div>
+            </li>
+            <!-- items mirrored twice, total of 12 -->
+          </ul>
+        </div>
+        <div id="room-carousel" class="flexslider">
+          <ul class="slides">
+            <li> <img src="images/room-detail.jpg" alt="" /> </li>
+            <li> <img src="images/room-detail2.jpg" alt="" /> </li>
+            <li> <img src="images/room-detail3.jpg" alt="" /> </li>
+            <li> <img src="images/room-detail4.jpg" alt="" /> </li>
+            <li> <img src="images/room-detail5.jpg" alt="" /> </li>
+            <!-- items mirrored twice, total of 12 -->
+          </ul>
+        </div>
+      </div>
+      <div class="six columns over-view">
+        <div class="indent-left-20">
+          <div class="subtitle"><span>Overview</span></div>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        <div class="subtitle"><span>Room Facilities</span></div>
+        <ul class="check-list">
+          <li> Lorem ipsum dolor sit amet</li>
+          <li> Lorem ipsum dolor sit amet</li>
+          <li> Lorem ipsum dolor sit amet</li>
+          <li> Lorem ipsum dolor sit amet</li>
+          <li> Lorem ipsum dolor sit amet</li>
+          <li> Lorem ipsum dolor sit amet</li>
+          <li> Lorem ipsum dolor sit amet</li>
+          <li> Lorem ipsum dolor sit amet</li>
+        </ul>
+        <br>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <br>
+    <br>
+    <div class="relate-room sixteen columns">
+      <div class="one-third column alpha">
+        <div class="overlay-img"> <a href="images/gallery-6.jpg" rel="prettyPhoto" title="Lorem ipsum" alt=""> <img alt="" src="images/gallery-6.jpg" />
+          <div class="overlay"><span class="hover-icon icon-search"></span> </div>
+          </a> </div>
+        <h3 class="title">The Single Rooms</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus </p>
+        <div class="readmore"><a href="#">Reservation!</a></div>
+      </div>
+      <div class="one-third column">
+        <div class="overlay-img"> <a href="images/gallery-7.jpg" rel="prettyPhoto" title="Lorem ipsum" alt=""> <img alt="" src="images/gallery-7.jpg" />
+          <div class="overlay"><span class="hover-icon icon-search"></span> </div>
+          </a> </div>
+        <h3 class="title">The King Suite</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus </p>
+        <div class="readmore"><a href="#">Reservation!</a></div>
+      </div>
+      <div class="one-third column omega">
+        <div class="overlay-img"> <a href="images/gallery-8.jpg" rel="prettyPhoto" title="Lorem ipsum" alt=""> <img alt="" src="images/gallery-8.jpg" />
+          <div class="overlay"><span class="hover-icon icon-search"></span> </div>
+          </a> </div>
+        <h3 class="title">The Luxury Rooms</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus </p>
+        <div class="readmore"><a href="#">Reservation!</a></div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<!-- End Main Content -->
+<footer>
+  <div id="wrapper-footer" class="container">
+    <div class="two-thirds column">
+      <nav id="footer-nav" class="clearfix">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Rooms</a></li>
+          <li><a href="#">Pages</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="content">
+        <ul class="clearfix">
+          <li class="icon-home"> 012 Some Street. New York, NY, 12345. USA</li>
+          <li class="icon-phone"> (123) 456-7890</li>
+          <li class="icon-mail"> info@domainname.com</li>
+        </ul>
+        <p class="copyright">© 2012 Eden Hotel. All Rights Reserved. Designed by Easythemes.</p>
+      </div>
+    </div>
+    <div class="one-third column">
+      <div class="sl-title">Newsletter sign up</div>
+      <div class="newsletter">
+        <form>
+          <input type="text" class="subscribe-email" value="Enter your Email address..." />
+          <input type="button" class="subscribe-button button yellow" value="Subscribe">
+        </form>
+      </div>
+    </div>
+    <div id="footer-ribbon"></div>
+  </div>
+</footer>
+<!-- End Document
+================================================== -->
+<div style="display:none;"><script src="http://s21.cnzz.com/stat.php?id=4975388&web_id=4975388" language="JavaScript"></script></div>
+</body>
+</html>

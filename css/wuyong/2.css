@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+.nav1{
+    height:15%;
+    /* background: pink; */
+    
+}
+.nav1>.show1 h4{
+    color: blue;
+    display: flex;
+    justify-content: center;
+    font-size: 1.6vw;
+}
+.nav1 ul{
+     background: rgb(200, 244, 196); 
+    display: flex;
+    justify-content: space-between;
+    /* line-height: 8vw; */
+    margin: 0 2.666667vw;
+    
+}
+.show1>ul li{
+    /* border: 1px solid #fff; */
+   padding: 0 1.333333vw;
+   font-size: 1.5vw;
+}
+/* .show1>ul>li>a{
+    color: red;
+    
+} */
+.show1>ul>li:hover{
+    background: rgb(231, 231, 253);
+}
+.show1>ul>li a:hover{
+    color: red;
+}

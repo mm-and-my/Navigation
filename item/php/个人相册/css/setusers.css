@@ -1,0 +1,108 @@
+.nav_ul>li:nth-child(4)>a{
+    background: rgb(220, 174, 88);
+    font-size: 4vh;
+    color: #fff;
+    font-weight: bold;
+}
+.nav{
+    z-index: 9999999999;
+    position: absolute;
+}
+.box_h2 {
+    position: absolute;
+    background: rgb(114, 173, 161);
+    width: 100%;
+    height: 10vh;
+    line-height: 10vh;
+    /* padding-left: 20vh; */
+    z-index: 9999999;
+    border-bottom: 1vh solid #fff;
+    margin-top: 8vh;
+}
+
+.box_h2>p>i {
+    color: #fff;
+    font-family: liuti, "楷体";
+    font-size: 1.8em;
+    margin-left: 20vh;
+}
+
+.pic_bg {
+    opacity: 0.9;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.box{
+    /* background: pink; */
+    position: absolute;
+    width: 100vh;
+    height: 60vh;
+    margin-top: 18vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.box_form>ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2vh;
+}
+
+.box_form>ul>li {
+    list-style: disc;
+    color: #fff;
+    width: 100%;
+    font-size: 5vh;
+}
+
+.box_form>ul>li>p {
+    font-family: liuti, "楷体";
+    margin-top: 2vh;
+    font-size: 3vh;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px #000;
+    margin-bottom: 2vh;
+}
+
+.box_form>ul>li:nth-child(1)>p>span {
+    color: #fff;
+    padding: 1vh;
+    font-size: 1em;
+ }
+.box_form>ul>li>p>input {
+    width: 90vh;
+    padding: 2vh;
+    border: 1px solid #000;
+    box-shadow: 1px 1px 8px #fff;
+    outline: none;
+    margin-top: 2vh;
+}
+
+.box_form>p>.btn {
+    font-family: liuti, "楷体";
+    background: orange;
+    border: 1px solid #000;
+    width: 95vh;
+    height: 8vh;
+    line-height: 8vh;
+    color: #fff;
+    text-shadow: 1px 1px 5px #000;
+    font-size: 1em;
+    margin-top: 5vh;
+    transition: all 0.8s;
+}
+
+.box_form>p>.btn:hover {
+    cursor: pointer;
+    background: #005983;
+}
+
+

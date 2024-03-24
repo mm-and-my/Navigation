@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+    <input type="checkbox" name="all" id="all">全选
+    <div id="check">
+        <input type="checkbox" name="text" id="t1">选项A
+        <input type="checkbox" name="text" id="">选项B
+        <input type="checkbox" name="text" id="">选项C
+    </div>
+    <input type="button" value="全选" id="btn1">
+    <input type="button" value="全不选" id="btn2">
+    <input type="button" value="反选" id="btn3">
+</body>
+<script>
+    $("#all").click(function (e) {
+        $('input[name="text"]').prop("checked",$(this).prop("checked"));
+    });
+    $('#btn1').click(function (e) {
+        $('input[name="text"]').prop("checked",true);
+    });
+    $('#btn2').click(function (e) {
+        $('input[name="text"]').prop("checked",false);
+    });
+    $('#btn3').click(function (e) {
+        $('input[name="text"]').each(function(index,ele){
+            $(this).prop("checked",!$(this).prop("checked"));
+        })
+    });
+</script>
+
+</html>

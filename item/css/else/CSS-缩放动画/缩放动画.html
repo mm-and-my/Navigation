@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      width: 249px;
+      height: 210px;
+      margin: 50px auto;
+      overflow: hidden;
+      box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.3);
+      border-radius: 3px;
+    }
+    .box p {
+      color: #3b3b3b;
+      padding: 10px 10px 0 10px;
+    }
+    .box .pic {
+      position: relative;
+    }
+    img {
+      width: 100%;
+    }
+
+
+    /* 1. 摆放一个播放按钮 压在图片的上面;2.hover效果 */
+    .box .pic::after {
+      content: '';
+      width: 58px;
+      height: 58px;
+      background-image: url(./images/play.png);
+
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(5);
+      opacity: 0;
+
+      transition: all .5s;
+    }
+
+    .box:hover .pic::after {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+  <div class="pic">
+    <img src="./images/party.jpeg" alt="">
+    <!-- 这个位置显示缩放的按钮 -->
+  </div>
+  <p>
+    《和平精英》锦绣画团圆版本上线，
+     大吉大利和平年！
+  </p>
+</div>
+
+</body>
+
+</html>

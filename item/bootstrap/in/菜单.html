@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://www.w3school.com.cn/lib/bs/bootstrap.css" rel="stylesheet">
+    <script src="https://www.w3school.com.cn/lib/bs/bootstrap.js"></script>
+</head>
+
+<body>
+    <div class="dropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+            下拉按钮
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">链接 1</a></li>
+            <li><a class="dropdown-item" href="#">链接 2</a></li>
+            <li><a class="dropdown-item" href="#">链接 3</a></li>
+            <li>
+                <hr class="dropdown-divider">
+                </hr>
+            </li>
+            <li>
+                <h5 class="dropdown-header">Dropdown header 1</h5>
+            </li>
+            <li><a class="dropdown-item" href="#">普通的</a></li>
+            <li><a class="dropdown-item active" href="#">活动的</a></li>
+            <li><a class="dropdown-item disabled" href="#">禁用的</a></li>
+        </ul>
+
+    </div>
+
+
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">链接 1</a></li>
+        <li><a class="dropdown-item" href="#">链接 2</a></li>
+        <li><a class="dropdown-item" href="#">链接 3</a></li>
+        <li><a class="dropdown-item-text" href="#">文本链接</a></li>
+        <li><span class="dropdown-item-text">纯文本</span></li>
+      </ul>
+
+
+
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary">华为</button>
+        <button type="button" class="btn btn-primary">大疆</button>
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">小米</button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">手机</a></li>
+            <li><a class="dropdown-item" href="#">平板电脑</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+
+
+      <div class="btn-group-vertical">
+        <button type="button" class="btn btn-primary">华为</button>
+        <button type="button" class="btn btn-primary">大疆</button>
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">小米</button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">手机</a></li>
+            <li><a class="dropdown-item" href="#">平板电脑</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+
+      <button data-bs-toggle="collapse" data-bs-target="#demo">春日</button>
+
+<div id="demo" class="collapse">
+  <p>胜日寻芳泗水滨，无边光景一时新。</p>
+  <p>等闲识得东风面，万紫千红总是春。</p>
+</div>
+
+
+
+</body>
+
+</html>

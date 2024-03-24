@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <button v-on:click="bbb">生成随机数</button><br>
+        <p>生成的随机数是:{{aaa}}</p>
+        <input type="text" @keyup.enter="ccc">
+        <div style="width: 400px;height: 40px;background-color: red;" @click="click_div">
+            <button @click="click_btn1">启用事件冒泡</button>
+            <button @click.stop="click_btn1">阻止事件冒泡</button>
+        </div>
+        <br><br>
+        <a href="https://www.baidu.com/">不阻止</a>
+        <a href="https://www.baidu.com/" @click.prevent>阻止</a>
+        <br><br>
+
+        <div style="width: 400px;height: 60px;background-color: blue;" @click.self ="outdiv_1">
+            <div style="width: 200px;height: 30px;background-color: greenyellow;" @click ="indiv_1">
+            </div>
+            <br><br><br><br>
+            <div style="width: 400px;height: 60px;background-color: blue;" @click ="outdiv_1">
+                <div style="width: 200px;height: 30px;background-color: greenyellow;" @click.self ="indiv_1">
+                </div>
+            </div>
+
+<button @click.once = "ddd">只点击一次有效</button>
+
+        </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    aaa: 0
+                },
+                methods: {
+                    bbb() {
+                        this.aaa = Math.random();
+                    },
+                    ccc() {
+                        console.log("嗨嗨嗨");
+                    },
+                    click_div() {
+                        console.log("点击外部的div");
+                    },
+                    click_btn1() {
+                        console.log("点击到内部按钮");
+                    },
+                    outdiv_1(){
+                        console.log("外部的div");
+                    },
+                    indiv_1(){
+                        console.log("内部的div");
+                    },
+                    ddd(){
+                        alert("哈哈哈哈");
+                    }
+                }
+            })
+
+        </script>
+</body>
+
+</html>

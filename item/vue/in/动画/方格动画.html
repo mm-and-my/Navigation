@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>111</title>
+    <style>
+        .orginDiv {
+            width: 200px;
+            height: 50px;
+            background: red;
+            display: flex;
+            flex-direction: column;
+            word-wrap: normal;
+        }
+
+        .a {
+            position: absolute;
+            top: 100px;
+            background: blue;
+            width: 200px;
+            height: 50px;
+        }
+
+        .box-enter-active,
+        .box-leave-active {
+            transition: width 3s;
+        }
+
+        .box-enter,
+        .box-leave-to {
+            width: 0px;
+        }
+
+        .box-enter-to,
+        .box-leave {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app" class="orginDiv">
+        author：{{uname}}
+        <button @click="divshow">切换状态</button>
+        <transition name = 'box'>
+            <div class="a" v-if="show"></div>
+        </transition>
+    </div>
+
+
+
+</body>
+<script src="./vue.js"></script>
+<script>
+
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            uname: 'xmy',
+            show: true
+        },
+        methods: {
+            divshow() {
+                this.show = !this.show
+            }
+        }
+    });
+</script>
+
+</html>

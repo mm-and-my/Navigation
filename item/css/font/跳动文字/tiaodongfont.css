@@ -1,0 +1,27 @@
+.loading_mask{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+.loading_text{
+    color: #fff;
+    font-size: 32px;
+}
+@keyframes upfont {
+    0%{
+        transform: translateY(0px);
+    }
+    20%{
+        transform: translateY(-24px);
+    }
+    40%,100%{
+        transform: translateY(0px);
+    }
+}
+.loading_text span{
+    display: inline-block;
+    animation: upfont 1.5s ease-in-out infinite;
+    animation-delay: calc(0.1s*var(--i));
+}

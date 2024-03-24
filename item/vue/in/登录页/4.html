@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>55555</title>
+    <script src="./vue.js"></script>
+<style>
+
+   *{
+        margin: 0;
+        padding: 0;
+    }
+    
+     .box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: #ccc;  */
+        width: 100%;
+        height: 100%;
+        font-size: 20px;
+        margin-top: 1vh;
+    } 
+    .box>p>button{
+        width: 22vh;
+    }
+</style>
+</head>
+
+<body>
+    <div id="app">
+        <login></login>
+    </div>
+
+    <template id="temp1">
+        <div class="box">
+            <p>账号:<input type="text" id="account" v-model="account" placeholder="请输入账号" /></p>
+            <p>密码:<input type="password" id="password" v-model="password" placeholder="请输入密码" /></p>
+            <p><button @click="checklogin">确定</button></p>
+        </div>
+    </template>
+
+    <script>
+        Vue.component('login', {
+            template: "#temp1",
+            data() {
+                return {
+                    account: '',
+                    password: ''
+                }
+            },
+            methods: {
+                checklogin() {
+                    if (this.password.indexOf(this.account) != -1) {
+                        alert('密码不合法');
+                    } else {
+                        alert('密码合法');
+                    }
+
+                }
+            }
+
+
+
+        })
+        var vm = new Vue({
+            data: {
+                name: 'fdfdfdfdfdf',
+            },
+            el: '#app',
+            methods: {
+                checklogin() {
+                    console.login(this.account);
+
+                }
+            }
+
+
+        })
+    </script>
+</body>
+
+</html>

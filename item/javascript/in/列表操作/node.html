@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>无标题文档</title>
+</head>
+
+<body>
+	<li class="list-option" style="display:none"><span>项目一</span> <a href="#" class="del">删除</a>&nbsp;<a href="#"
+			class="up">上移</a>&nbsp;<a href="#" class="down">下移</a></li>
+	<ul class="list-ul">
+		<li class="list-option">项目一 <a href="#" class="del">删除</a>&nbsp;<a href="#" class="up">上移</a>&nbsp;<a href="#"
+				class="down">下移</a></li>
+		<li class="list-option">项目二 <a href="#" class="del">删除</a>&nbsp;<a href="#" class="up">上移</a>&nbsp;<a href="#"
+				class="down">下移</a></li>
+		<li class="list-option">项目三 <a href="#" class="del">删除</a>&nbsp;<a href="#" class="up">上移</a>&nbsp;<a href="#"
+				class="down">下移</a></li>
+		<li class="list-option">项目四 <a href="#" class="del">删除</a>&nbsp;<a href="#" class="up">上移</a>&nbsp;<a href="#"
+				class="down">下移</a></li>
+		<li class="list-option">项目五 <a href="#" class="del">删除</a>&nbsp;<a href="#" class="up">上移</a>&nbsp;<a href="#"
+				class="down">下移</a></li>
+	</ul>
+	<p>
+		<label for="vv"></label>
+		<input type="text" name="vv" id="vv" />
+		<input type="button" name="btn-add" id="btn-add" value="添加节点" />
+	</p>
+	<div class="title">
+		<ul>
+			<li><span>首页</span></li>
+			<li><span>PHP</span></li>
+			<li><span>JavaScript</span></li>
+		</ul>
+	</div>
+	<div class="body" id="body">
+		<div>div01 text</div>
+		<div>div02 text</div>
+		<div>div03 text</div>
+		<div>div04 text</div>
+	</div>
+</body>
+<script src="./js/jquery-3.7.0.min.js"></script>
+<script>
+	$('#btn-add').click(function () {//添加
+		let v = $("#vv").val();//得到文本字段的值
+		/* let li = `<li class="list-option">${v} <a href="#" class="del">删除</a>&nbsp;<a href="#" class="up">上移</a>&nbsp;<a href="#"
+				class="down">下移</a></li>`; */
+		let li = $('.list-option:first').clone(true);
+		li.css("display","");
+		li.children("span").text(v);
+		$(".list-ul").append($(li));
+	});
+	$('.del').click(function () {//删除
+		if (confirm('您是否要删除')) {
+			$(this).parent().remove();
+		}
+	});
+	$(".up").click(function () {//上移
+		let li = $(this).parent();//得到要移动的li
+		let lis = li.prev();//得到当前li的前一个li
+		if (lis.length == 0) {
+			alert('已经是第一个了')
+		}
+		else {
+			lis.before(li);//把当前的li移动到前一个li的前面
+		}
+		/* $(this).parent().prev().before($(this).parent()); */
+	});
+
+	$(".down").click(function () {//下移
+		let li = $(this).parent();
+		let lis = li.next();
+		if (lis.length == 0) {
+			alert('已经是最后一个了')
+		}
+		else {
+			lis.after(li);
+		}
+	});
+</script>
+
+
+</html>

@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jquery网站导航分类焦点图切换代码演示-前端元素eleui.cn</title>
+
+<link href="css/xm.css" rel="stylesheet" type="text/css">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.SuperSlide.2.1.1.js"></script>
+
+</head>
+<body>
+
+<div style="height:50px;"></div>
+
+<div class="des-menu-nav">
+	<div class="des-nav-box">
+		<dl>
+			<dd class="cur">
+				<h3>
+					<a href="#">首页</a>
+				</h3>
+			</dd>
+			<dd>
+				<h3>
+					<a href="#">精选家装</a>
+				</h3>
+				<ul>
+					<li>
+						<a href="#">家装图库</a>
+					</li>
+				</ul>
+			</dd>
+			<dd>
+				<h3>
+					<a href="#">精选工装</a>
+				</h3>
+				<ul>
+					<li>
+						<a href="#">工装图库</a>
+					</li>
+				</ul>
+			</dd>
+			<dd>
+				<h3>
+					<a href="#">找设计师</a>
+				</h3>
+			</dd>
+			<dd>
+				<h3>
+					<a href="#">前端元素</a>
+				</h3>
+				<ul>
+					<li>
+						<a href="#">案例解析</a>
+					</li>
+					<li>
+						<a href="#">人物专访</a>
+					</li>
+				</ul>
+			</dd>
+			<dd>
+				<h3>
+					<a href="#">有问必答</a>
+				</h3>
+			</dd>
+		</dl>
+		<dl class="fr">
+			<dd>
+				<h3>
+					<a href="#">设计师专区</a>
+				</h3>
+				<ul>
+					<li>
+						<a href="#">3DMAX模型下载</a>
+					</li>
+					<li>
+						<a href="#">设计资讯</a>
+					</li>
+					<li>
+						<a href="#">人脉广场</a>
+					</li>
+					<li>
+						<a href="#">空间谈</a>
+					</li>
+				</ul>
+			</dd>
+		</dl>
+		<div class="des-column">
+			<div class="des-column-list">
+				<div class="hd des-column-head">
+					<ul>
+						<li class="item">
+							<h2>家装设计</h2>
+							<div class="des-column-link">
+								<a href="#" class="des-red">三居</a>
+								<a href="#" class="des-red">小户型</a>
+								<a href="#">别墅豪宅</a>
+								<a href="#" class="des-red">复式</a>
+								<a href="#">样板房</a>
+								<a href="#">日式</a>
+								<a href="#" class="des-red">北欧</a>
+								<a href="#">地中海</a>
+								<a href="#" class="des-red">中式</a>
+								<a href="#" class="des-red">现代</a>
+								<a href="#">混搭</a>
+								<a href="#" class="des-red">美式</a>
+							</div>
+							<ul class="product-wrap product-wrap001">
+								<li>
+									<h2>户型</h2>
+									<div class="des-column-link">
+										<a href="#">小户型</a>
+										<a href="#">二居</a>
+										<a href="#">三居</a>
+										<a href="#">四居</a>
+										<a href="#">复式</a>
+										<a href="#">别墅豪宅</a>
+									</div>
+								</li>
+								<li>
+									<h2>风格</h2>
+									<div class="des-column-link">
+										<a href="#">欧式</a>
+										<a href="#">中式</a>
+										<a href="#">新古典</a>
+										<a href="#">东南亚</a>
+										<a href="#">美式</a>
+										<a href="#">田园</a>
+										<a href="#">地中海</a>
+										<a href="#">现代</a>
+										<a href="#">混搭</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li class="item">
+							<h2>工装设计</h2>
+							<div class="des-column-link">
+								<a href="#" class="des-red">餐厅设计</a>
+								<a href="#" class="des-red">休闲会所</a>
+								<a href="#">办公室设计</a>
+								<a href="#" class="des-red">主题酒店</a>
+								<a href="#">娱乐空间</a>
+								<a href="#">商业展示</a>
+								<a href="#" class="des-red">购物中心</a>
+								<a href="#">教育机构</a>
+								<a href="#" class="des-red">医疗机构</a>
+							</div>
+							<ul class="product-wrap product-wrap002">
+								<li>
+									<h2>类型</h2>
+									<div class="des-column-link">
+										<a href="#">酒店空间</a>
+										<a href="#">购物空间</a>
+										<a href="#">文化空间</a>
+										<a href="#">商业展示</a>
+										<a href="#">医疗机构</a>
+										<a href="#">办公空间</a>
+										<a href="#">餐饮空间</a>
+										<a href="#">娱乐空间</a>
+										<a href="#">休闲场所</a>
+										<a href="#">售楼中心</a>
+										<a href="#">金融机构</a>
+										<a href="#">运动场所</a>
+										<a href="#">教育机构</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li class="item item-clear">
+							<h2>室内设计师</h2>
+							<div class="des-column-link">
+								<a href="#" class="des-red">设计本网站在线交易流程及服务保障>>></a>
+								<a href="#" class="des-red">北京</a>
+								<a href="#">上海</a>
+								<a href="#" class="des-red">深圳</a>
+								<a href="#">台湾</a>
+								<a href="#">别墅</a>
+								<a href="#" class="des-red">会所</a>
+								<a href="#">酒店</a>
+								<a href="#" class="des-red">餐厅</a>
+								<a href="#" class="des-red">办公室</a>
+							</div>
+							<ul class="product-wrap product-wrap003">
+								<li>
+									<h2>所在城市</h2>
+									<div class="des-column-link">
+										<a href="#">北京</a>
+										<a href="#">上海</a>
+										<a href="#">广州</a>
+										<a href="#">深圳</a>
+										<a href="#">南京</a>
+										<a href="#">天津</a>
+										<a href="#">杭州</a>
+										<a href="#">武汉</a>
+										<a href="#">成都</a>
+										<a href="#">西安</a>
+										<a href="#">福州</a>
+										<a href="#">苏州</a>
+										<a href="#">郑州</a>
+										<a href="#">合肥</a>
+										<a href="#">贵阳</a>
+										<a href="#">宁波</a>
+										<a href="#">长沙</a>
+									</div>
+								</li>
+								<li>
+									<h2>擅长空间</h2>
+									<div class="des-column-link">
+										<a href="#">家居住宅</a>
+										<a href="#">别墅豪宅</a>
+										<a href="#">办公室</a>
+										<a href="#">酒店</a>
+										<a href="#">餐厅</a>
+										<a href="#">咖啡厅</a>
+										<a href="#">酒吧</a>
+										<a href="#">KTV</a>
+										<a href="#">商业展示</a>
+										<a href="#">医院</a>
+										<a href="#">幼儿园</a>
+										<a href="#">会所</a>
+										<a href="#">样板房</a>
+										<a href="#">售楼处</a>
+										<a href="#">文化空间</a>
+										<a href="#">运动空间</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="des-banners">
+	<div class="hd des-banners-circle">
+		<ul>
+			<li class="on"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<div class="bd des-banners-image">
+		<ul>
+			<li class="des-banners-image-001">
+				<a href="#"></a>
+			</li>
+			<li class="des-banners-image-002">
+				<a href="#"></a>
+			</li>
+			<li class="des-banners-image-003">
+				<a href="#"></a>
+			</li>
+			<li class="des-banners-image-004">
+				<a href="#"></a>
+			</li>
+			<li class="des-banners-image-005">
+				<a href="#"></a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+	$(function(){//左侧二级菜单
+
+		$('.des-column-head .item').hover(function(){
+
+			$(this).addClass('active').find('s').hide();
+
+			$(this).find('.product-wrap').show();
+
+		},function(){
+
+			$(this).removeClass('active').find('s').show();
+
+			$(this).find('.product-wrap').hide();
+
+		});
+
+	});
+
+	jQuery(".des-banners").slide({//首页轮播
+		mainCell: ".bd ul",
+		effect: "leftLoop",
+		autoPlay: true,
+		trigger: "click",
+		delayTime: 700
+	});
+
+	jQuery(".des-menu-nav").slide({//导航二级菜单
+		type: "menu",
+		titCell: "dd",
+		targetCell: "ul",
+		delayTime: 0,
+		defaultPlay: false,
+		returnDefault: true
+	});
+
+</script>
+
+<div style="text-align:center;margin:30px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+
+
+ 
+</div>
+
+</body>
+</html>

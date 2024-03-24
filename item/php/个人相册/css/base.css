@@ -1,0 +1,64 @@
+@font-face{
+    font-family: 'liuti';
+    src: url('../font/柳体.ttf');
+    font-weight: normal;
+    font-style: normal;
+    }
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.pic_bg>img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    /* 图片保持原有尺寸比例,但部分内容可能被剪切 */
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.nav {
+    /* background: pink; */
+    width: 100%;
+}
+
+.nav_ul {
+    /* background: rgb(187, 187, 198); */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+
+
+.nav_ul>li {
+    /* background: #de9797; */
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.nav_ul>li>a{
+    font-family: liuti,"楷体";
+    background:  #005983;
+    width: 100%;
+    height: 8vh;
+    font-size: 3.3vh;
+    line-height: 8vh;
+    display: block;
+    color: #fff;
+}
+.nav_ul>li>a:hover{
+    background-color: rgb(94, 202, 94);
+    font-size: 4.4vh;
+    transition: background-color 1s;
+    transition: font-size 1.5s;
+}
