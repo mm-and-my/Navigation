@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8" />
+<title>vue.js文字列表动态加载特效——前端元素www.eleui.cn</title>
+</head>
+
+<script src="js/vue.min.js"></script>
+
+<link rel="stylesheet" href="css/main.css">
+
+<body>
+<div id="map" style="width:100%;height:100%;"></div>
+
+<section id="yd-data" style="height:100%;">
+
+    <div class="user-test-main">
+        <div class="user-test-coent">
+            <!--右侧列表-->
+            <div class="yd-right">
+                <el-tabs v-model="activeName" type="card" stretch=true >
+                    <el-tab-pane label="高速/快速路" name="second" >
+                        <table class="header-table">
+                            <tbody>
+                                <tr height="30px">
+                                    <td ></td>
+                                    <td >道路名称</td>
+                                    <td >拥堵指数</td>
+                                    <td >平均速度</td>
+                                    
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="center-table" border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                
+                                <tr height="30px" v-for="item in tableData" >
+                                    <td >{{item.number}}</td>
+                                    <td >{{item.roadname}}</td>
+                                    <td >{{item.index}}</td>
+                                    <td >{{item.seepd}}</td>
+                                   
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                    </el-tab-pane>
+                </el-tabs>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+<script>
+    /*vue实例*/
+    var vm = new Vue({
+        el:"#yd-data",
+        data:function(){
+            return{
+                loadDataTimes:0,
+                activeName:'second',
+                tableData:[]
+            }
+        },
+        methods:{
+            
+            ajaxLoadYDdata:function(){
+                
+                var results=[{
+                            number:1,
+                            roadname:'北京路',
+                            roadsegid:"北京路-4",
+                            index:"10.41",
+                            index_level:4,
+                            location:"106.70748,26.596485",
+                            seepd:"4.46"
+                        },{
+                            number:2,
+                            roadname:'金清大道',
+                            roadsegid:"金清大道-16",
+                            index:"4.89",
+                            index_level:4,
+                            location:"106.63315,26.605295",
+                            seepd:"8.73"
+                        },{
+                            number:3,
+                            roadname:'创驻路',
+                            roadsegid:"创驻路-5",
+                            index:"4.17",
+                            index_level:4,
+                            location:"106.697678,26.767288",
+                            seepd:"8.58"
+                        },{
+                            number:4,
+                            roadname:'龙泉苑街',
+                            roadsegid:"龙泉苑街-5",
+                            index:"4.05",
+                            index_level:4,
+                            location:"106.627241,26.613056",
+                            seepd:"7.39"
+                        },{
+                            number:5,
+                            roadname:'林城东路',
+                            roadsegid:"林城东路-16",
+                            index:"4.03",
+                            index_level:4,
+                            location:"106.6849,26.643121",
+                            seepd:"10.23"
+                        },{
+                            number:6,
+                            roadname:'尚雅路',
+                            roadsegid:"尚雅路-1",
+                            index:"4.03",
+                            index_level:4,
+                            location:"106.751288,26.59024",
+                            seepd:"8.87"
+                        },{
+                            number:7,
+                            roadname:'新添大道北段',
+                            roadsegid:"新添大道北段-1",
+                            index:"3.34",
+                            index_level:4,
+                            location:"106.783456,26.673816",
+                            seepd:"11.54"
+                        },{
+                            number:8,
+                            roadname:'同城南路',
+                            roadsegid:"同城南路-0",
+                            index:"3.34",
+                            index_level:4,
+                            location:"106.660425,26.631579",
+                            seepd:"18.08"
+                        },{
+                            number:9,
+                            roadname:'北京西路',
+                            roadsegid:"北京西路-0",
+                            index:"4.25",
+                            index_level:4,
+                            location:"106.689887,26.594334",
+                            seepd:"12.32"
+                        },{
+                            number:10,
+                            roadname:'北京西路',
+                            roadsegid:"北京西路-0",
+                            index:"4.25",
+                            index_level:4,
+                            location:"106.678562,26.62153",
+                            seepd:"8.33"
+                        }];
+                        
+                        this.tableData = results;//给遍历的内容赋值
+            },
+            
+
+            
+        },
+        created:function(){
+            this.ajaxLoadYDdata();
+        }
+    });
+
+</script>
+
+</body>
+</html>
+

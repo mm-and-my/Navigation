@@ -1,0 +1,220 @@
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录html</title>
+    <link rel="stylesheet" href="css/phone.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/signIn.css">
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+
+        body {
+            background-color: #f1f3f7;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sign-in">
+        <section class="cy_sigin">
+            <div class="clearfix cy_sigin_box cy_sigin_content">
+                <div class="floatl cy_sigin_left"><img src="images/leftBg.jpg" alt=""></div>
+                <div class="floatr cy_sigin_right"><img src="images/logo.png" alt=""
+                        class="cy_sigin_logo">
+                    <div class="clearfix cy_sigin_synopsis">
+                        <div class="floatl line1px"></div>
+                        <div class="floatl cy_sigin_synopsis_text">助力前端开发</div>
+                        <div class="floatl line1px"></div>
+                    </div>
+                    <div class="cy_sigin_input">
+                        <div class="el-input">
+                            <!----><input type="text" autocomplete="off" placeholder="手机号/管理员账号" maxlength="20"
+                                class="el-input__inner">
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!---->
+                        </div>
+                        <div class="el-input">
+                            <!----><input type="password" autocomplete="off" placeholder="请输入密码" maxlength="20"
+                                class="el-input__inner">
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!---->
+                        </div>
+                        <div class="clearfix cy_sigin_proving" style="display: none;">
+                            <div class="el-input">
+                                <!----><input type="text" autocomplete="off" placeholder="请输入验证码" maxlength="10"
+                                    class="el-input__inner">
+                                <!---->
+                                <!---->
+                                <!---->
+                                <!---->
+                            </div>
+                            <div class="cy_sigin_proving_box"><img id="code_img"
+                                    src="https://www.kuaikaoti.com/Login/Login/authcode?r=0.543281231721521"
+                                    style="width: 100%; height: 100%;"></div>
+                        </div>
+                        <div class="cy_sigin_a"><a target="_blank"
+                                href="forget_password.html">忘记密码</a></div>
+                    </div>
+                    <div class="cy_sigin_btn"><button type="button" class="el-button el-button--primary">
+                            <!---->
+                            <!----><span>登录</span>
+                        </button>
+                        <div class="cy_sigin_btn_a">
+                            还没有账号？ <a href="register.html">立即创建&gt;&gt;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <script src="js/jquery-1.7.2.js"
+        type="text/javascript" charset="utf-8"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        /* 考生列表 控制器 */
+        var vm = new Vue({
+            el: '#sign-in',
+            data: {
+                inputData: {
+                    phoneTel: '',   // 账号
+                    passWord: '',   // 密码
+                    authcode: '',   //验证码
+                },
+                repeatNum: 0,   // 重复登录次数
+                proving: '#' + Math.random(),  // 验证码
+
+                /* 防止重复提交 */
+                lock: false,
+                loginClick: false,  //放连点
+            },
+            computed: {},
+            watch: {
+
+            },
+            components: {},
+            created: function () { },
+            mounted: function () { },
+            methods: {
+
+                /* 判断输入的手机号/账号格式 */
+                accountChange: function () {
+                    this.inputData.phoneTel = this.inputData.phoneTel.replace(/[^A-Za-z0-9]/g, '');
+                },
+
+                /* 切换验证码 */
+                switchProving: function () {
+                    this.proving = '#' + Math.random();
+                },
+
+
+                /* 登录 */
+                sigIn: function () {
+                    var that = this;
+                    if (this.lock) {
+                        return false;
+                    }
+                    if (this.loginClick) return
+                    var tel = this.inputData.phoneTel; // 手机号
+                    var password = this.inputData.passWord; // 密码
+                    var inputCode = this.inputData.authcode; // 验证码
+                    var repeatNum = this.repeatNum;
+
+                    this.$message.closeAll()
+                    if (tel == '') {
+                        this.$message.error({
+                            message: '登录手机号/管理员登录账号不能为空!',
+                            offset: messageTop
+                        });
+                        return false;
+                    }
+                    if (tel.length < 8 || tel.length > 20) {
+                        this.$message.error({
+                            message: '登录手机号/管理员登录账号长度错误!',
+                            offset: messageTop
+                        });
+                        return false;
+                    }
+                    if (password == '') {
+                        this.$message.error({
+                            message: '密码不能为空!',
+                            offset: messageTop
+                        });
+                        return false;
+                    }
+                    if (!password.match(/[A-Za-z]/g)) {
+                        this.$message.error({
+                            message: '密码必须含有英文字母!',
+                            offset: messageTop
+                        });
+                        return false;
+                    }
+                    if (inputCode.length <= 0 && repeatNum > 3) {
+                        this.$message.error({
+                            message: '请输入验证码!',
+                            offset: messageTop
+                        });
+                        return false;
+                    }
+                    that.loginClick = true
+                    $.ajax({
+                        type: "post",
+                        url: "#",
+                        data: { tel: tel, authcode: inputCode, password: password, act: 'login', repeat_num: repeatNum },
+                        dataType: 'json',
+                        success: function (res) {
+                            if (res.code == 200) {
+                                /* 								that.$message.success({
+                                                                    message: res.info,
+                                                                    offset: messageTop
+                                                                });	 */
+                                that.lock = true;
+                                that.loginClick = false
+                                setTimeout(function () {
+                                    isLogining = false
+                                    window.location.href = res.url
+                                }, 500);
+                                return false;
+                            } else {
+                                that.$message.error({
+                                    message: res.info,
+                                    offset: messageTop
+                                });
+                                that.loginClick = false
+                                that.repeatNum++;
+                                document.getElementById('code_img').src = '#' + Math.random(); that.inputData.authcode = '';
+                                return false;
+                            }
+                        }
+                    })
+                },
+
+                /* ajax请求数据 */
+                requestData: function () {
+
+                },
+            }
+        })
+
+
+    </script>
+
+
+
+</body>
+
+</html>

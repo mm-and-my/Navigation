@@ -1,0 +1,133 @@
+.timu_container {
+	width: 100%;
+	height: 100%;
+	z-index: 10000;
+	background-color: rgba(0, 0, 0, .6);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.timu_content {
+	position: absolute;
+	background-image: url(../img/timu.png);
+	background-size: 100% 100%;
+	width: 80%;
+	height: 50%;
+	box-sizing: border-box;
+	padding: 14vw 18vw 14vw 20vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 2vw;
+}
+
+.timu_content>h3 {
+	font-size: 4vw;
+}
+
+.timu_content>h5 {
+	font-size: 3w;
+}
+
+.timu_switchs {
+	margin-top: 3vw;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 3vw;
+	font-size: 3vw;
+	font-family: "微软雅黑";
+	font-weight: 550;
+}
+.timu_switchs >label {
+	width: 64%;
+	text-align: left;
+}
+.timu_switchs >label>span {
+	margin-left: 4vw;
+}
+.timu_switchs >label>input[type=radio]{
+	position: relative;
+	/* opacity: 0; */
+	width: 0;
+	height: 0;
+
+}
+.timu_switchs >label>input[type=radio]::after {
+	position: absolute;
+	content: "";
+	top:-1vw;
+	left: -0.5vw;
+	width: 3vw;
+	height: 3vw;
+	border-radius: 50%;
+	transform: translateY(-50%);
+	background-color: rgba(0, 0, 0, .2);
+	z-index: 99;
+}
+
+
+.timu_switchs >label>input[type=radio]:checked::before {
+	position: absolute;
+	content: "";
+	top:-1vw;
+	left: 0;
+	width: 2vw;
+	height: 2vw;
+	border-radius: 50%;
+	transform: translateY(-50%);
+	background-color: red;
+	z-index: 99;
+}
+.timu_switchs >label>input[type=radio]:checked+span {
+	color: red;
+}
+.timu_btn {
+	position: absolute;
+	background-image: url(../img/index/button.png);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	font-family: "微软雅黑";
+	color: #ffe9be;
+	font-size: 3.4vw;
+	line-height: 10vw;
+	padding: 4vw 11vw;
+	bottom: 10vw;
+	left: 50%;
+	transform: translateX(-50%);
+	/* animation: left_move 1s linear .5s 1 normal forwards; */
+}
+.info {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* transform: translate(-50%,-50%); */
+	
+	z-index: 2123123;
+}
+ .success {
+	padding: 2vw 3vw;
+	background-color: rgba(0, 0, 0, .6);
+	color: white;
+	font-size: 3vw;
+	border-radius: 4vw;
+}
+
+.info {
+	display: none;
+}
+
+.last_container {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .6);
+}

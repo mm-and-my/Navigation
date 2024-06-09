@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kao</title>
+    <script src="./js/jquery-3.7.0.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            text-align: center;
+            font-family: "楷体";
+            font-size: 26px;
+            font-weight: bold;
+        }
+        .pic {
+            width: 350px;
+            height: 80px;
+            margin: auto;
+            overflow: hidden;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .pic img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <p>高考加油</p>
+    <div class="pic"><img src="./images/1.jpg" alt=""></div>
+    <div class="pic"><img src="./images/2.jpg" alt=""></div>
+    <div class="pic"><img src="./images/3.jpg" alt=""></div>
+    <div class="pic"><img src="./images/4.jpg" alt=""></div>
+    <div class="pic"><img src="./images/5.jpg" alt=""></div>
+    <div class="pic"><img src="./images/6.jpg" alt=""></div>
+    <div class="pic"><img src="./images/7.jpg" alt=""></div>
+    <div class="pic"><img src="./images/8.jpg" alt=""></div>
+    <div class="pic"><img src="./images/9.jpg" alt=""></div>
+</body>
+<script>
+    $(".pic").click(function (e) {
+        if ($(this).height() >= 450) {
+            $(this).animate({ height: 80 },1000);
+        }
+        else {
+            $(this).animate({ height: 450 },1000);
+        }
+    });
+
+
+    //方法二，加一个class进去，判断是否有class
+    $(".pic").click(function(){
+        if($(this).hasClass("toggle") == true){
+            $(this).animate({height:100},1000);
+            $(this).removeClass("toggle");
+        }
+        else{
+            $(this).animate({height:482},1000);
+            $(this).addClass("toggle");
+        }
+    });
+
+    //方法三,为图片设置一个自定义属性data-xxx，通过判断这属性的值。
+    $(".pic").click(function(){
+        if($(this).attr("data-flag")==1){
+            $(this).animate({height:100},1000);
+            $(this).attr("data-flag",0);
+        }
+        else{
+            $(this).animate({height:482},1000);
+            $(this).attr("data-flag",1);
+        }
+    });
+    
+</script>
+
+</html>

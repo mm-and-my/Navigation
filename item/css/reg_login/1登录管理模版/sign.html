@@ -1,0 +1,131 @@
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--favicon-->
+
+    <!--plugins-->
+    <link href="css/simplebar.css" rel="stylesheet">
+    <link href="css/perfect-scrollbar.css" rel="stylesheet">
+    <link href="css/metisMenu.min.css" rel="stylesheet">
+    <!-- loader-->
+    <link href="css/pace.min.css" rel="stylesheet">
+    <script src="js/pace.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <link href="css/icons.css" rel="stylesheet">
+    <title>Bootstrap5 管理模板登陆界面——登陆界面</title>
+</head>
+
+<body class="bg-login  pace-done">
+    <div class="pace  pace-inactive">
+        <div class="pace-progress" data-progress-text="100%" data-progress="99"
+            style="transform: translate3d(100%, 0px, 0px);">
+            <div class="pace-progress-inner"></div>
+        </div>
+        <div class="pace-activity"></div>
+    </div>
+    <!--wrapper-->
+    <div class="wrapper">
+        <div class="section-authentication-signin d-flex align-items-center justify-content-center my-5 my-lg-0">
+            <div class="container-fluid">
+                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
+                    <div class="col mx-auto">
+                        <div class="mb-4 text-center">
+                            <img src="img/logo2.png" alt="">
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="border p-4 rounded">
+                                    <div class="text-center">
+                                        <h3 class="">登陆</h3>
+                                        <p>还没有账号？<a href="register.html">在此注册</a>
+                                        </p>
+                                    </div>
+                                    <div class="d-grid">
+                                        <a class="btn my-4 shadow-sm btn-white" href="#"> <span
+                                                class="d-flex justify-content-center align-items-center">
+                                                <img class="me-2" src="img/wx.png" width="16">
+                                                <span>使用微信帐号登陆</span>
+                                            </span>
+                                        </a> <a href="#" class="btn btn-facebook"><img class="me-2" src="img/qq.png" width="16"></i> 使用QQ帐号登陆</a>
+                                    </div>
+                                    <div class="login-separater text-center mb-4"> <span>或使用电子邮件注册</span>
+                                        <hr>
+                                    </div>
+                                    <div class="form-body">
+                                        <form class="row g-3">
+                                            <div class="col-12">
+                                                <label for="inputEmailAddress" class="form-label">电子邮件地址</label>
+                                                <input type="email" class="form-control" id="inputEmailAddress"
+                                                    placeholder="电子邮件地址">
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="inputChoosePassword" class="form-label">输入密码</label>
+                                                <div class="input-group" id="show_hide_password">
+                                                    <input type="password" class="form-control border-end-0" id="inputChoosePassword" value="12345678" placeholder="Enter Password"> 
+                                                    <a href="#" class="input-group-text bg-transparent"><i class="bx bx-hide"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked="">
+                                                    <label class="form-check-label" for="flexSwitchCheckChecked">记住账号</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 text-end"> <a
+                                                    href="forgot-password.html">忘记密码 ?</a>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="d-grid">
+                                                    <button type="submit" class="btn btn-primary"><i
+                                                            class="bx bxs-lock-open"></i>登陆</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end row-->
+            </div>
+        </div>
+    </div>
+    <!--end wrapper-->
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!--plugins-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/simplebar.min.js"></script>
+    <script src="js/metisMenu.min.js"></script>
+    <script src="js/perfect-scrollbar.js"></script>
+    <!--Password show & hide js -->
+    <script>
+        $(document).ready(function () {
+            $("#show_hide_password a").on('click', function (event) {
+                event.preventDefault();
+                if ($('#show_hide_password input').attr("type") == "text") {
+                    $('#show_hide_password input').attr('type', 'password');
+                    $('#show_hide_password i').addClass("bx-hide");
+                    $('#show_hide_password i').removeClass("bx-show");
+                } else if ($('#show_hide_password input').attr("type") == "password") {
+                    $('#show_hide_password input').attr('type', 'text');
+                    $('#show_hide_password i').removeClass("bx-hide");
+                    $('#show_hide_password i').addClass("bx-show");
+                }
+            });
+        });
+    </script>
+
+    <!--app JS-->
+    <script src="js/app.js"></script>
+
+
+</body>
+
+</html>

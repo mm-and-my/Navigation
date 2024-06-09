@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>请输入相同的字：<input type="text" name="xain" id="xian" value="一"></p>
+    <p>请输入要找的字：<input type="text" name="cha" id="cha" value="二"></p>
+    <p>请输入矩阵大小：<input type="number" name="da" id="da" value="20"></p>
+    <input type="button" value="开始" id="btn">
+    <div id="show"></div>
+
+    <script>//开始调用id
+        var xain = document.querySelector('#xian');
+        var cha = document.querySelector('#cha');
+        var n = document.querySelector('#da');
+        var btn = document.querySelector('#btn');
+        var show = document.querySelector('#show');
+        btn.onclick = function () {//按下按钮开始执行
+            let x = xain.value;//相同的字
+            let c = cha.value;//要找的字
+            let num = n.value ** 2;//矩阵里的文字总数
+
+            let rand = Math.floor(Math.random() * num + 1);
+            //Math.floor(Math.random()*(max-min+1) + min)随机数公式
+
+            let str = '';//保存最终生成字符串
+            for (let i = 1; i <= num; i++) {//当i为随机数时，显示要找的字
+                /* if (i == rand) {
+                    str += c;
+                }
+                else {
+                    str += x;
+                } */
+                str += i == rand ? c : x;//三元运算符，等价于上方if
+
+                if (i % n.value == 0) {//取余数为0时加入<br>
+                    str += "<br>";
+                }
+            }
+            show.innerHTML = str;//把拼接的字符显示到show里面
+        }
+
+
+    </script>
+</body>
+
+</html>

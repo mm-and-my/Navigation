@@ -1,0 +1,13 @@
+#animation {
+    position: fixed;
+    /* absolute */
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    left: 0%;
+    top: 0%;
+    background-image: url('../image/26.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

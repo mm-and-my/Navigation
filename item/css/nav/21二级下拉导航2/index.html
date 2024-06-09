@@ -1,0 +1,451 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5+jQuery响应式导航菜单下拉效果</title>
+
+  <!-- ITEM ASSETS -->
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/item.css">
+
+  <!-- DEMO STYLES -->
+ 
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body class="">
+
+  <!-- MONAKA HEADER -->
+  <header class="monaka-header monaka-header-aligned-left" role="banner">
+    <div class="monaka-container monaka-flex monaka-align-middle monaka-align-justify">
+
+      <!-- MOBILE/DESKTOP LOGO -->
+      <div class="monaka-logo">
+        <h1>
+          <a href="" title="Knox">
+            <img src="images/logo2.png" alt="Knox Logo Light" class="monaka-logo-light">
+            <img src="images/logo2.png" alt="Knox Logo Dark" class="monaka-logo-dark">
+            <span>Knox</span>
+          </a>
+
+        </h1>
+      </div>
+      <!-- MOBILE/DESKTOP LOGO END -->
+
+      <div class="monaka-flex monaka-align-middle lg:monaka-flex-auto">
+        <input type="checkbox" id="MONAKA-NAV" class="monaka-menu-monitor monaka-hidden">
+        <label for="MONAKA-NAV" class="monaka-menu-overlay"></label>
+
+        <!-- MONAKA MENU -->
+        <nav class="monaka-menu monaka-submenu-swing" role="navigation">
+          <ul class="monaka-menu-title">
+            <li>
+
+              <!-- MOBILE MENU TOGGLE -->
+              <div class="monaka-menu-toggler">
+                <label for="MONAKA-NAV">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M3 18h12v-2H3v2zM3 6v2h18V6H3zm0 7h18v-2H3v2z"></path>
+                    <path fill="none" d="M0 0h24v24H0V0z"></path>
+                  </svg>
+                </label>
+              </div>
+              <!-- MOBILE MENU TOGGLE END -->
+
+              <!-- MOBILE LOGO -->
+              <div class="monaka-logo">
+                <h1>
+                  <a href="" title="Knox">
+                    <img src="../images/logo-light.png" alt="Knox Logo Light" class="monaka-logo-light">
+                    <img src="../images/logo-dark.png" alt="Knox Logo Dark" class="monaka-logo-dark">
+                    <span>Knox</span>
+                  </a>
+
+                </h1>
+              </div>
+              <!-- MOBILE LOGO END -->
+
+            </li>
+          </ul>
+          <ul class="monaka-menu-body">
+            <li class="monaka-menu-item monaka-menu-active"><a href="#"> <span>Ipsum</span></a></li>
+            <li class="monaka-menu-item">
+              <a href="#"> <span>Veritatis Tatum</span> <span class="monaka-menu-arrow"></span></a>
+              <ul>
+                <!-- DROPDOWN MENU -->
+                <li class="monaka-menu-item"><a href="#"> <span>Lorem ipsum</span></a></li>
+                <li class="monaka-menu-item"><a href="#"> <span>Nobis perspiciatis</span></a></li>
+                <li class="monaka-menu-item">
+                  <a href="#"> <span>Fugit totam</span> <span class="monaka-menu-arrow"></span></a>
+                  <ul>
+                    <li class="monaka-menu-item"><a href="#"><span>Lorem ipsum</span></a></li>
+                    <li class="monaka-menu-item"><a href="#"><span>Eaque ex</span></a></li>
+                  </ul>
+                </li>
+                <li class="monaka-menu-item">
+                  <a href="#"> <span>Consectetur illum</span> <span class="monaka-menu-arrow"></span></a>
+                  <ul>
+                    <li class="monaka-menu-item"><a href="#"><span>Lorem ipsum</span></a></li>
+                    <li class="monaka-menu-item"><a href="#"><span>Quisquam tenetur</span></a></li>
+                    <li class="monaka-menu-item"><a href="#"><span>Repellendus suscipit</span></a></li>
+                    <li class="monaka-menu-item"><a href="#"><span>Facere quam</span></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="monaka-menu-item monaka-item-mega-menu">
+              <a href="#"> <span>Aliquam</span> <span class="monaka-menu-arrow"></span></a>
+              <ul>
+                <!-- DROPDOWN MEGA MENU -->
+                <li class="monaka-menu-item">
+                  <div class="monaka-row">
+                    <div class="monaka-col">
+                      <div class="monaka-media">
+                        <div class="monaka-media-thumbnail"><a href="#"><img src="images/landscape-2-thumb.jpg"
+                              alt=""></a></div>
+                        <div class="monaka-media-info">
+                          <a class="monaka-media-title" href="#">Repudiandae Sapiente</a>
+                          <p class="monaka-media-description">Ipsum dolor sit amet, consectetur adipisicing elit.
+                            Adipisci in minima molestiae placeat quaerat</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="monaka-col">
+                      <div class="monaka-media">
+                        <div class="monaka-media-thumbnail"><a href="#"><img src="images/landscape-7-thumb.jpg"
+                              alt=""></a></div>
+                        <div class="monaka-media-info">
+                          <a class="monaka-media-title" href="#">Repudiandae Sapiente</a>
+                          <p class="monaka-media-description">Ipsum dolor sit amet, consectetur adipisicing elit.
+                            Adipisci in minima molestiae placeat quaerat</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="monaka-col">
+                      <div class="monaka-media">
+                        <div class="monaka-media-thumbnail"><a href="#"><img src="images/landscape-3-thumb.jpg"
+                              alt=""></a></div>
+                        <div class="monaka-media-info">
+                          <a class="monaka-media-title" href="#">Repudiandae Sapiente</a>
+                          <p class="monaka-media-description">Ipsum dolor sit amet, consectetur adipisicing elit.
+                            Adipisci in minima molestiae placeat quaerat</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="monaka-col">
+                      <div class="monaka-media">
+                        <div class="monaka-media-thumbnail"><a href="#"><img src="images/landscape-6-thumb.jpg"
+                              alt=""></a></div>
+                        <div class="monaka-media-info">
+                          <a class="monaka-media-title" href="#">Repudiandae Sapiente</a>
+                          <p class="monaka-media-description">Ipsum dolor sit amet, consectetur adipisicing elit.
+                            Adipisci in minima molestiae placeat quaerat</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="monaka-menu-item monaka-item-mega-menu">
+              <a href="#"> <span>Rerum</span> <span class="monaka-menu-arrow"></span></a>
+              <ul>
+                <!-- DROPDOWN MEGA MENU -->
+                <li class="monaka-menu-item">
+                  <div class="monaka-row">
+                    <div class="monaka-col">
+                      <div class="monaka-media monaka-media-small">
+                        <div class="monaka-media-thumbnail"><a href="#"><img src="images/landscape-1-thumb.jpg"
+                              alt=""></a></div>
+                        <div class="monaka-media-info">
+                          <a class="monaka-media-title" href="#">Repudiandae Sapiente</a>
+                          <p class="monaka-media-description">Ipsum dolor sit amet, consectetur adipisicing.</p>
+                        </div>
+                      </div>
+
+                      <div class="monaka-media monaka-media-small">
+                        <div class="monaka-media-thumbnail"><a href="#"><img src="images/landscape-2-thumb.jpg"
+                              alt=""></a></div>
+                        <div class="monaka-media-info">
+                          <a class="monaka-media-title" href="#">Repudiandae Sapiente</a>
+                          <p class="monaka-media-description">Ipsum dolor sit amet, consectetur adipisicing.</p>
+                        </div>
+                      </div>
+
+                      <div class="monaka-media monaka-media-small">
+                        <div class="monaka-media-thumbnail"><a href="#"><img src="images/landscape-3-thumb.jpg"
+                              alt=""></a></div>
+                        <div class="monaka-media-info">
+                          <a class="monaka-media-title" href="#">Repudiandae Sapiente</a>
+                          <p class="monaka-media-description">Ipsum dolor sit amet, consectetur adipisicing.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="monaka-col">
+                      <div class="monaka-media monaka-media-small">
+                        <div class="monaka-media-thumbnail"><a href="#"><img src="images/landscape-4-thumb.jpg"
+                              alt=""></a></div>
+                        <div class="monaka-media-info">
+                          <a class="monaka-media-title" href="#">Repudiandae Sapiente</a>
+                          <p class="monaka-media-description">Ipsum dolor sit amet, consectetur adipisicing.</p>
+                        </div>
+                      </div>
+
+                      <div class="monaka-media monaka-media-small">
+                        <div class="monaka-media-thumbnail"><a href="#"><img src="images/landscape-5-thumb.jpg"
+                              alt=""></a></div>
+                        <div class="monaka-media-info">
+                          <a class="monaka-media-title" href="#">Repudiandae Sapiente</a>
+                          <p class="monaka-media-description">Ipsum dolor sit amet, consectetur adipisicing.</p>
+                        </div>
+                      </div>
+
+                      <div class="monaka-media monaka-media-small">
+                        <div class="monaka-media-thumbnail"><a href="#"><img src="images/landscape-6-thumb.jpg"
+                              alt=""></a></div>
+                        <div class="monaka-media-info">
+                          <a class="monaka-media-title" href="#">Repudiandae Sapiente</a>
+                          <p class="monaka-media-description">Ipsum dolor sit amet, consectetur adipisicing.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="monaka-col">
+                      <div class="monaka-media">
+                        <div class="monaka-media-thumbnail"><a href="#"><img src="images/landscape-7-thumb.jpg"
+                              alt=""></a></div>
+                        <div class="monaka-media-info">
+                          <a class="monaka-media-title" href="#">Repudiandae Sapiente</a>
+                          <p class="monaka-media-description">Ipsum dolor sit amet, consectetur adipisicing.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="monaka-menu-item monaka-item-mega-menu">
+              <a href="#"> <span>Disa</span> <span class="monaka-menu-arrow"></span></a>
+              <ul>
+                <!-- DROPDOWN MEGA MENU -->
+                <li class="monaka-menu-item">
+                  <div class="monaka-row">
+                    <div class="monaka-col">
+                      <div class="monaka-media monaka-media-links">
+                        <a class="monaka-media-title" href="#">Repudiandae Sapiente</a>
+                        <ul>
+                          <li><a href="#">Lorem ipsum</a></li>
+                          <li><a href="#">Culpa earum</a></li>
+                          <li><a href="#">Animi voluptatum</a></li>
+                          <li><a href="#">Commodi esse</a></li>
+                        </ul>
+                      </div>
+
+                      <div class="monaka-media monaka-media-links">
+                        <a class="monaka-media-title" href="#">Repudiandae Sapiente</a>
+                        <ul>
+                          <li><a href="#">Lorem ipsum</a></li>
+                          <li><a href="#">Doloribus exercitationem</a></li>
+                          <li><a href="#">Assumenda impedit</a></li>
+                          <li><a href="#">At debitis</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="monaka-col">
+                      <div class="monaka-media monaka-media-links">
+                        <a class="monaka-media-title" href="#">Repudiandae Sapiente</a>
+                        <ul>
+                          <li><a href="#">Lorem ipsum</a></li>
+                          <li><a href="#">Minus nostrum</a></li>
+                          <li><a href="#">Hic iusto</a></li>
+                          <li><a href="#">Magnam quam</a></li>
+                        </ul>
+                      </div>
+
+                      <div class="monaka-media monaka-media-links">
+                        <a class="monaka-media-title" href="#">Repudiandae Sapiente</a>
+                        <ul>
+                          <li><a href="#">Lorem ipsum</a></li>
+                          <li><a href="#">Similique voluptate</a></li>
+                          <li><a href="#">Commodi sapiente</a></li>
+                          <li><a href="#">Consequuntur voluptatibus</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="monaka-col">
+                      <div class="monaka-media monaka-media-links">
+                        <a class="monaka-media-title" href="#">Repudiandae Sapiente</a>
+                        <ul>
+                          <li><a href="#">Lorem ipsum</a></li>
+                          <li><a href="#">Delectus enim</a></li>
+                          <li><a href="#">Atque tempore</a></li>
+                          <li><a href="#">Omnis quos</a></li>
+                        </ul>
+                      </div>
+
+                      <div class="monaka-media monaka-media-links">
+                        <a class="monaka-media-title" href="#">Repudiandae Sapiente</a>
+                        <ul>
+                          <li><a href="#">Lorem ipsum</a></li>
+                          <li><a href="#">Doloribus eum</a></li>
+                          <li><a href="#">Saepe voluptates</a></li>
+                          <li><a href="#">Ab debitis</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="monaka-col">
+                      <div class="monaka-media">
+                        <div class="monaka-media-thumbnail"><a href="#"><img src="images/landscape-7-thumb.jpg"
+                              alt=""></a></div>
+                        <div class="monaka-media-info">
+                          <a class="monaka-media-title" href="#">Repudiandae Sapiente</a>
+                          <p class="monaka-media-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Corporis fuga harum itaque quae ratione soluta tempore unde? Libero, totam?</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="monaka-menu-item monaka-submenu-right">
+              <a href="#"> <span>Enimu</span> <span class="monaka-menu-arrow"></span></a>
+              <ul>
+                <!-- DROPDOWN MENU -->
+                <li class="monaka-menu-item"><a href="#"> <span>Lorem ipsum</span></a></li>
+                <li class="monaka-menu-item"><a href="#"> <span>Nobis perspiciatis</span></a></li>
+                <li class="monaka-menu-item">
+                  <a href="#"> <span>Fugit totam</span> <span class="monaka-menu-arrow"></span></a>
+                  <ul>
+                    <li class="monaka-menu-item"><a href="#"><span>Lorem ipsum</span></a></li>
+                    <li class="monaka-menu-item"><a href="#"><span>Eaque ex</span></a></li>
+                  </ul>
+                </li>
+                <li class="monaka-menu-item">
+                  <a href="#"> <span>Consectetur illum</span> <span class="monaka-menu-arrow"></span></a>
+                  <ul>
+                    <li class="monaka-menu-item"><a href="#"><span>Consectetur illum</span></a></li>
+                    <li class="monaka-menu-item"><a href="#"><span>Quisquam tenetur</span></a></li>
+                    <li class="monaka-menu-item"><a href="#"><span>Repellendus suscipit</span></a></li>
+                    <li class="monaka-menu-item"><a href="#"><span>Facere quam</span></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+        </nav>
+        <!-- MONAKA MENU END -->
+
+        <div class="monaka-menu-right-section">
+          <!-- MONAKA MENU SEARCH -->
+          <form class="monaka-menu-search">
+            <input class="monaka-hidden" id="MONAKA-SEARCH" type="checkbox">
+            <label class="monaka-transparent-overlay" for="MONAKA-SEARCH"></label>
+            <label class="monaka-pointer monaka-flex js-monaka-menu-search-icon" for="MONAKA-SEARCH">
+              <svg class="monaka-search-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24">
+                <path
+                  d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                </path>
+                <path d="M0 0h24v24H0z" fill="none"></path>
+              </svg>
+            </label>
+            <div class="monaka-menu-search-field">
+              <div class="monaka-container">
+                <div class="monaka-menu-search-field-inner">
+                  <label class="monaka-flex monaka-pointer" for="MONAKA-SEARCH">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z"></path>
+                    </svg>
+                  </label>
+                  <input class="js-monaka-menu-search-field" type="search" placeholder="Search" name="q"
+                    autocapitalize="off" autocomplete="off">
+                </div>
+              </div>
+            </div>
+          </form>
+          <!-- MONAKA MENU SEARCH END -->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="monaka-header-shadow"></div>
+  </header>
+  <div class="monaka-header-spacer"></div>
+  <!-- MONAKA HEADER END -->
+
+  <!-- DEMO CONTENT -->
+  <main id="content">
+    <div class="banner banner-overlay">
+      <img class="banner-image" src="images/banner-default.jpg" alt="">
+      <div class="banner-content">
+        <div>
+          <h2>Multi Purpose Responsive</h2>
+          <h1>Navigation Menu</h1>
+          <div>
+            <a class="button outline" href="javascript:" onclick="alert('Purchase the item first ;)')">Copy HTML</a>
+            &nbsp;
+            <!--<a class="button" href="#">Purchase</a>-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="features">
+      <h2>Features</h2>
+    
+      <ul>
+        <li>
+          <section>
+            <h4>Independent</h4>
+            <p>Do not depend on JQuery and other Javascript libraries that might cause conflicts</p>
+          </section>
+        </li>
+        <li>
+          <section>
+            <h4>Responsive</h4>
+            <p>Gracefully adapt to any screen size, fully compatible with smart phones, tablets and desktops</p>
+          </section>
+        </li>
+        <li>
+          <section>
+            <h4>SASS</h4>
+            <p>The included scss files will enable you to customize various settings</p>
+          </section>
+        </li>
+        <li>
+          <section>
+            <h4>Light and Dark</h4>
+            <p>Each layout has lots of design possibilities including light and dark theme.</p>
+          </section>
+        </li>
+        <li>
+          <section>
+            <h4>Cross Browser</h4>
+            <p>Tested on popular browsers such as IE11, Edge, Opera, Firefox, Safari and Chrome</p>
+          </section>
+        </li>
+        <li>
+          <section>
+            <h4>Support</h4>
+            <p>Get help and answers related to bug, installation and technical questions via email</p>
+          </section>
+        </li>
+      </ul>
+    </div>
+
+  </main>
+
+  <!-- ITEM SCRIPTS -->
+  <script src="js/item.js"></script>
+
+
+</body>
+
+</html>

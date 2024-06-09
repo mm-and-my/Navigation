@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="show">
+        10秒<input type="text" name="num" id="num">
+    </div>
+    <input type="button" value="开始" id="btn1">
+    <input type="button" value="停止" id="btn2"><br>
+
+    <script>
+        var num = document.querySelector('#num');
+        var t = 0.00;
+        var ten;
+        document.querySelector('#btn1').onclick = function () {
+            t = 0.00;
+            ten = setInterval(function () {
+                t += 0.01;
+                num.value = t.toFixed(2);
+            }, 10);
+        };
+        document.querySelector('#btn2').onclick = function () {
+            clearInterval(ten);
+            if (t == 10) {
+                alert('中奖了');
+            }
+        }
+        </script>
+</body>
+</html>

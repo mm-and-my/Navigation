@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-size: 1.5em;
+            color: #000;
+        }
+
+        span {
+            font-weight: bold;
+
+        }
+
+        .title {
+            font-size: 1.8em;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="title">1.浏览器无法上网问题：</p>
+    <p> <span>搜索代理服务器设置---将手动代理关闭即可</span><br>
+        <span>刷新dns: ipconfig /flushdns</span>
+    </p>
+
+    <hr>
+    <hr>
+
+    <p class="title">2.windows安全中心无法打开问题</p>
+    <p>打开网址:<a href="https://uupdump.net" target="_blank">https://uupdump.net</a></p>
+    <p>寻找对应的win11版本信息，以及自己的处理器类型；</p>
+    <p>重新下载安装文件 Microsoft.SecHealthUI_8wekyb3d8bbwe.appx(加上尾缀后重新安装)</p>
+
+    <hr>
+    <hr>
+
+    <p class="title">3.打开方式和选择更多没有反应时</p>
+    <p>将以下两个内容分别复制到记事本中，另存为.reg注册表后缀，双击运行即可</p>
+    <p>Windows Registry Editor Version 5.00
+        [HKEY_CLASSES_ROOT\Unknown\shell\openas]
+        @=hex(2):40,00,25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,\
+        00,25,00,5c,00,73,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,73,00,\
+        68,00,65,00,6c,00,6c,00,33,00,32,00,2e,00,64,00,6c,00,6c,00,2c,00,2d,00,35,\
+        00,33,00,37,00,36,00,00,00
+        "MultiSelectModel"="Single"
+        [HKEY_CLASSES_ROOT\Unknown\shell\openas\command]
+        @=hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,\
+        00,5c,00,73,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,4f,00,70,00,\
+        65,00,6e,00,57,00,69,00,74,00,68,00,2e,00,65,00,78,00,65,00,20,00,22,00,25,\
+        00,31,00,22,00,00,00
+        "DelegateExecute"="{e44e9428-bdbc-4987-a099-40dc8fd255e7}"</p>
+    <hr>
+    <p>Windows Registry Editor Version 5.00
+        [HKEY_CLASSES_ROOT\Unknown\shell\OpenWithSetDefaultOn]
+        "MultiSelectModel"="Single"
+        "ProgrammaticAccessOnly"=""
+        [HKEY_CLASSES_ROOT\Unknown\shell\OpenWithSetDefaultOn\command]
+        @=hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,\
+        00,5c,00,73,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,4f,00,70,00,\
+        65,00,6e,00,57,00,69,00,74,00,68,00,2e,00,65,00,78,00,65,00,20,00,2d,00,6f,\
+        00,76,00,65,00,72,00,72,00,69,00,64,00,65,00,20,00,22,00,25,00,31,00,22,00,\
+        00,00
+        "DelegateExecute"="{e44e9428-bdbc-4987-a099-40dc8fd255e7}"
+    </p>
+
+    <hr>
+    <hr>
+
+    <p class="title">4.win11右键菜单风格设置</p>
+    <p>切换到旧版右键菜单：</p>
+    <p>reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve</p>
+    <p>恢复回Win11右键菜单： </p>
+    <p>delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f</p>
+
+    <hr>
+    <hr>
+
+    <p class="title">5.桌面时间显示没有秒</p>
+    <p>在管理员终端中输入：Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name ShowSecondsInSystemClock -Value 1 -Force</p>
+
+    <hr>
+    <hr>
+
+    <p class="title">6.win11右键菜单内容编辑</p>
+    <p>打开注册表cmd</p>
+    <p>regedit</p>
+    <p>定位到注册表项 </p>
+    <p>计算机\HKEY_CLASSES_ROOT\directory\background\shell</p>
+
+
+    <hr>
+    <hr>
+
+
+
+</body>
+
+</html>

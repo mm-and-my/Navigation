@@ -1,0 +1,83 @@
+/* 烟花 */
+@keyframes yanhua_scale {
+	0%,50%,100%{
+		/*scale() 方法缩放当前绘图至更大或更小*/
+		transform: scale(1);
+		opacity: 1;
+	}
+	25%{
+		transform: scale(.6);
+		opacity: .3;
+	}
+	75%{
+		transform: scale(1.5);		
+		opacity: 1;
+	}
+}
+/* 爆竹 */
+@keyframes baozhu_scale {
+	0%,50%,100%{
+		transform: scale(1);
+	}
+	25%{
+		transform: scale(.8);
+	}
+	75%{
+		transform: scale(1.2);
+	}
+}
+/* 爆竹 */
+@keyframes baozhu_scale2 {
+	0%,50%,100%{
+		transform: scale(1);
+	}
+	25%{
+		transform: scale(.8);
+	}
+	75%{
+		transform: scale(1.1);
+	}
+}
+/* 规则页按钮 */
+@keyframes left_move {
+	0%{
+		left: -50%;
+	}
+	100%{
+		left: 50%;
+	}
+}
+
+
+/*灯笼*/
+@keyframes denlon {
+	0%,50%,100%{
+		transform: rotate(0);
+	}
+	25%{
+		transform: rotate(10deg);
+	}
+	75%{
+		transform: rotate(-5deg);
+	}
+}
+/*音乐按钮*/
+@keyframes yinlue_rotate {
+	0%{
+		transform: rotate(0);
+	}
+	
+	100%{
+		transform: rotate(360deg);
+	}
+}
+/* 规则页文字 */
+@keyframes warring_text {
+	0%{
+		opacity: 0;
+	}
+	
+	100%{
+		opacity: 1;
+	}
+}

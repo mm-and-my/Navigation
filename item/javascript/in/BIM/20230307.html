@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>请输入您的身高：<input type="number" name="height" id="height">米(m)</p>
+    <p>请输入您的体重：<input type="number" name="weight" id="weight">公斤(kg)</p>
+    <p><input type="button" value="提交" id="btn"></p>
+    <div id="show"></div>
+    <script>
+        var heightDdd = document.querySelector('#height');
+        var weightDdd = document.querySelector('#weight');
+        var btn = document.querySelector('#btn');
+        var result;
+        btn.onclick = function () {
+            var bim = weightDdd.value / heightDdd.value ** 2;
+            bim = bim.toFixed(1);
+            var img;
+            if (bim < 18.5) {
+                result = '体重过低';
+                img = '1.png';
+            }
+            else if (bim < 25) {
+                result = '体重正常';
+                img = '2.png';
+            }
+            else if (bim < 30) {
+                result = '体重偏胖';
+                img = '3.png';
+            }
+            else if (bim < 34.5) {
+                result = '体重肥胖';
+                img = '4.png';
+            }
+            else {
+                result = '体重重度肥胖';
+                img = '5.png';
+            }
+
+            document.querySelector('#show').innerHTML = `<h2>您的BIM为:${bim},您的体质为:${result}</h2> 
+            <img src="images/${img}" alt="">`;
+           
+           
+        }
+
+    </script>
+    
+</body>
+
+</html>

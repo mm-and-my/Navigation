@@ -1,0 +1,86 @@
+.dati_container {
+	background-image: url(../img/dati/bg.png);
+	background-size: 100% 100%;
+	flex-direction: column;	
+	gap: 4vw;
+	z-index: 100;
+}
+
+.dati_content {
+	position: absolute;
+	top: 46vw;
+	left: 25%;
+	width: 50%;
+	height: 60%;
+	/* background-color: red; */
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	grid-template-rows: repeat(3,1fr);
+	gap: 10vw;
+	justify-items: center;
+}
+
+.dati_btn {
+	background-size: 100% auto;
+	width: 11vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: baozhu_scale2 3	s linear 0s infinite normal forwards;
+}
+.dati_no {
+	background-image: url(../img/dati/未答题.png);
+}
+
+.dati_yes {
+	background-image: url(../img/dati/答题.png);
+}
+.dati_btn>span {
+	display: block;
+	font-family: "Regular";
+	font-size: 3vw;
+	width: 1em;
+	color: #b20610;
+	line-height: 3.4vw;
+	margin-top: -5vw;
+	font-weight: bold;
+	
+}
+
+.ddd_btn {
+	position: absolute;
+	background-image: url(../img/index/button.png);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	font-family: "微软雅黑";
+	color: #ffe9be;
+	font-size: 3.4vw;
+	line-height: 10vw;
+	padding: 4vw 11vw;
+	bottom: 9vw;
+	left: 50%;
+	transform: translateX(-50%);
+	display: none;
+	animation: left_move 1s linear .5s 1 normal forwards;
+}
+
+.last_btn {
+	position: absolute;
+	background-image: url(../img/index/button.png);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	font-family: "微软雅黑";
+	color: #ffe9be;
+	font-size: 3.4vw;
+	line-height: 10vw;
+	padding: 4vw 11vw;
+	bottom: 9vw;
+	left: 50%;
+	transform: translateX(-50%);
+	/* display: none; */
+	animation: left_move 1s linear .5s 1 normal forwards;
+}
+
+.last_container {
+	z-index: 9999;
+}

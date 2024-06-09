@@ -1,0 +1,155 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4115446 */
+  src: url('iconfont.woff2?t=1686393074964') format('woff2'),
+       url('iconfont.woff?t=1686393074964') format('woff'),
+       url('iconfont.ttf?t=1686393074964') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-xinxi:before {
+  content: "\e600";
+}
+
+.icon-shuaxin:before {
+  content: "\e601";
+}
+
+.icon-liebiao:before {
+  content: "\e602";
+}
+
+.icon-weixin:before {
+  content: "\e628";
+}
+
+.icon-denglu:before {
+  content: "\e67c";
+}
+
+.icon-yunduanxiazai:before {
+  content: "\ec1d";
+}
+
+.icon-QQ:before {
+  content: "\e882";
+}
+
+.icon-weibo:before {
+  content: "\e8bb";
+}
+
+.icon-flower:before {
+  content: "\e606";
+}
+
+.icon-plume:before {
+  content: "\e607";
+}
+
+.icon-sands:before {
+  content: "\e608";
+}
+
+.icon-circle:before {
+  content: "\e60a";
+}
+
+.icon-goblet:before {
+  content: "\e60c";
+}
+
+.icon-anemo:before {
+  content: "\e60d";
+}
+
+.icon-cryo:before {
+  content: "\e60e";
+}
+
+.icon-dendro:before {
+  content: "\e60f";
+}
+
+.icon-electro:before {
+  content: "\e610";
+}
+
+.icon-geo:before {
+  content: "\e611";
+}
+
+.icon-hydro:before {
+  content: "\e612";
+}
+
+.icon-pyro:before {
+  content: "\e613";
+}
+
+.icon-diqiu:before {
+  content: "\e60b";
+}
+
+.icon-gengduo:before {
+  content: "\e620";
+}
+
+.icon-dianhua:before {
+  content: "\e88b";
+}
+
+.icon-gengduo1:before {
+  content: "\ec1c";
+}
+
+.icon-fenxiang:before {
+  content: "\eb24";
+}
+
+.icon-gengduo2:before {
+  content: "\e652";
+}
+
+.icon-video:before {
+  content: "\e634";
+}
+
+.icon-bi:before {
+  content: "\e609";
+}
+
+.icon-tupian:before {
+  content: "\e889";
+}
+
+.icon-pinglun:before {
+  content: "\e891";
+}
+
+.icon-jiahao:before {
+  content: "\eaf3";
+}
+
+.icon-Magnifier:before {
+  content: "\e62d";
+}
+
+.icon-dianzan:before {
+  content: "\ec7f";
+}
+
+.icon-aixin:before {
+  content: "\eca1";
+}
+
+.icon-shezhi:before {
+  content: "\e8b7";
+}
+

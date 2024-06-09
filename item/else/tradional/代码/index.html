@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web</title>
+    <link rel="stylesheet" href="./css/web.css">
+    <script src="./js/vue.js"></script>
+    <script src="./js/vue-router.js"></script>
+</head>
+
+<body>
+    <div id="box" class="box">
+        <div class="nav">
+            <ul>
+                <li><router-link to="/" tag="a">个人中心</router-link></li>
+                <li><router-link to="/story" tag="a">民间故事</router-link></li>
+                <li><router-link to="/culture" tag="a">传统节日</router-link></li>
+                <li> <router-link to="/traditional" tag="a">传统文化</router-link></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <router-view></router-view>
+        </div>
+
+
+    </div>
+
+
+    <template id="index">
+        <div class="model">
+            <img src="./images/userbg.jpg" alt="" class="user_bg">
+
+            <div class="login">
+                <div class="inputBox">
+                    <input type="text" placeholder="请输入用户名" id="users">
+                </div>
+                <div class="inputBox" id="pass">
+                    <input type="password" placeholder="请输入密码" id="pwd">
+                </div>
+                <div class="inputBox">
+                    <input type="submit" value="登录" id="btn" @click="denglu">
+                </div>
+            </div>
+
+        </div>
+    </template>
+
+    <template id="story">
+        <div class="model">
+            <img src="./images/storybg.jpg" alt="" class="story_bg">
+            <div class="story">
+                <p>&nbsp;&nbsp;唐朝贞观年间，西域回纥国是大唐的藩国。一次，回纥国为了表示对大唐的友好，便派使者缅伯高带了一批珍奇异宝去拜见唐王。在这批贡物中，最珍贵的要数一只罕见的珍禽——白天鹅。缅伯高最担心的也是这只白天鹅，万一有个三长两短，可怎么向国王交待呢?所以，一路上，他亲自喂水喂食，一刻也不敢怠慢。可是有一天，天鹅喝水的时候合颈一扇翅膀，“扑喇喇”一声飞上了天!。缅伯高向前一扑，只捡到几根羽毛，却没能抓住白天鹅，眼睁睁看着它飞得无影无踪。<br>
+                    &nbsp;&nbsp;缅伯高决定继续东行，他拿出一块洁白的绸子，小心翼翼地把鹅毛包好，又在绸子上题了一首诗：“天鹅贡唐朝，山重路更遥。沔阳湖失宝，回纥情难抛。上奉唐天子，请罪缅伯高，物轻人义重，千里送鹅毛!”<br>
+                    &nbsp;&nbsp;伯高带着珠宝和鹅毛，披星戴月，不辞劳苦，不久就到了长安。唐太宗接见了缅伯高，缅伯高献上鹅毛。唐太宗看了那首诗，又听了缅伯高的诉说，非但没有怪罪他，反而觉得缅伯高忠诚老实，不辱使命，就重重地赏赐了他从此，“千里送鹅毛，礼轻人义重”，便成为我国民间礼尚往来、交流感情的写照或一种谦词
+                </p>
+            </div>
+        </div>
+
+    </template>
+
+    <template id="culture">
+        <div class="model">
+            <div class="bg bg_one" id="chunjie">
+                <p>春节</p>
+            </div>
+
+            <div class="content_index">
+                春节是中国人最隆重、最热闹的传统节日之一，也是农历正月初一。<br>它有着4000多年的历史，是中华民族最隆重的节日。<br>在春节期间，人们有拜年、放鞭炮等习俗，家家户户都会在自家门口贴上对联、挂上红灯笼，以迎接新年的到来。<br>此外，春节还是一家人团聚的时刻，人们会回家过年，一起吃年夜饭、放鞭炮、看春晚。春节不仅象征着新的开始，也寓意着祈福平安、繁荣昌盛。
+            </div>
+
+            <div class="bg bg_second">
+                <p>中元节</p>
+            </div>
+
+            <div class="content_index">
+                中元节是中国的传统节日之一，也是祭祖节之一。<br>它是道教名称，民间世俗称为七月半、七月十四、祭祖节，佛教称为盂兰盆节。中元节是农历七月十五，地官的诞辰，也是佛教中盂兰盆节。<br>这个节日有着重要的宗教、文化和民俗意义。人们在这一天会祭祖、上香、放烟火，追忆逝去的亲人和祖先，祈求来生平安和福报。<br>中元节是中国人传承和弘扬中华传统文化的重要时刻，也是弘扬佛教教义和道德的重要时刻。
+            </div>
+
+            <div class="bg bg_three">
+                <p>清明节</p>
+            </div>
+
+            <div class="content_index">
+                清明节是中国传统节日之一，也是最重要的祭祀节日。<br>它是扫墓和祭祖的日子，人们在这一天会扫墓、烧香、祭拜祖先，以表达对逝去亲人的思念和敬意。<br>此外，清明节还有踏青的习俗，人们会去郊外踏青，欣赏大自然的美景，放松身心。<br>总之，清明节是中国传统的重要节日，具有重要的社会和文化意义。
+            </div>
+
+            <div class="bg bg_four">
+                <p>除夕</p>
+            </div>
+
+            <div class="content_index">除夕是指每年农历腊月的最后一个晚上，有吃年夜饭、贴春联、给压岁钱等风俗。</div>
+
+            <div class="bg bg_five">
+                <p>端午节</p>
+            </div>
+
+            <div class="content_index">
+                端午节是为了纪念古代爱国诗人屈原而设立的，也是龙舟竞赛的日子。<br>人们在这一天会吃粽子、赛龙舟、挂菖蒲等。<br>端午节是为了表达对屈原的怀念和缅怀。</div>
+
+            <div class="bg bg_six">
+                <p>中秋节</p>
+            </div>
+
+            <div class="content_index">
+                中秋节是中国传统的中秋佳节，每年农历八月十五日。<br>在这一天，人们仰望天空如玉如盘的朗朗明月，自然会期盼家人团聚。<br>远在他乡的游子也借此寄托自己对故乡和亲人的思念之情。<br>所以，中秋又称“团圆节”。中秋节与春节齐名，是中国重要的传统节日之一。习俗有赏月、吃月饼、赏月等。
+            </div>
+
+            <div class="bg bg_seven">
+                <p>重阳节</p>
+            </div>
+
+            <div class="content_index">
+                重阳节是中国传统节日之一，因为古人认为九月九日日月并阳，象征着长寿和吉祥。<br>人们在这一天会举行各种庆祝活动，如登高赏秋、吃重阳糕、饮菊花酒等，以表达对长寿和好运的祝愿。<br>此外，重阳节也与敬老和孝老有关，人们在这一天会为长辈们上香祈福，并表达对他们的敬意。
+            </div>
+
+            <div class="bg bg_eight">
+                <p>七夕节</p>
+            </div>
+
+            <div class="content_index">
+                中国传统节日中，七夕节是最具浪漫色彩的一个节日，也是人们重视爱情的节日。<br>它起源于对自然的崇拜，是对妇女穿针乞巧的习俗的传承，后来还赋予了牛郎织女的传说，形成了象征爱情的节日。<br>七夕节在中国历史上也有很重要的地位，它不仅是一种传统节日，还是人们表达对爱情的祝福和期盼的日子。
+            </div>
+
+            <div class="bg bg_nice">
+                <p>冬至</p>
+            </div>
+
+            <div class="content_index">
+                冬至节是中国传统节日之一，根据节气来定，在每年的阳历12月22日或23日之间。<br>冬至是二十四节气中一个重要的节日，代表着冬天的开始和丰收的希望。<br>冬至节最受欢迎的习俗是吃饺子、吃汤圆等。<br>冬至节也标志着冬季的正式来临，人们迎接寒冷的冬天，迎接新的季节的到来。
+            </div>
+
+            <div class="else"><a href="#chunjie">加载更多</a></div>
+        </div>
+
+    </template>
+
+    <template id="traditional">
+
+        <div class="model">
+            <div class="containerss">
+                <div id="slide">
+                    <div class="pic" style="background-image:url('./images/indexpic/3.PNG')"></div>
+                    <div class="pic" style="background-image:url('./images/indexpic/4.PNG')"></div>
+                    <div class="pic" style="background-image:url('./images/indexpic/2.PNG')"></div>
+                    <div class="pic" style="background-image:url('./images/indexpic/1.PNG')"></div>
+                    <div class="pic" style="background-image:url('./images/indexpic/5.PNG')"></div>
+                    <div class="pic" style="background-image:url('./images/indexpic/6.PNG')"></div>
+                </div>
+                <div class="buttons">
+                    <div class="left" @click="up">上一张</div>
+                    <div class="right" @click="out">下一张</div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+</body>
+<script src="./js/web.js"></script>
+</html>

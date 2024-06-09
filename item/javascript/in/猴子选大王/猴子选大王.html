@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var total = prompt('请输入猴子的总数');
+        var kick = prompt('踢出第几只猴子');
+        var mokey = [];
+        for (let i = 1; i <= total; i++) {
+            mokey.push(i);
+        }
+        var n = 1;
+        while (mokey.length > 1) {
+            head = mokey.shift();
+            if (n % kick != 0) {
+                mokey.push(head);
+            }
+            n++;
+        }
+        alert(`大王的编号是${mokey[0]}`);
+    </script>
+</body>
+
+</html>

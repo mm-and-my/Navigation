@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bowenbtn</title>
+    <link rel="stylesheet" href="./css/bowenbtn.css">
+</head>
+
+<body>
+    <button>Click Me
+        <!--  <span></span>  -->
+    </button>
+</body>
+ <script>
+    const button = document.querySelector('button');
+    // 点击注册事件
+    button.addEventListener('click', function (e) {
+        // 计算波纹按钮所需要的坐标，找出光标相对于按钮的位置
+        let boundingBox = this.getBoundingClientRect();
+        let x = e.clientX - boundingBox.left;
+        let y = e.clientY - boundingBox.top;
+        // 动态创建按钮，添加到盒子中
+        let ripple = document.createElement('span');
+        ripple.style.left = x + "px";
+        ripple.style.top = y + "px";
+        this.appendChild(ripple);
+        // 动画结束后移出波纹
+        ripple.addEventListener("animationend", () => ripple.remove());
+    })
+</script>
+
+</html>

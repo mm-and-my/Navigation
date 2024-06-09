@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/animate.css"><!-- 动画 -->
+	<link rel="stylesheet" href="./css/base.css"><!-- 全局基础 -->
+	<link rel="stylesheet" href="css/loading.css"><!-- 加载页 -->
+	<link rel="stylesheet" href="css/index.css"><!-- 主页 -->
+	<link rel="stylesheet" href="css/warring.css"><!-- 规则页 -->
+	<link rel="stylesheet" href="css/dati.css"><!-- 答题页 -->
+	<link rel="stylesheet" href="css/timu.css">
+</head>
+<body>
+	<div class="container">
+		<!-- loading -->
+		<div class="default loading_container show" style="display: flex;">
+			<div class="loading_num">
+				<span>Loading...</span>
+				<span class="loading_count">0%</span>
+			</div>
+			<div class="load_bar">
+				<span class="load_move"></span>
+			</div>
+			
+			<img src="./img/烟花1.png" class="yanhua yanhua1">
+			<img src="./img/烟花2.png" class="yanhua yanhua2">
+			<img src="./img/烟花3.png" class="yanhua yanhua3">
+			<img src="./img/烟花2.png" class="yanhua yanhua4">
+			<img src="./img/烟花3.png" class="yanhua yanhua5">
+			
+			<img src="./img/爆竹1.png" class="baozhu baozhu1">
+			<img src="./img/爆竹2.png" class="baozhu baozhu2">
+		</div>
+		
+		<!-- 首页 -->
+		<div class="default index_container hident" style="display: none;">
+			<!-- 音乐 -->
+		<div id="yinle">
+			<audio src="./media/lalala.mp3" loop="loop"></audio>
+		</div>
+			<img src="./img/index/灯笼-left.png"  class=" denglon denlon_left">
+			<img src="./img/index/灯笼-right.png" class="denglon denlon_right">
+			<img src="./img/爆竹2.png" class="baozhu index_baozhu">
+			<img src="./img/烟花1.png" class="yanhua yanhua1">
+			<img src="./img/烟花2.png" class="yanhua index_yanhua2">
+			<img src="./img/烟花3.png" class="yanhua index_yanhua3">
+			<img src="./img/烟花2.png" class="yanhua yanhua4">
+			<img src="./img/烟花3.png" class="yanhua yanhua5">
+			<button class="index_btn">我要猜灯谜</button>
+		</div>
+		<!-- 规则 -->
+		<div class="default warring_container hident" style="display: none;">
+			<img src="./img/烟花1.png" class="yanhua warring_yanhua1">
+			<img src="./img/烟花2.png" class="yanhua warring_yanhua2">
+			<img src="./img/烟花3.png" class="yanhua warring_yanhua3">
+			<img src="./img/烟花2.png" class="yanhua warring_yanhua4">
+			<img src="./img/烟花3.png" class="yanhua warring_yanhua5">
+			<div class="warring_text">
+				<p style="--i:0s">1. 本活动仅限参加比赛用户参不。</p>
+				<p style="--i:1.5s">2. 用户在页面内可参不猜灯谜活动，本次活动共有 6 道灯谜
+				题，需全部答对方可领叏元旦祝福语。</p>
+				<p style="--i:3s">3. 如您已拥有祝福语，丌要重复领区哦，本活动有效期 7 天
+				呢！还等什么？快来领取吧！</p>
+			</div>
+			<button class="warring_btn">开始猜灯谜</button>
+		</div>
+		<!-- 选择答题页面 -->
+		<div class="default dati_container hident" style="display: none;">
+			<div class="dati_content">
+			<!-- 	<button class="dati_btn dati_no"><span>打一产品</span></button>
+				<button class="dati_btn dati_no"><span>打一产品</span></button>
+				<button class="dati_btn dati_no"><span>打一产品</span></button>
+				<button class="dati_btn dati_no"><span>打一产品</span></button>
+				<button class="dati_btn dati_no"><span>打一产品</span></button>
+				<button class="dati_btn dati_no"><span>打一产品</span></button> -->
+			</div>
+			<button class="ddd_btn">我的祝福语</button>
+		</div>
+		<!-- 答题 -->
+		<div class="default timu_container hident" style="display: none;">
+			<!-- <div class="timu_content">
+				<h3> 充耳丌闻无话讲</h3>
+				<h5>打一茶叶名</h5>
+				<div class="timu_switchs">
+					<label for="">
+						<input type="radio">
+						<span>A：龙井 </span>
+					</label>
+					<label for="">
+						<input type="radio">
+						<span>A：龙井 </span>
+					</label>
+					<label for="">
+						<input type="radio">
+						<span>A：龙井 </span>
+					</label>
+					<label for="">
+						<input type="radio">
+						<span>A：龙井 </span>
+					</label>
+				</div>
+				<button class="timu_btn">立即提交</button>
+			</div> -->
+		</div>
+		<div class="info">
+			<div class="success">您的回答错误</div>
+		</div>
+		<div class="default last_container	" style="display: none;">
+			<img src="./img/last.png" alt="">
+			<button class="last_btn">回到首页</button>
+		</div>
+	</div>
+</body>
+<script src="./js/index.js"></script>
+</html>

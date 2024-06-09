@@ -1,0 +1,446 @@
+
+body {
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #303030;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif;
+  color: #1B1B1C;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+p {
+  margin-bottom: 0px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.img-full {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #E98C81;
+}
+
+a,
+button,
+i {
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+button,
+button:focus,
+.btn,
+.btn:focus,
+input,
+input:focus,
+select,
+textarea,
+.slick-slide {
+  text-decoration: none;
+  outline: 0;
+}
+
+input.input-field {
+  border: 1px solid #e1e1e1;
+}
+
+textarea.textarea-field {
+  border: 1px solid #e1e1e1;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  position: relative;
+  padding-left: 30px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+}
+
+input[type="checkbox"] + label:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  display: block;
+  border: 2px solid #e1e1e1;
+  content: "";
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+input[type="checkbox"] + label:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  content: "\f00c";
+  font-family: 'FontAwesome';
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  opacity: 0;
+  width: 20px;
+  text-align: center;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  color: #13aff0;
+}
+
+input[type="checkbox"]:checked + label:before {
+  border: 2px solid #e1e1e1;
+}
+
+input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+button,
+.btn {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* ---Font Style--- */
+.font-style_italic {
+  font-style: italic;
+}
+
+/* ---Line Height--- */
+.line-height-1 {
+  line-height: 1;
+}
+
+
+
+
+.banner-fullwidth-area {
+  background-color: #efedee;
+  padding: 80px 0;
+}
+.banner-fullwidth-area .banner-flash-content .deal-head {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+.banner-fullwidth-area .banner-flash-content .deal-title {
+  font-size: 32px;
+  margin-bottom: 35px;
+  font-weight: 600;
+}
+.banner-fullwidth-area .banner-flash-content .obrien-button {
+  margin-bottom: 45px;
+}
+.obrien-button.primary-btn {
+  background-color: #E98C81;
+  color: #ffffff;
+}
+.obrien-button {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Oswald", sans-serif;
+  height: 45px;
+  letter-spacing: 0.025em;
+  line-height: 45px;
+  padding: 0 30px;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+  width: auto;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  border-radius: 25px;
+}
+.countdown-wrapper {
+  margin-bottom: 10px;
+}
+
+.price-filter .ui-widget-content {
+  background-color: #e1e1e1;
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+  height: 5px;
+  margin: 0 0 25px;
+  width: 100%;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.price-filter .ui-slider-range {
+  background-color: #1b1b1b;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  height: 100%;
+}
+
+.price-filter .ui-slider-handle {
+  background: #ffffff;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.4);
+  display: block;
+  outline: none;
+  width: 20px;
+  height: 20px;
+  line-height: 15px;
+  margin: 0;
+  text-align: center;
+  top: 50%;
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 0px 6.65px 0.35px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 6.65px 0.35px rgba(0, 0, 0, 0.15);
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  cursor: e-resize;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.price-filter .ui-slider-handle:last-child {
+  -webkit-transform: translate(0%, -50%);
+      -ms-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+}
+
+.price-filter .ui-slider-handle:hover {
+  background-color: #E98C81;
+}
+
+.price-filter .price-slider-amount {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.price-filter .price-slider-amount .filter-btn {
+  border: 2px solid #1b1b1b;
+  width: 110px;
+  height: 40px;
+  line-height: 38px;
+  font-size: 12px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .price-filter .price-slider-amount .filter-btn {
+    width: 40px;
+    font-size: 14px;
+  }
+}
+
+.price-filter .price-slider-amount .filter-btn:hover {
+  background-color: #E98C81;
+  border-color: #E98C81;
+  color: #ffffff;
+}
+
+.price-filter .price-slider-amount .label-input label {
+  font-size: 14px;
+  margin: 0;
+  text-transform: capitalize;
+  padding-left: 5px;
+}
+
+.price-filter .price-slider-amount .label-input input {
+  background: transparent none repeat scroll 0 0;
+  border: medium none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 14px;
+  height: inherit;
+  padding-left: 5px;
+  width: 99px;
+}
+
+/* ---Countdown--- */
+.countdown-wrapper {
+  margin-bottom: 10px;
+}
+
+.countdown-wrapper .single-countdown {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 20px;
+}
+
+.countdown-wrapper .single-countdown:last-child {
+  margin-right: 0;
+}
+
+.countdown-wrapper .single-countdown .single-countdown_time {
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  line-height: 40px;
+  color: #1B1B1C;
+}
+
+@media (max-width: 479px) {
+  .countdown-wrapper .single-countdown .single-countdown_time {
+    font-size: 26px;
+  }
+}
+
+.countdown-wrapper .single-countdown .single-countdown_text {
+  font-size: 22px;
+  line-height: 22px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  color: #1B1B1C;
+}
+
+@media (max-width: 479px) {
+  .countdown-wrapper .single-countdown .single-countdown_text {
+    font-size: 14px;
+  }
+}
+
+.countdown-wrapper.countdown-style-2 .single-countdown {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 5px;
+  width: 60px;
+  height: 60px;
+  background-color: #1B1B1C;
+  border-radius: 5px;
+}
+
+.countdown-wrapper.countdown-style-2 .single-countdown:last-child {
+  margin-right: 0;
+}
+
+.countdown-wrapper.countdown-style-2 .single-countdown .single-countdown_time {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  line-height: 16px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.countdown-wrapper.countdown-style-2 .single-countdown .single-countdown_text {
+  font-size: 14px;
+  line-height: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+@media (max-width: 479px) {
+  .countdown-wrapper.countdown-style-2 .single-countdown .single-countdown_text {
+    font-size: 14px;
+  }
+}

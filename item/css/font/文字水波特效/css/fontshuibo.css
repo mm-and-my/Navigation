@@ -1,0 +1,34 @@
+@keyframes water {
+    0% {
+        clip-path: polygon(31% 61%, 53% 65%, 77% 67%, 100% 68%, 100% 100%, 0% 100%, 0% 35%, 13% 52%);
+    }
+
+    100% {
+        clip-path: polygon(51% 68%, 71% 59%, 86% 44%, 100% 24%, 100% 100%, 0% 100%, 0% 72%, 28% 71%);
+    }
+}
+
+.mask {
+    background-color: #000;
+    height: 100vh;
+    position: relative;
+}
+
+.words {
+    color: #fff;
+    font-size: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.words:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 2px #03a9f4;
+}
+
+.words:nth-child(2) {
+    color: #03a9f4;
+    animation: water 2s ease-in-out infinite alternate;
+}

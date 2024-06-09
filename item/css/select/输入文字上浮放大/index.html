@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery文本框输入文字浮动放大显示演示-前端元素eleui.cn</title>
+
+<script src="js/jquery.min.js"></script>
+
+<style type="text/css">
+.fill_ipt{
+	position: relative;
+	margin: 200px 0 0 500px;
+}
+.showbig{
+	display: block;
+	width: 400px;
+	height: 40px;
+	border: 1px solid #404040;
+}
+input{
+	display: block;
+	width: 100%;
+	height: 100%;
+	outline: none;
+	border: none;
+	text-indent: 20px;
+}
+.bigtx{
+	height: 30px;
+	min-width:10px;
+	line-height: 30px;
+	padding: 0px 8px;
+	border: 1px solid #C9CFDA;
+	background: #f5f7fc;
+	box-shadow: 0 0 10px rgba(120,144,156,0.2);
+	position: absolute;
+	left: 0;
+	top: -0px;
+	font-size: 24px;
+	color: #1c2b36;
+	line-height: normal;
+	/*display: none;*/
+	opacity: 0;
+	transition: all 0.2s;
+}
+.bigtx span{
+	font-size: 24px;
+	color: #1c2b36;
+}
+</style>
+
+</head>
+<body>
+<!-- 代码 开始 -->
+<div class="fill_ipt">
+	<input type="text" class="showbig" name="" id="" value="" placeholder="在这里输入" />
+</div>
+
+<script type="text/javascript">
+//金额输入放大显示
+$(".showbig").focus(function(){
+	var _fill_ipt = $(this).parent(".fill_ipt");
+	if (_fill_ipt.find('.bigtx').size() === 0) {
+		var tar = "<div class='bigtx'><span></span><i></i></div>";
+		_fill_ipt.append(tar)
+	}
+}).bind('input propertychange', function(){
+	//console.log(1)
+	var tx =$(this).val();
+	
+	var _format_value = tx;
+	if (_format_value !== '' && !isNaN(_format_value)) {
+		var _value_array = _format_value.split('.');
+		var _int = _value_array[0];
+		var _decimal = '';
+		if (_value_array.length > 1) {
+			_decimal = _value_array[1];
+		}
+
+		var _int_str = '';
+		var _count = 0;
+
+		for (var i = _int.length - 1; i >= 0; i--) {
+			_count++;
+			_int_str = _int.charAt(i) + _int_str;
+			if (!(_count % 3) && i !== 0) {
+				_int_str = ',' + _int_str;
+			}
+		}
+
+		_format_value = _int_str;
+
+		if (_decimal !== '') {
+			_format_value += '.' + _decimal;
+		}
+	}
+	
+	$(this).siblings(".bigtx").css({
+		"top":"-37px",
+		"opacity":"1"
+	});
+	$(this).siblings(".bigtx").find("span").html(_format_value);
+	if(_format_value ===""){
+		$(this).siblings(".bigtx").css({
+		"top":"0",
+		"opacity":"0"
+		})
+		}
+}).blur(function(){
+
+		$(this).siblings(".bigtx").css({
+			"top":"0",
+			"opacity":"0"
+		});
+		var _fill_ipt = $(this).parent(".fill_ipt");
+		if (_fill_ipt.find('.bigtx').size() > 0) {
+			setTimeout(function () {
+				_fill_ipt.find('.bigtx').remove();
+			}, 200);
+		}
+});
+</script>
+<!-- 代码 结束 -->
+
+<div style="text-align:center;margin:80px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+
+
+ 
+</div>
+
+</body>
+</html>

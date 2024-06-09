@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>jquery左右清单双向列表切换插件演示-前端元素eleui.cncom/</title>
+
+<!-- 需要引用的CSS -->
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="css/doublebox-bootstrap.css" />
+<style type="text/css">
+.ue-container {
+	width: 60%;
+	margin: 0 auto;
+	margin-top: 3%;
+	padding: 20px 40px;
+	border: 1px solid #ddd;
+	background: #fff;
+}
+</style>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<!-- 代码 开始 -->
+<!-- 页面结构 -->
+<div class="ue-container">
+	<select multiple="multiple" size="10" name="doublebox" class="demo"></select>
+</div>
+
+<!-- 需要引用的JS -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/doublebox-bootstrap.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var demo2 = $('.demo').doublebox({
+		nonSelectedListLabel: '愿望清单一',
+		selectedListLabel: '愿望清单二',
+		preserveSelectionOnMove: 'moved',
+		moveOnSelect: false,
+		nonSelectedList:[{"roleId":"1","roleName":"健康"},{"roleId":"2","roleName":"快乐"},{"roleId":"3","roleName":"财富"}],
+		selectedList:[{"roleId":"4","roleName":"自由"},{"roleId":"5","roleName":"幸福"},{"roleId":"6","roleName":"感恩"}],
+		optionValue:"roleId",
+		optionText:"roleName",
+		doubleMove:true,
+	});
+})
+</script>
+<!-- 代码 结束 -->
+</body>
+</html>

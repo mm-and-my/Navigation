@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    zoom: 140%;
+}
+
+.btn {
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid  deeppink;
+    color:  rgb(247, 133, 152);
+    padding: 10px 20px;
+    font-weight: bold;
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+    margin-left: 42.5%;
+    margin-top: 10%;
+}
+
+.btn::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: -30px;
+    top: 0;
+    background: linear-gradient(45deg, deeppink, skyblue);
+    transform: skewX(45deg);
+    width: 0%;
+    transition: all 1s;
+    z-index: -1;
+}
+
+.btn:hover::before {
+    width: 180%;
+}
+
+.btn:hover {
+    color: white;
+}

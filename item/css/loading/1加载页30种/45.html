@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="static/css/45.css" type="text/css">
+    <style>
+        #Content {
+            visibility: hidden
+        }
+    </style>
+</head>
+
+<body onload="Initialize()">
+
+    <div id="Preloader">
+        <div class='body'>
+            <span>
+				<span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            </span>
+            <div class='base'>
+                <span></span>
+                <div class='face'></div>
+            </div>
+        </div>
+        <div class='longfazers'>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h1>Loading</h1>
+    </div>
+
+    <main id="Content">
+        <h1>Taiizor</h1>
+    </main>
+
+</body>
+
+<script>
+    function Initialize() {
+        //window.onload = Preloaded()
+    }
+
+    function Preloaded() {
+        document.getElementById("Preloader").style.display = "none";
+        document.getElementById("Content").style.visibility = "visible";
+    }
+</script>
+
+</html>

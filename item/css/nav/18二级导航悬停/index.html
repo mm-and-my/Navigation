@@ -1,0 +1,396 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery实现简单的下拉菜单样式</title>
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/raphael.min.js"></script>
+</head>
+
+<body>
+    <div class="topbox">
+        <div class="head clearfloat">
+            <div class="logo clearfloat"><img src="images/logo.png"></div>
+            <div class="nav">
+                <ul class="clearfloat">
+                    <li class="active"><a href="">首页</a></li>
+                    <li><a href="tmc1.html">产品中心</a>
+                        <div class="nav_down"
+                            style="display: none; height: 204px; padding-top: 22px; margin-top: 0px; padding-bottom: 30px; margin-bottom: 0px;">
+                            <p><a href="tmc1.html">TMC智慧消防云平台</a></p>
+                            <p><a href="tmc2.html">TMC智慧消防APP/小程序</a></p>
+                            <p><a href="tmc3.html">TMC可视化指挥平台</a></p>
+                            <p><a href="hard.html">硬件终端</a></p>
+                        </div>
+                    </li>
+                    <li><a href="solve.html">解决方案 </a>
+                        <div class="nav_down"
+                            style="display: none; height: 394px; padding-top: 22px; margin-top: 0px; padding-bottom: 30px; margin-bottom: 0px;">
+                            <p><a href="">火灾自动报警系统解决方案</a></p>
+                            <p><a href="">电气火灾监控系统解决方案</a></p>
+                            <p><a href="">可燃气体监控系统解决方案</a></p>
+                            <p><a href="">消防给水监测系统解决方案</a></p>
+                            <p><a href="">气体灭火控制系统解决方案</a></p>
+                            <p><a href="">防火门监控系统解决方案</a></p>
+                            <p><a href="">消防视频监控系统解决方案</a></p>
+                            <p><a href="">消防巡检系统解决方案</a></p>
+                            <p><a href="">应急疏散系统解决方案</a></p>
+                        </div>
+                    </li>
+                    <li><a href="case.html">应用案例</a></li>
+                    <li><a href="agent.html">招商代理</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--top-->
+
+    <div class="wraps">
+        <div class="banner">
+            <ul class="clearfloat bannerul">
+                <li style="width: 1855px;"> <img src="images/banner.png">
+                    <div class="ban_text">
+                        <h2>让消防数据产生价值</h2>
+                        <div class="ban_info"> 大数据+消防，运用大数据分析研判、预知预警、辅助决策并指导实战，全面提升消防安全 </div>
+                        <div class="ban_more"> <a href="">立即咨询</a> </div>
+                    </div>
+                </li>
+                <li style="width: 1855px;"> <img src="images/banner.png">
+                    <div class="ban_text">
+                        <h2>让消防数据产生价值</h2>
+                        <div class="ban_info"> 大数据+消防，运用大数据分析研判、预知预警、辅助决策并指导实战，全面提升消防安全 </div>
+                        <div class="ban_more"> <a href="">立即咨询</a> </div>
+                    </div>
+                </li>
+                <li style="width: 1855px;"> <img src="images/banner.png">
+                    <div class="ban_text">
+                        <h2>让消防数据产生价值</h2>
+                        <div class="ban_info"> 大数据+消防，运用大数据分析研判、预知预警、辅助决策并指导实战，全面提升消防安全 </div>
+                        <div class="ban_more"> <a href="">立即咨询</a> </div>
+                    </div>
+                </li>
+                <li style="width: 1855px;"> <img src="images/banner.png">
+                    <div class="ban_text">
+                        <h2>让消防数据产生价值</h2>
+                        <div class="ban_info"> 大数据+消防，运用大数据分析研判、预知预警、辅助决策并指导实战，全面提升消防安全 </div>
+                        <div class="ban_more"> <a href="">立即咨询</a> </div>
+                    </div>
+                </li>
+                <li style="width: 1855px;"> <img src="images/banner.png">
+                    <div class="ban_text">
+                        <h2>让消防数据产生价值</h2>
+                        <div class="ban_info"> 大数据+消防，运用大数据分析研判、预知预警、辅助决策并指导实战，全面提升消防安全 </div>
+                        <div class="ban_more"> <a href="">立即咨询</a> </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="num clearfloat">
+                <li class="active"></li>
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""></li>
+            </ul>
+        </div>
+
+
+    </div>
+
+    <!--右侧返回顶部-->
+
+
+    <script>
+
+        var banner = function () {
+
+            (function (obj) {
+
+                obj.win = {
+
+                    loopFun: function (el, val, bg, color, textColor, fontSize, size, r, time, easing) {
+
+                        var si = r + size / 2;
+
+                        var xy = r + size;
+
+                        if (val < 0 || val > 100) {
+
+                            return alert('请输入0~100之间的数')
+
+                        }
+
+                        var paper = Raphael(el, (r + size) * 2, (r + size) * 2);
+
+                        paper.circle(xy, xy, r).attr({
+
+                            'stroke-width': size,
+
+                            stroke: bg
+
+                        });
+
+                        paper.customAttributes.arc = function (val) {
+
+                            var v = 360 * val / 100,
+
+                                s = -180,
+
+                                e = s + v,
+
+                                x = xy,
+
+                                y = xy,
+
+                                rad = Math.PI / 180,
+
+                                x1 = x + r * Math.sin(-s * rad),
+
+                                y1 = y + r * Math.cos(-s * rad),
+
+                                x2 = x + r * Math.sin(-e * rad),
+
+                                y2 = y + r * Math.cos(-e * rad),
+
+                                path = [
+
+                                    ['M', x1, y1],
+
+                                    ['A', r, r, 0, +(e - s > 180), 1, x2, y2]
+
+                                ];
+
+                            return {
+
+                                path: path
+
+                            };
+
+                        };
+
+                        var an = paper.path().attr({
+
+                            'stroke-width': size,
+
+                            stroke: color,
+
+                            arc: 0.01
+
+                        });
+
+                        an.animate({
+
+                            stroke: color,
+
+                            arc: val
+
+                        }, time, easing);
+
+                        setTimeout(function () {
+
+                            if (val == 100) {
+
+                                paper.circle(xy, xy, r).attr({
+
+                                    'stroke-width': size,
+
+                                    stroke: color
+
+                                });
+
+                            }
+
+                        }, time);
+
+                        paper.customAttributes.txt = function (val) {
+
+                            return {
+
+                                text: Math.floor(val * 100) / 100 + '%'
+
+                            }
+
+                        };
+
+                        var l = paper.text(xy, xy).attr({
+
+                            txt: 0,
+
+                            'fill': textColor,
+
+                            'font-size': fontSize,
+
+                            'font-weight': 700
+
+                        });
+
+                        l.animate({
+
+                            txt: val
+
+                        }, time);
+
+                    },
+
+                    stripFun: function (el, val, bg, color, textColor, fontSize, lenght, size, time, easing) {
+
+                        var s = size / 2;
+
+                        if (val < 0 || val > 100) {
+
+                            return alert('请输入0~100之间的数')
+
+                        }
+
+                        var paper = Raphael(el, lenght, size);
+
+                        paper.path('M 0,' + s + ' L' + lenght + ',' + s).attr({
+
+                            'stroke-width': size,
+
+                            stroke: bg
+
+                        });
+
+                        var strip = paper.path('M 0,' + s + ' L0,' + s).attr({
+
+                            'stroke-width': size,
+
+                            stroke: color
+
+                        });
+
+                        strip.animate({
+
+                            path: 'M 0,' + s + ' L' + lenght / 100 * val + ',' + s
+
+                        }, time, easing);
+
+                        paper.customAttributes.arc = function (val) {
+
+                            return {
+
+                                text: Math.floor(val * 100) / 100 + '%'
+
+                            }
+
+                        };
+
+                        var l = paper.text(lenght / 2, s).attr({
+
+                            arc: 0,
+
+                            'fill': textColor,
+
+                            'font-size': fontSize
+
+                        });
+
+                        l.animate({
+
+                            arc: val
+
+                        }, time);
+
+                    }
+
+                };
+
+            })(window);
+
+            win.loopFun($('.num li.active')[0], 100, '#808080', '#ffffff', 'none', '2px', 2, 7, 5000, 'linear');
+
+            var widths = $(".banner").width();
+
+            var lengths = $('.bannerul li').length;
+
+            $('.bannerul').append($('.bannerul li').first().clone());
+
+            var sid = null;
+
+            var index = 0;
+
+            $('.bannerul li').width(widths)
+
+
+
+            function play() {
+
+                index++;
+
+                if (index == $('.bannerul li').length) {
+
+                    index = 1;
+
+                    $('.bannerul').stop().animate({
+
+                        'margin-left': 0
+
+                    }, 0)
+
+                }
+
+                if (index == $('.bannerul li').length - 1) {
+
+                    $(' .num li').eq(0).addClass('active').siblings().removeClass('active');
+
+                    $(' .num li').eq(0).siblings("li").removeClass('active');
+
+                }
+
+                core(index);
+
+            }
+
+            sid = setInterval(play, 5000);
+
+            $(' .banner').hover(function () {
+
+                clearInterval(sid)
+
+            }, function () {
+
+                sid = setInterval(play, 5000);
+
+            })
+
+            $(".num li").click(function () {
+
+                index = $(this).index();
+
+                core(index);
+
+            })
+
+
+
+            function core(num) {
+
+                $('.bannerul').stop().animate({
+
+                    'margin-left': -($('.bannerul li').eq(0).innerWidth() * num)
+
+                }, 1000);
+
+                $(' .num li').eq(num).addClass('active').siblings().removeClass('active');
+
+                win.loopFun($('.num li.active')[0], 100, '#808080', '#ffffff', 'none', '2px', 2, 7, 5000, 'linear');
+
+                $(' .num li').eq(num).siblings("li").find("svg").remove()
+
+                //          console.log(num)
+
+            }
+
+        }
+
+        banner();
+
+    </script>
+</body>
+
+</html>

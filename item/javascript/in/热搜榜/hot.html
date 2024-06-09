@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rebang</title>
+    <link rel="stylesheet" href="./css/shoufengqing.css">
+    <link rel="stylesheet" href="./css/hot.css">
+</head>
+
+<body>
+    <!-- 切换风琴加载动画 -->
+    <div id="pic">
+        <div class="loader">
+            <div class="slider" style="--i:0"></div>
+            <div class="slider" style="--i:1"></div>
+            <div class="slider" style="--i:2"></div>
+            <div class="slider" style="--i:3"></div>
+            <div class="slider" style="--i:4"></div>
+        </div>
+        <p id="pss">loading......</p>
+    </div>
+    <!-- 下拉列表 -->
+    <select id="type"></select>
+<!-- 模版，克隆内容，设置为页面不显示 -->
+    <div class="news" style="display: none;">
+        <div class="hot"></div>
+        <a href="#" target="_blank">
+            <div class="img"><img src="" width="100%" alt=""></div>
+            <div class="content">
+                <div class="title">我是标题</div>
+                <div class="desc">我是内容</div>
+            </div>
+        </a>
+    </div>
+    <!-- 页码 -->
+    <div id="page"></div>
+    <!-- 获取的内容 -->
+    <div class="box"></div>
+</body>
+<script src="./js/jquery-3.7.0.js"></script>
+<script src="./js/hot.js"></script>
+</html>

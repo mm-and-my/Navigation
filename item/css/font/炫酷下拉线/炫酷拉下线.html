@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title{
+            color: black;
+            text-align: center;
+             transform: 1s; 
+            background-image: url(./素材/火焰.gif);
+            background-attachment: fixed;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .title span{
+            background: linear-gradient(to right,red,rgb(19, 248, 19))no-repeat right bottom;
+            background-size: 0 3px;
+            transition: background-size 1500ms;
+        }
+        .title span:hover{
+            background-position-x: left;
+            background-size: 100% 3px
+        }
+        .q{
+            text-align: center;
+        }
+        .w{
+            text-align: center;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="q">《春晓》</h1>
+    <h4 class="w">孟浩然</h4>
+    <h2 class="title">
+        <span>春眠不觉晓，处处闻啼鸟。<br>
+            夜来风雨声，花落知多少。
+        </span>
+    </h2>
+    
+</body>
+
+</html>

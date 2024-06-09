@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>切换</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 30px;
+            border: 1px solid #ccc;
+            box-shadow: 0 5px 4px #ccc;
+            position: relative;
+        }
+        #box::before{
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            position: absolute;
+            border: 8px solid #000;
+            top: 30px;
+            left: 80px;
+            border-color: #FFF transparent transparent transparent;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+    <p>A<input type="text" class="txt"></p>
+    <p>B<input type="text" class="txt"></p>
+    <p>C<input type="text" class="txt"></p>
+    <p>D<input type="text" class="txt"></p>
+    <p>D<input type="text" class="txt"></p>
+    <p>D<input type="text" class="txt"></p>
+    <script>
+        var txt = document.querySelectorAll(".txt");//得到这四个input，根据类来获取
+        //再用循环，分别为这4个input添加keydown事件
+        for(let i=0;i<txt.length;i++){
+            txt[i].addEventListener("keydown",function(e){
+                //当按回车的时候把焦点定到下一个的input里面，如果是最后一个，回到第一个
+                if(e.keyCode==13){
+                    txt[(i+1)%txt.length].focus();
+                }
+            });
+        }
+            
+    </script>
+    
+</body>
+</html>

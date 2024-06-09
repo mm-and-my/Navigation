@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* .nav1 {
+    margin-top: .3vw;
+     margin-bottom: .4vw; 
+} */
+
+#nav1 {
+    margin-top: 0;
+}
+
+.nav1>ul {
+    text-align: center;
+}
+
+.nav1 h4 {
+    background: rgba(255, 85, 0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(30, 0, 255, 0.9);
+    font-size: 1.6vw;
+}
+
+.show1>ul li {
+    /* display: inline-block; */
+    font-size: 1.5vw;
+    line-height: 3vw;
+}
+
+.show1 ul {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(151, 243, 178, 0.6);
+    flex-wrap: wrap;
+}
+
+.show1>ul li {
+    /* margin: 0 .8vw; */
+    width: 16vw;
+    padding: 0.4vw 0;
+}
+
+.show1>ul>li a {
+    display: block;
+    /* height: 40px; */
+    width: 100%;
+    text-align: center;
+    /* float: left; */
+    /* background: rgb(220, 220, 246,0.6); */
+}
+
+.show1>ul>li a:hover {
+    background-color: rgb(200, 244, 196);
+    color: blue;
+    cursor: pointer;
+}

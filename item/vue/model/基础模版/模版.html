@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+    <script src="./vuex.js"></script>
+    <script src="./vue-router.js"></script>
+</head>
+
+<body>
+    <div id="app">
+
+        <div class="content">
+            <router-view></router-view> <!-- 显示区域 -->
+        </div>
+
+        <div class="nav">
+            <router-link to="/aaa" tag="">#1</router-link><!-- 链接1,tag="div"显示方式为div -->
+            <router-link to="/bbb" tag="">#2</router-link><!-- 链接 2-->
+        </div>
+
+    </div>
+
+
+
+    <!-- 定义模版aaa -->
+    <template id="aaa">
+
+
+    </template>
+
+
+    <!-- 定义模版bbb -->
+    <template id="bbb">
+
+
+    </template>
+</body>
+<script>
+
+    //组件注册aaa
+    const aaa = Vue.component('my-component1', {
+        //模版名称
+        template: "#aaa",
+        //数据
+        data() {
+            return {
+                aaa: [
+                    { 'id': '', 'title': '', 'price': '', src: '' },
+                    { 'id': '', 'title': '', 'price': '', src: '' },
+                    { 'id': '', 'title': '', 'price': '', src: '' }
+                ]
+            }
+        }
+    }
+    );
+
+    //组件注册bbb
+    const bbb = Vue.component('my-component2', {
+        //模版名称
+        template: "#bbb",
+        //数据
+        data() {
+            return {
+
+            }
+        }
+    }
+    );
+
+
+
+
+    //路由的实例
+    const router = new VueRouter({
+        //路由条数定义
+        routes: [
+            //满足路由时打开组件aaa
+            { path: '/', name: "aaa", component: aaa },
+            { path: '/bbb', name: "bbb", component: bbb },
+        ]
+    });
+    //状态管理的仓库对象
+    const store = new Vuex.Store({
+        //状态数据的容器
+        state: {
+
+        },
+        //同步操作模块this.$store.commit('')
+        mutations: {
+
+        },
+        //异步操作模块dispatch this.$store.dispatch('')
+        actions: {
+
+        },
+        //计算属性
+        getters: {
+
+        }
+    });
+
+    //vue的实例
+    const vm = new Vue({
+        //响应式数据
+        data: {
+
+        },
+        //要绑定函数
+        methods: {
+
+        },
+        //v-model：''计算属性,响应式
+        computed: {
+
+        },
+        //过滤器
+        filters: {
+
+        },
+        store: store,
+        router: router
+
+    });
+
+    vm.$mount('#app');//挂载点
+</script>
+
+</html>

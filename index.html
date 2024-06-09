@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigationSix</title>
+    <!-- 浏览页图标 -->
+    <!-- <link rel="apple-touch-icon-precomposed" sizes="120x120" href="./images/logo/logo.ico"> -->
+    <!-- <link rel="icon" href="./images/logo/logo.ico" type="image/x-icon"/> -->
+    <link rel="shortcut icon" href="./images/logo/logo.ico" type="image/x-icon" />
+    <!-- 导航样式第五版本 -->
+    <!-- <link rel="stylesheet" href="./css/navigationfive.css"> -->
+    <!-- 导航样式第六版本 -->
+    <link rel="stylesheet" href="./css/navigationSix.css">
+    <!-- 引用图标样式 -->
+    <link rel="stylesheet" href="./css/iconfont_font/iconfont.css">
+</head>
+
+<body>
+    <div id="navigation">
+        <div class="container">
+            <img src="https://tool.lu/netcard/" class="ipimg">
+            <div class="box_base box_left">
+                <div class="box_h3">
+                    <h3 class="">综合导航</h3>
+                </div>
+                <div class="box_nav"><a href="https://mm-and-my.github.io/Navigation/"
+                        class="iconfont icon-daohang">在线导航</a>
+                    <!-- <a href="#" class="iconfont icon-shipingkaiqi-xue">在线预览</a> -->
+                </div>
+                <div class="box_ul">
+                    <ul>
+                        <li> <router-link to="/" tag='a' class="textbright brighttext" id="basessnav">
+                                <i class=" iconfont icon-jichu3"></i>常用网站</router-link>
+                        </li>
+                        <li> <router-link to="/school" tag='a' class="textbright">
+                                <i class=" iconfont icon-xuexiao"></i>学校部分</router-link>
+                        </li>
+                        <li> <router-link to="/material" tag='a' class="textbright">
+                                <i class=" iconfont icon-sucaiku"></i>素材网站</router-link>
+                        </li>
+                        <li> <router-link to="/download" tag='a' class="textbright">
+                                <i class=" iconfont icon-xiazai"></i>软件下载</router-link>
+                        </li>
+                        <li> <router-link to="/normaluse" tag='a' class="textbright">
+                                <i class=" iconfont icon-qita3"></i>其他网站</router-link>
+                        </li>
+                        <li class="itemshow">
+                            <router-link to="/item" tag='a' class="textbright" id="textbrighttwo">
+                                <i class=" iconfont icon-xuexi"></i>代码项目</router-link>
+                            <!-- 代码项目二级导航开始 -->
+                            <ul class="item_nav">
+                                <li>
+                                    <router-link to="/item/htmlcss" tag='a' class="textbrighttwo textbrightthree">
+                                        <i class="iconfont icon-HTML"></i>HTML+CSS</router-link>
+                                </li>
+                                <li>
+                                    <router-link to="/item/javascript" tag='a' class="textbrighttwo">
+                                        <i class="iconfont icon-js"></i>JavaScript</router-link>
+                                </li>
+                                <li>
+                                    <router-link to="/item/vue" tag='a' class="textbrighttwo">
+                                        <i class="iconfont icon-vue"></i>Vue</router-link>
+                                </li>
+                                <li>
+                                    <router-link to="/item/bootstrap" tag='a' class="textbrighttwo">
+                                        <i class="iconfont icon-bootstrap"></i>BootStrap</router-link>
+                                </li>
+                                <li>
+                                    <router-link to="/item/php" tag='a' class="textbrighttwo">
+                                        <i class="iconfont icon-php"></i>PHP</router-link>
+                                </li>
+                                <li>
+                                    <router-link to="/item/open" tag='a' class="textbrighttwo">
+                                        <i class="iconfont icon-suyuanmaguanli"></i>编程码</router-link>
+                                </li>
+                                <li>
+                                    <router-link to="/item/java" tag='a' class="textbrighttwo">
+                                        <i class="iconfont icon-java"></i>Java</router-link>
+                                </li>
+                                <li>
+                                    <router-link to="/item/mysql" tag='a' class="textbrighttwo">
+                                        <i class="iconfont icon-mysql"></i>Mysql</router-link>
+                                </li>
+                                <li>
+                                    <router-link to="/item/linux" tag='a' class="textbrighttwo">
+                                        <i class="iconfont icon-linux"></i>Linux</router-link>
+                                </li>
+                                <li>
+                                    <router-link to="/item/medium" tag='a' class="textbrighttwo">
+                                        <i class="iconfont icon-guangdianrongmei"></i>Medium</router-link>
+                                </li>
+                                <li>
+                                    <router-link to="/item/else" tag='a' class="textbrighttwo">
+                                        <i class="iconfont icon-qita1"></i>Else</router-link>
+                                </li>
+                            </ul>
+                            <!-- 代码项目二级导航结束 -->
+                        </li>
+                        <li> <router-link to="/wendang" tag='a' class="textbright">
+                                <i class=" iconfont icon-shiyongwendang"></i>在线文档</router-link>
+                        </li>
+                        <li> <router-link to="/elses" tag='a' class="textbright">
+                                <i class=" iconfont icon-qita1"></i>其他内容</router-link>
+                        </li>
+                        <li> <router-link to="/teacher" tag='a' class="textbright">
+                                <i class=" iconfont icon-icon"></i>教学网站</router-link>
+                        </li>
+                        <!--  <li> <router-link to="/beiyong" tag='a' class="textbright">
+                                <i class=" iconfont icon-icon"></i>备用</router-link>
+                        </li> -->
+                        <li> <router-link to="/chatgpt" tag='a' class="textbright">
+                                <i class=" iconfont icon-rengongzhineng"></i>人工智能</router-link>
+                        </li>
+                        <li> <router-link to="/game" tag='a' class="textbright">
+                                <i class=" iconfont icon-youxiyouxiji"></i>娱乐部分</router-link>
+                        </li>
+                        <li> <router-link to="/music" tag='a' class="textbright">
+                                <i class=" iconfont icon-yinle1"></i>音乐网站</router-link>
+                        </li>
+                        <li> <router-link to="/video" tag='a' class="textbright">
+                                <i class=" iconfont icon-shipin1"></i>视频网站</router-link>
+                        </li>
+                        <li> <router-link to="/shop" tag='a' class="textbright">
+                                <i class=" iconfont icon-gouwuchekong"></i>购物网站</router-link>
+                        </li>
+                        <li> <router-link to="/ps" tag='a' class="textbright">
+                                <i class=" iconfont icon-ps"></i>Ps/Pr</router-link>
+                        </li>
+
+                        <li> <router-link to="/tips" tag='a' class="textbright">
+                                <i class=" iconfont icon-tishi"></i>提示内容</router-link>
+                        </li>
+                        <!-- <li> <router-link to="/beiyong2" tag='a' class="textbright">
+                            <i class=" iconfont icon-tishi"></i>备用区域</router-link>
+                    </li> -->
+                </div>
+                <div class="information">
+                    <ul>
+                        <li><router-link to="/" tag='a'><i class="iconfont icon-jichuxinxi"></i>主页</router-link></li>
+                        <li><router-link to="/adminset" tag='a' class="textbright">
+                                <i class="iconfont icon-yonghuguanli_huaban"></i>用户</router-link></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 显示区域 -->
+            <div class="box_base box_right">
+                <router-view></router-view>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 基础内容模板——有图片模板 -->
+    <template id="model_pic">
+        <div class="box_right_bg suofang">
+            <div class="box_right_bg_h3"><a :href="tiaozhuang"><i :class="iconfont"></i>{{h3name}}</a></div>
+            <ul>
+                <li class="itempic" v-for="(session,index) in basessarr" :key="index">
+                    <a :href="session.url" target="_blank">
+                        <div class="item">
+                            <div class="logo"><img :src="session.src" class="" alt="">{{ session.title }}</div>
+                            <div class="desc">{{ session.desc }}</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </template>
+    <!-- 无图片模板 -->
+    <template id="model_nopic">
+        <div class="box_right_bg suofang">
+            <div class="box_right_bg_h3"><a :href="tiaozhuang"><i :class="iconfont"></i>{{h3name}}</a></div>
+            <ul>
+                <li class="itemfonts" v-for="(session,index) in basessarr" :key="index">
+                    <a :href="session.url" target="_blank">
+                        <div class="itemfont">
+                            <div class="logo">{{ session.title }}</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </template>
+    <!-- 代码部分有图片模板 -->
+    <template id="item">
+        <div class="box_right_bg suofang">
+
+            <ul>
+                <div class="box_right_bg_h3_two"><a :href="tiaozhuangzhuye"><i :class="iconfont"></i>{{h3name}}</a>
+                </div>
+                <router-view></router-view>
+                <li class="itempic" v-for="(session,index) in basessarr" :key="index" v-on:click="textbrightfanhui">
+                    <router-link :to="session.url" tag='a' class="textbrighttwo">
+                        <div class="item">
+                            <div class="logo"><img :src="session.src" class="" alt="">{{ session.title }}</div>
+                            <div class="desc">{{ session.desc }}</div>
+                        </div>
+                    </router-link>
+                </li>
+
+            </ul>
+
+        </div>
+    </template>
+    <!-- 代码部分详细模板链接型 -->
+    <template id="itemsection">
+        <div class="box_right_bg suofangtwo">
+            <div class="box_right_bg_h3_two" v-on:click="textbrightfanhui"><router-link :to="tiaozhuang" tag='a'
+                    class="subiao"><i :class="classurl"></i>{{thisitemname}}</router-link></div>
+            <ul>
+                <li class="itemfonts" v-for="(session,index) in basessarr" :key="index">
+                    <a :href="session.url" target="_blank">
+                        <div class="itemfont">
+                            <div class="logo">{{ session.title }}</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </template>
+    <!-- 代码部分二级详细模板路由三级型 -->
+    <template id="itemsectiontwo">
+        <div class="box_right_bg suofangtwo">
+            <div class="box_right_bg_h3_two" v-on:click="textbrightfanhui"><router-link :to="tiaozhuang" tag='a'
+                    class="subiao"><i :class="classurl"></i>{{thisitemname}}</router-link></div>
+            <ul>
+                <li class="itemfonts" v-for="(session,index) in basessarr" :key="index">
+                    <router-link :to="session.url" tag='a' class="textbrighttwo">
+                        <div class="itemfont">
+                            <div class="logo">{{ session.title }}</div>
+                        </div>
+                    </router-link>
+                </li>
+            </ul>
+            <router-view></router-view>
+        </div>
+    </template>
+    <!-- 代码三级部分模板 -->
+    <template id="itemsectionnext">
+        <div class="box_right_bg_next">
+            <p>{{titlethree}} </p>
+            <ul>
+                <li class="itemfonts" v-for="(session,index) in basessarr" :key="index">
+                    <a :href="session.url" target="_blank">
+                        <div class="itemfont">
+                            <div class="logo">{{ session.title }}</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </template>
+
+    <!-- 用户模板 -->
+    <template id="adminset">
+        <div class="box_right_bg suofang" id="adminsetfunction">
+            <div class="form1">
+                <p class="username">导航开发:<input type="text" :placeholder="myname"></p>
+                <p class="outtime">修改时间:<input type="text" :placeholder="outtime"></p>
+                <p class="play">
+                    <router-link to="/adminset/wechat" tag='a'>添加微信</router-link>
+                    <router-link to="/adminset/qq" tag='a'>添加QQ</router-link>
+                    <!-- <router-link to="/adminset/zhifuplay" tag='a'>支付宝</router-link>
+                    <router-link to="/adminset/wechatplay" tag='a'>微信</router-link> -->
+                </p>
+            </div>
+            <router-view></router-view>
+        </div>
+    </template>
+    <!-- 用户模板盒子 -->
+    <template id="adminset_model">
+        <div :class="picplay" id="divpic"></div>
+        </div>
+    </template>
+
+
+    <!-- vue框架基础文件 -->
+    <script src="./js/vue.js"></script>
+    <!-- vue仓库文件 -->
+    <script src="./js/vuex.js"></script>
+    <!-- vue路由文件 -->
+    <script src="./js/vue-router.js"></script>
+    <!-- jquery插件文件 -->
+    <script src="./js/jquery-3.7.0.js"></script>
+    <!-- 导航内容 -->
+    <script src="./js/navigationFiveItem.js"></script>
+    <!-- 导航基础结构vue -->
+    <script src="./js/navigationfive.js"></script>
+    <!-- 开发测试链入 -->
+    <script src="./js/kaifa/cheshi.js"></script>
+</body>
+
+</html>

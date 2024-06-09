@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-size: 20px;
+            color: #000;
+            font-weight: bold;
+        }
+        #show img {
+            width: 300px;
+            height: 500px;
+            filter: grayscale(100%);
+            cursor: pointer;
+            transition: all 5s;
+        }
+
+        #bian .gray {
+            width: 300px;
+            height: 500px;
+            float: left;
+            margin: 10px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        #bian .gray img {
+            width: 100%;
+            position: absolute;
+            transition: all 3s;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="show">
+        <p>2020年4月8日，今晚，让我们一起点亮武汉</p>
+        <img src="./images/1b.jpg" alt="">
+        <img src="./images/2b.jpg" alt="">
+        <img src="./images/3b.jpg" alt="">
+    </div>
+
+    
+    <div id="bian">
+        <div class="gray"><img src="./images/1b.jpg" alt=""><img src="./images/1.jpg" alt=""></div>
+        <div class="gray"><img src="./images/2b.jpg" alt=""><img src="./images/2.jpg" alt=""></div>
+        <div class="gray"><img src="./images/3b.jpg" alt=""><img src="./images/3.jpg" alt=""></div>
+    </div>
+
+    <script>
+        var as = document.querySelectorAll('#show img');
+        for (let i = 0; i < as.length; i++) {
+            as[i].onclick = function () {
+                this.style.filter = 'grayscale(0%)';
+            }
+        }
+
+        var bs = document.querySelectorAll('#bian .gray');
+        for (let i = 0; i < bs.length; i++) {
+            bs[i].onclick = function () {
+                let img = this.querySelectorAll('img');
+                img[1].style.opacity = 0;
+            }
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

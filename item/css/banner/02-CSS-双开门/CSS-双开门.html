@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            width: 1366px;
+            height: 600px;
+            margin: 0 auto;
+            background: url('./images/bg.jpg');
+            overflow: hidden;
+        }
+        
+        /* 1. 左右相同的样式 */
+        .box::before,
+        .box::after {
+            float: left;
+            content: '';
+            width: 50%;
+            height: 600px;
+            /* background-color: pink; */
+            background-image: url(./images/fm.jpg);
+            transition: all .5s;
+        }
+
+        /* 2. 左右的背景图不一样 */
+        .box::after{
+            background-position: right 0;
+        }
+
+        /* 3. hover 效果 */
+        /* 用户鼠标移入box, 控制子级after before移动 */
+        .box:hover::before {
+            transform: translateX(-100%);
+        }
+
+        .box:hover::after {
+            transform: translate(100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <!-- 通过css实现2个标签 -->
+        <!-- <div></div>
+        <div></div> -->
+    </div>
+</body>
+
+</html>

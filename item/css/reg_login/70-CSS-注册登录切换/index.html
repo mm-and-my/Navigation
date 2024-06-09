@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>注册登录界面</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <div class="container panel-active">
+    <!-- 注册 -->
+    <div class="formbox register">
+      <form action="#" class="form" id="form1">
+        <h2 class="title">注 册</h2>
+        <input type="text" placeholder="用户名" class="input" />
+        <input type="email" placeholder="邮箱" class="input" />
+        <input type="password" placeholder="密码" class="input" />
+        <button class="btn">注册</button>
+      </form>
+    </div>
+
+    <!-- 登录 -->
+    <div class="formbox login">
+      <form action="#" class="form" id="form2">
+        <h2 class="title">登 陆</h2>
+        <input type="email" placeholder="邮箱" class="input" />
+        <input type="password" placeholder="密码" class="input" />
+        <a href="#" class="link">忘记密码？</a>
+        <button class="btn">登陆</button>
+      </form>
+    </div>
+
+    <!-- 浮层 -->
+    <div class="overlay-box">
+      <div class="overlay">
+        <div class="panel over-left">
+          <button class="btn" id="signIn">已有账号？立即登陆</button>
+        </div>
+        <div class="panel over-right">
+          <button class="btn" id="signUp">无账号？前往注册</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const signInBtn = document.getElementById("signIn");
+    const signUpBtn = document.getElementById("signUp");
+    const container = document.querySelector(".container");
+
+    signInBtn.addEventListener("click", () => {
+      container.classList.remove("panel-active");
+    });
+
+    signUpBtn.addEventListener("click", () => {
+      container.classList.add("panel-active");
+    });
+  </script>
+</body>
+
+</html>

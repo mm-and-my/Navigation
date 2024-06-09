@@ -1,0 +1,82 @@
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>手机端聊天应用程序</title>
+
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/vicons/vicons-font.css">
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/chat.css">
+	
+</head>
+
+<body class="demo-1">
+	<div class="container">
+		<header class="codrops-header">
+			
+			<h1>手机端聊天应用程序</h1>
+			
+		</header>
+		<div class="content">
+			<div class="chat-window">
+				<div class="chat-messages" style="height: 406px;">
+					<ol class="chat-messages-list">
+						<li class="chat-message chat-message-friend">
+							<div class="chat-message-bubble">嘿</div>
+						</li>
+						<li class="chat-message chat-message-friend">
+							<div class="chat-message-bubble">这是聊天窗口效果的演示
+							</div>
+						</li>
+						
+						<li class="chat-message chat-message-friend">
+							<div class="chat-message-bubble">请在下面的字段中输入内容</div>
+						</li>
+						<li class="chat-message chat-message-friend">
+							<div class="chat-message-bubble">哦，然后按回车：0</div>
+						</li>
+					</ol>
+				</div>
+				<div class="chat-input-bar">
+					<div class="chat-info-container">
+
+					</div>
+					<div class="chat-effect-container" style="filter: none;">
+						<div class="chat-effect-bar"></div>
+					</div>
+					<div class="chat-input-wrapper">
+						<button class="chat-input-tool">
+							<i class="icon icon-camera"></i>
+						</button>
+						<div class="chat-input" contenteditable=""></div>
+						<button class="chat-send">
+							<i class="fa fa-paper-plane"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800">
+			<defs>
+				<filter id="goo">
+					<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+					<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+						result="goo"></feColorMatrix>
+					<feComposite in="SourceGraphic" in2="goo"></feComposite>
+				</filter>
+			</defs>
+		</svg>
+		
+
+	</div><!-- /container -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/TweenMax.min.js"></script>
+	<script src="js/chat.js"></script>
+
+</body>
+
+</html>

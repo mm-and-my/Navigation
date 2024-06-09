@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.jq22.com/jquery/jquery-3.3.1.js"></script>
+    <style>
+        #bodys {
+            background: #fff;
+            transition: 3s;
+        }
+
+        .button {
+            display: inline-block;
+            line-height: 0;
+            cursor: pointer;
+        }
+
+        .btnInner {
+            transition: all 0.6s ease-in-out;
+            line-height: 0;
+            display: inline-block;
+            position: relative;
+            height: 66px;
+            width: 150px;
+            border-radius: 100px;
+            background: #1c80da;
+            box-shadow: inset 0 2px 6px #000, 0 0 3px rgba(0, 0, 0, 0.6);
+            overflow: hidden;
+        }
+
+        .circle {
+            transition: all 0.6s ease-in-out;
+            position: absolute;
+            z-index: 2;
+            overflow: hidden;
+            width: 54px;
+            height: 54px;
+            top: 6px;
+            left: 6px;
+            background: #ffdd08;
+            border-radius: 100px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6), inset -0.5px -1px 3px rgba(0, 0, 0, 0.6), inset 1px 1px 3px rgba(255, 255, 255, 0.8);
+        }
+
+        .circle .circleNight {
+            transition: all 0.6s ease-in-out;
+            position: absolute;
+            top: 0;
+            left: 101%;
+            width: 100%;
+            height: 100%;
+            border-radius: 100px;
+            background: #c7d0da;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6), inset -0.5px -1px 2px rgba(0, 0, 0, 0.6), inset 1px 1px 2px rgba(255, 255, 255, 0.8);
+        }
+
+        .circle .crater {
+            position: absolute;
+            width: 25%;
+            height: 25%;
+            top: 12%;
+            left: 44%;
+            border-radius: 100px;
+            background: #909baf;
+        }
+
+        .circle .crater2 {
+            width: 34%;
+            height: 34%;
+            top: 42%;
+            left: 16%;
+        }
+
+        .circle .crater3 {
+            width: 19%;
+            height: 19%;
+            top: 62%;
+            left: 63%;
+        }
+
+        .haloBox {
+            transition: all 0.6s ease-in-out;
+            position: absolute;
+            z-index: 1;
+            width: 0;
+            height: 0;
+            left: 33px;
+            top: 33px;
+        }
+
+        .haloBox .halo {
+            transition: all 0.6s ease-in-out;
+            width: 92.4px;
+            height: 92.4px;
+            position: absolute;
+            background: #fff;
+            opacity: 0.1;
+            border-radius: 1000px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .haloBox .halo2 {
+            width: 117.4px;
+            height: 117.4px;
+        }
+
+        .haloBox .halo3 {
+            width: 142.4px;
+            height: 142.4px;
+        }
+
+        .clouds {
+            transition: all 0.6s ease-in-out;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.3;
+            transition-delay: 0s;
+        }
+
+        .clouds .cloud {
+            position: absolute;
+            background: #fff;
+            border-radius: 100px;
+            width: 59.4px;
+            height: 59.4px;
+            top: -17%;
+            left: 84%;
+        }
+
+        .clouds2 {
+            transition-delay: 0.3s;
+            top: 19%;
+            left: -5%;
+            opacity: 1;
+            transform: rotate(5deg);
+        }
+
+        .clouds2 .cloud {
+            top: 2%;
+            left: 92%;
+
+        }
+
+        .clouds2 .cloud2 {
+            top: 39%;
+            left: 69%;
+        }
+
+        .clouds .cloud2 {
+            width: 44.88px;
+            height: 44.88px;
+            top: 39%;
+            left: 69%;
+        }
+
+        .clouds .cloud3 {
+            width: 48.18px;
+            height: 48.18px;
+            top: 47%;
+            left: 54%;
+        }
+
+        .clouds .cloud4 {
+            width: 33px;
+            height: 33px;
+            top: 64%;
+            left: 49.7%;
+        }
+
+        .clouds .cloud5 {
+            width: 37.62px;
+            height: 37.62px;
+            top: 64%;
+            left: 32%;
+        }
+
+        .clouds .cloud6 {
+            width: 48.18px;
+            height: 48.18px;
+            top: 81%;
+            left: 13%;
+        }
+
+        .clouds .cloud7 {
+            width: 29.7px;
+            height: 29.7px;
+            top: 85%;
+            left: 7%;
+        }
+
+        .stars {
+            transition: all 0.6s ease-in-out;
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .stars .star {
+            transition: all 0.6s ease-in-out;
+            transform: translateY(-20px);
+            display: inline-block;
+            position: absolute;
+            left: 20%;
+            top: 20%;
+            width: 10px;
+        }
+
+        .stars .star2 {
+            left: 10%;
+            top: 30%;
+            width: 4px;
+            transition-delay: 0.1s;
+        }
+
+        .stars .star3 {
+            left: 20%;
+            top: 48%;
+            width: 3px;
+            transition-delay: 0.15s;
+        }
+
+        .stars .star4 {
+            left: 11%;
+            top: 76%;
+            width: 4px;
+            transition-delay: 0.24s;
+        }
+
+        .stars .star5 {
+            left: 16%;
+            top: 71%;
+            width: 4px;
+            transition-delay: 0.20s;
+        }
+
+        .stars .star6 {
+            left: 23%;
+            top: 79%;
+            width: 5px;
+            transition-delay: 0.26s;
+        }
+
+        .stars .star7 {
+            left: 44%;
+            top: 26%;
+            width: 4px;
+            transition-delay: 0.04s;
+        }
+
+        .stars .star8 {
+            left: 37%;
+            top: 50%;
+            width: 4px;
+            transition-delay: 0.14s;
+        }
+
+        .stars .star9 {
+            left: 44%;
+            top: 68%;
+            width: 6px;
+            transition-delay: 0.12s;
+        }
+
+        .stars .star10 {
+            left: 52%;
+            top: 37%;
+            width: 8px;
+            transition-delay: 0.05s;
+        }
+
+        .night .btnInner {
+            background: #252525;
+        }
+
+        .night .circle {
+            left: 90px;
+        }
+
+        .night .circle .circleNight {
+            left: 0;
+        }
+
+        .night .haloBox {
+            left: 122px;
+        }
+
+        .night .haloBox .halo {
+            opacity: 0.13;
+        }
+
+        .night .clouds {
+            top: 100%;
+            transition-delay: 0.3s;
+        }
+
+        .night .clouds2 {
+            transition-delay: 0s;
+        }
+
+        .night .stars {
+            top: 0;
+        }
+
+        .night .stars .star {
+            transform: translateY(0);
+        }
+
+        .button:hover .circle {
+            transform: translateX(5px);
+        }
+
+        .button:hover .haloBox {
+            transform: translateX(5px);
+        }
+
+        .night:hover .circle {
+            transform: translateX(-5px);
+        }
+
+        .night:hover .haloBox {
+            transform: translateX(-5px);
+        }
+
+        #box {
+            width: 250px;
+            height: 540px;
+            margin: auto;
+            position: relative;
+            cursor: pointer;
+        }
+
+        #mask {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            background-color: #fff;
+            top: 0;
+            left: 0;
+            display: none;
+            overflow: hidden;
+        }
+
+        #pic {
+            filter: blur(10px);
+        }
+
+        #mask_pic {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #biao {
+            border: 1px solid rgb(180, 180, 246);
+            position: absolute;
+            float: none;
+            margin-top: 10%;
+            margin-left: 18%;
+            width: 200px;
+            height: 150px;
+            text-align: center;
+            border-radius: 18px;
+        }
+
+        #tet {
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        #btn {
+            margin-top: 13px;
+            padding-left: 50px;
+            padding-right: 50px;
+            border: 1px solid #ccc;
+        }
+
+        #sel {
+            margin-top: 10px;
+            color: blue;
+            border: #fff;
+        }
+
+        p {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body id="bodys">
+
+    <form action="" id="biao">
+        <select name="sel" id="sel"></select><br>
+        <p>请输入左图中人物</p>
+        <input type="text" name="tet" id="tet"><br>
+        <input type="button" value="确认" id="btn">
+    </form>
+
+    <div id="box">
+        <img src="./images/0.jpg" width="250px" id="pic" alt="" value="可莉">
+        <div id="mask">
+            <img src="./images/0.jpg" width="250px" id="mask_pic" alt="">
+        </div>
+    </div>
+
+    <span class="button" id="button">
+        <span class="btnInner">
+            <span class="circle">
+                <span class="circleNight">
+                    <span class="crater"></span>
+                    <span class="crater crater2"></span>
+                    <span class="crater crater3"></span>
+                </span>
+            </span>
+            <span class="haloBox">
+                <span class="halo"></span>
+                <span class="halo halo2"></span>
+                <span class="halo halo3"></span>
+            </span>
+            <span class="clouds">
+                <span class="cloud"></span>
+                <span class="cloud cloud2"></span>
+                <span class="cloud cloud3"></span>
+                <span class="cloud cloud4"></span>
+                <span class="cloud cloud5"></span>
+                <span class="cloud cloud6"></span>
+                <span class="cloud cloud7"></span>
+            </span>
+            <span class="clouds clouds2">
+                <span class="cloud"></span>
+                <span class="cloud cloud2"></span>
+                <span class="cloud cloud3"></span>
+                <span class="cloud cloud4"></span>
+                <span class="cloud cloud5"></span>
+                <span class="cloud cloud6"></span>
+                <span class="cloud cloud7"></span>
+            </span>
+            <span class="stars">
+                <span class="star">
+                    <svg version="1.1" viewBox="0 0 20 20" height="20" width="20" style="width: 100%; height: 100%;">
+                        <path d="M 0 10 c 5 0 10 -5 10 -10 c 0 5 5 10 10 10 c -5 0 -10 5 -10 10 c 0 -5 -5 -10 -10 -10"
+                            stroke="#fff" stroke-width="1" fill="#fff"></path>
+                    </svg>
+                </span>
+                <span class="star star2">
+                    <svg version="1.1" viewBox="0 0 20 20" height="20" width="20" style="width: 100%; height: 100%;">
+                        <path d="M 0 10 c 5 0 10 -5 10 -10 c 0 5 5 10 10 10 c -5 0 -10 5 -10 10 c 0 -5 -5 -10 -10 -10"
+                            stroke="#fff" stroke-width="1" fill="#fff"></path>
+                    </svg>
+                </span>
+                <span class="star star3">
+                    <svg version="1.1" viewBox="0 0 20 20" height="20" width="20" style="width: 100%; height: 100%;">
+                        <path d="M 0 10 c 5 0 10 -5 10 -10 c 0 5 5 10 10 10 c -5 0 -10 5 -10 10 c 0 -5 -5 -10 -10 -10"
+                            stroke="#fff" stroke-width="1" fill="#fff"></path>
+                    </svg>
+                </span>
+                <span class="star star4">
+                    <svg version="1.1" viewBox="0 0 20 20" height="20" width="20" style="width: 100%; height: 100%;">
+                        <path d="M 0 10 c 5 0 10 -5 10 -10 c 0 5 5 10 10 10 c -5 0 -10 5 -10 10 c 0 -5 -5 -10 -10 -10"
+                            stroke="#fff" stroke-width="1" fill="#fff"></path>
+                    </svg>
+                </span>
+                <span class="star star5">
+                    <svg version="1.1" viewBox="0 0 20 20" height="20" width="20" style="width: 100%; height: 100%;">
+                        <path d="M 0 10 c 5 0 10 -5 10 -10 c 0 5 5 10 10 10 c -5 0 -10 5 -10 10 c 0 -5 -5 -10 -10 -10"
+                            stroke="#fff" stroke-width="1" fill="#fff"></path>
+                    </svg>
+                </span>
+                <span class="star star6">
+                    <svg version="1.1" viewBox="0 0 20 20" height="20" width="20" style="width: 100%; height: 100%;">
+                        <path d="M 0 10 c 5 0 10 -5 10 -10 c 0 5 5 10 10 10 c -5 0 -10 5 -10 10 c 0 -5 -5 -10 -10 -10"
+                            stroke="#fff" stroke-width="1" fill="#fff"></path>
+                    </svg>
+                </span>
+                <span class="star star7">
+                    <svg version="1.1" viewBox="0 0 20 20" height="20" width="20" style="width: 100%; height: 100%;">
+                        <path d="M 0 10 c 5 0 10 -5 10 -10 c 0 5 5 10 10 10 c -5 0 -10 5 -10 10 c 0 -5 -5 -10 -10 -10"
+                            stroke="#fff" stroke-width="1" fill="#fff"></path>
+                    </svg>
+                </span>
+                <span class="star star8">
+                    <svg version="1.1" viewBox="0 0 20 20" height="20" width="20" style="width: 100%; height: 100%;">
+                        <path d="M 0 10 c 5 0 10 -5 10 -10 c 0 5 5 10 10 10 c -5 0 -10 5 -10 10 c 0 -5 -5 -10 -10 -10"
+                            stroke="#fff" stroke-width="1" fill="#fff"></path>
+                    </svg>
+                </span>
+                <span class="star star9">
+                    <svg version="1.1" viewBox="0 0 20 20" height="20" width="20" style="width: 100%; height: 100%;">
+                        <path d="M 0 10 c 5 0 10 -5 10 -10 c 0 5 5 10 10 10 c -5 0 -10 5 -10 10 c 0 -5 -5 -10 -10 -10"
+                            stroke="#fff" stroke-width="1" fill="#fff"></path>
+                    </svg>
+                </span>
+                <span class="star star10">
+                    <svg version="1.1" viewBox="0 0 20 20" height="20" width="20" style="width: 100%; height: 100%;">
+                        <path d="M 0 10 c 5 0 10 -5 10 -10 c 0 5 5 10 10 10 c -5 0 -10 5 -10 10 c 0 -5 -5 -10 -10 -10"
+                            stroke="#fff" stroke-width="1" fill="#fff"></path>
+                    </svg>
+                </span>
+            </span>
+        </span>
+    </span>
+</body>
+<script>
+
+    window.onload = function () {
+        var yuansheng = [
+            ['第一张图片', '可莉'],
+            ['第二张图片', '四神'],
+            ['第三张图片', '达达利亚'],
+            ['第四张图片', '神里凌华'],
+            ['第五张图片', '白术'],
+            ['第六张图片', '甘雨'],
+            ['第七张图片', '艾尔海森'],
+            ['第八张图片', '钟离'],
+            ['第九张图片', '纳西妲'],
+            ['第十张图片', '八重神子'],
+        ];
+
+        var box = document.querySelector("#box");
+        var mask = document.querySelector("#mask");
+        var mask_pic = document.querySelector('#mask_pic');
+        var pic = document.querySelector('#pic');
+        box.addEventListener("mouseover", function (e) {
+            mask.style.display = 'block';
+        })
+        box.addEventListener("mouseout", function (e) {
+            mask.style.display = 'none';
+        })
+
+        box.addEventListener("mousemove", function (e) {
+            var x = e.pageX - box.offsetLeft - mask.offsetWidth / 2;
+            var y = e.pageY - box.offsetTop - mask.offsetHeight / 2;
+            if (x < 0) {
+                x = 0;
+            }
+            if (x > (box.offsetWidth - mask.offsetWidth)) {
+                x = box.offsetWidth - mask.offsetWidth;
+            }
+            if (y < 0) {
+                y = 0;
+            }
+            if (y > (box.offsetHeight - mask.offsetHeight)) {
+                y = box.offsetHeight - mask.offsetHeight;
+            }
+            mask.style.left = x + 'px';
+            mask.style.top = y + 'px';
+
+            mask_pic.style.left = -x + 'px';
+            mask_pic.style.top = -y + 'px';
+        })
+
+        for (index in yuansheng) {
+            /* console.log(index); */
+            var opt = new Option(yuansheng[index][0], index);
+            sel.add(opt);
+        }
+
+        document.querySelector("#pic").value = '可莉';
+        var text = document.querySelector('#tet');
+        text.focus();
+        text.select();
+        document.querySelector('#sel').onchange = function () {
+            pic.style.filter = `blur(10px)`;
+            var f = this.value;
+            document.querySelector("#pic").src = `images/${f}.jpg`;
+            document.querySelector("#mask_pic").src = `images/${f}.jpg`;
+            var da = yuansheng[f][1];
+            /*  console.log(da);  */
+            document.querySelector("#pic").value = da;
+            text.value = '';
+            text.focus();
+            text.select();
+        }
+
+        document.querySelector('#btn').onclick = function () {
+            var tets = text.value;
+            /* console.log(tet); */
+            var daan = document.querySelector("#pic").value;
+            if (tets == daan) {
+                pic.style.filter = `blur(0px)`;
+                alert('恭喜你，猜对了');
+            }
+            else {
+                alert(`猜错了，答案是${daan}哦`);
+                pic.style.filter = `blur(0px)`;
+            }
+        }
+    }
+
+    $(document).ready(function (e) {
+        $('#button').click(function () {
+            toggleClass();
+        })
+        function toggleClass() {
+            $('#button').toggleClass('night')
+        }
+    })
+    
+    var n = 1;
+    document.querySelector("#button").onclick = function () {
+        if (n % 2 == 1) {
+            document.querySelector("#bodys").style.background = 'rgb(0,0,0,0.2)';
+            n++;
+        }
+        else {
+            n++;
+            document.querySelector("#bodys").style.background = '#fff';
+        }
+        console.log(n);
+    }
+</script>
+
+</html>

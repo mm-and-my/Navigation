@@ -1,0 +1,102 @@
+.loadinger {
+    background-color: #222;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 55;
+    margin-top: 0px;
+    top: 0px;
+    left: 0px;
+}
+
+.loadinger-center {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.loadinger-center-absolute {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 50px;
+    #width: 150px;
+    margin-top: -25px;
+    margin-left: -75px;
+}
+
+.objecter {
+    width: 8px;
+    height: 50px;
+    margin-right: 5px;
+    background-color: #b83dba;
+    -webkit-animation: animater 1s infinite;
+    animation: animater 1s infinite;
+    float: left;
+    border: 2px solid #f218c6;
+}
+
+.objecter:last-child {
+    margin-right: 0px;
+}
+
+.objecter:nth-child(10) {
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+
+.objecter:nth-child(9) {
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+
+.objecter:nth-child(8) {
+    -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+}
+
+.objecter:nth-child(7) {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+.objecter:nth-child(6) {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+.objecter:nth-child(5) {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.objecter:nth-child(4) {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.objecter:nth-child(3) {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.objecter:nth-child(2) {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+@-webkit-keyframes animater {
+    50% {
+        -ms-transform: scaleY(0);
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+    }
+}
+
+@keyframes animater {
+    50% {
+        -ms-transform: scaleY(0);
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+    }
+}

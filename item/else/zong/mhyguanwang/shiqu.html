@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>shiqu</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/font_4115446_tn8zguyo6zk/iconfont.css">
+  <script src="./js/bootstrap.js"></script>
+  <script src="./js/jquery-3.7.0.min.js"></script>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark daohanlan">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#juzhos">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse juzhos" id="juzhos">
+
+      <ul class="navbar-nav me-auto ">
+        <li class="nav-item">
+          <a class="" href="./index.html" data-bs-toggle="tooltip" title="回到首页">首页</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="" href="./gongao.html" data-bs-toggle=" tooltip" title="官方公告">公告</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="" href="./jueseneirong.html" data-bs-toggle=" tooltip" title="角色介绍">角色</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="" href="./shiqu.html" data-bs-toggle=" tooltip" title="游戏交流区域">社区</a>
+        </li>
+
+      </ul>
+      <div class="dropdown gengduo">
+        <li type="button" class="dropdown-toggle" data-bs-toggle="dropdown">
+          更多
+        </li>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="./gongao.html">官方</a></li>
+          <li><a class="dropdown-item" href="#pinglunquyu">攻略</a></li>
+          <li><a class="dropdown-item" href="#pinglunquyu">交流平台</a></li>
+          <li>
+            <hr class="dropdown-divider">
+            </hr>
+          </li>
+          <li><a class="dropdown-item" href="./denglu.html">个人中心</a></li>
+        </ul>
+      </div>
+
+
+      <form class="d-flex gengduobtn">
+        <input class="form-control" type="text" placeholder="查找内容">
+        <button class="btn  shousuotubiao" type="button"><i class="iconfont icon-Magnifier"></i></button>
+      </form>
+    </div>
+
+    <div class="touxiangsss"><img src="./images/2.jpeg" alt="" onclick = "window.location.href = './denglu.html'"></div>
+
+    </div>
+  </nav>
+
+
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-sm-6 lunbotu">
+          <div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+            </div>
+            <div class="carousel-inner">
+
+              <div class="carousel-item active">
+                <img src="./images/pinglun/shiqu7.jpg" alt="Los Angeles" class="d-block w-100">
+              </div>
+
+              <div class="carousel-item">
+                <img src="./images/pinglun/shiqu7.png" alt="Chicago" class="d-block w-100">
+              </div>
+
+              <div class="carousel-item">
+                <img src="./images/pinglun/4.jpg" alt="New York" class="d-block w-100">
+              </div>
+
+              <div class="carousel-item">
+                <img src="./images/pinglun/3.jpg" alt="New York" class="d-block w-100">
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-3 headerlibiao">
+          <ul>
+            <li class="list-group-item" onclick = "window.location.href = './gongao.html'">最新公告</li>
+            <li class="list-group-item"  onclick = "window.location.href = '#pinglunquyu'">最新讨论</li>
+            <li class="list-group-item"  onclick = "window.location.href = './jueseneirong.html'">最新内容</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-sm-3 headerbtn">
+          <ul>
+            <li class="iconfont icon-bi" onclick = "window.location.href = '#pinglunquyu'">发布帖子</li>
+            <li class="iconfont icon-tupian" onclick = "window.location.href = '#pinglunquyu'">发布图片</li>
+            <li class="iconfont icon-video" onclick = "window.location.href = '#pinglunquyu'">发布视频</li>
+            <li class="iconfont icon-dianzan" onclick = "window.location.href = './shiqu.html'">收获的赞</li>
+            <li class="iconfont icon-shezhi" onclick = "window.location.href = './shiqu.html'">用户中心</li>
+            <li class="iconfont icon-fenxiang" onclick = "window.location.href = './shiqu.html'">我的分享</li>
+          </ul>
+        </div>
+      </div>
+
+  </header>
+
+  <section>
+
+    <div class="container" id="gungping">
+      <div class="view">
+        <div class="list">
+          <li class="item">
+            <img src="./images/1.jpeg" alt="">
+            <div class="mask"><button class="btn_view"  onclick = "window.location.href = './jueseneirong.html#zongli'">角色介绍<span class="icon"></span></button></div>
+          </li>
+           <li class="item">
+            <img src="./images/2.jpeg" alt="">
+            <div class="mask"><button class="btn_view"  onclick = "window.location.href = './jueseneirong.html#wangye'">角色介绍<span class="icon"></span></button></div>
+          </li> 
+          <li class="item">
+                  <img src="./images/3.jpeg" alt="">
+                  <div class="mask"><button class="btn_view"  onclick = "window.location.href = './jueseneirong.html#naxida'">角色介绍<span class="icon"></span></button></div>
+              </li> 
+          <li class="item">
+            <img src="./images/4.jpeg" alt="">
+            <div class="mask"><button class="btn_view"  onclick = "window.location.href = './jueseneirong.html#wengdi'">角色介绍<span class="icon"></span></button></div>
+          </li>
+          <li class="item">
+            <img src="./images/5.jpeg" alt="">
+            <div class="mask"><button class="btn_view"  onclick = "window.location.href = './jueseneirong.html#hutao'">角色介绍<span class="icon"></span></button></div>
+          </li>
+          <li class="item">
+            <img src="./images/6.jpeg" alt="">
+            <div class="mask"><button class="btn_view"  onclick = "window.location.href = './jueseneirong.html#qiqi'">角色介绍<span class="icon"></span></button></div>
+          </li>
+          <li class="item">
+            <img src="./images/7.jpeg" alt="">
+            <div class="mask"><button class="btn_view"  onclick = "window.location.href = './jueseneirong.html#xinhai'">角色介绍<span class="icon"></span></button></div>
+          </li>
+            <li class="item">
+                  <img src="./images/8.jpg" alt="">
+                  <div class="mask"><button class="btn_view"  onclick = "window.location.href = './jueseneirong.html#linhua'">角色介绍<span class="icon"></span></button></div>
+              </li>  
+          <li class="item">
+            <img src="./images/9.jpeg" alt="">
+            <div class="mask"><button class="btn_view"  onclick = "window.location.href = './jueseneirong.html#keli'">角色介绍<span class="icon"></span></button></div>
+          </li>
+          <li class="item">
+            <img src="./images/10.jpeg" alt="">
+            <div class="mask"><button class="btn_view"  onclick = "window.location.href = './jueseneirong.html#keqing'">角色介绍<span class="icon"></span></button></div>
+          </li>
+           <li class="item">
+            <img src="./images/11.jpeg" alt="">
+            <div class="mask"><button class="btn_view"  onclick = "window.location.href = './jueseneirong.html#leisheng'">角色介绍<span class="icon"></span></button></div>
+          </li> -
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container biankuang" id="pinglunquyu">
+      <div class="row biankuangxian">
+        <!-- 1 -->
+        <div class="col-lg-9">
+          <div class="pinglunqu">
+            <div class="jutipinglunqu">
+              <div class="touxiangs"><img src="./images/pinglun/toux3.png" alt=""></div>
+              <div class="dengji">Lv21</div>
+              <div class="pinglunheader">
+                <ul>
+                  <li class="">06-09-官方</li>
+                  <li class="">原神</li>
+                  <button onclick = "window.location.href = './denglu.html'">关注</button>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-9">
+          <div class="neirong">
+            <div class="tongzhi">
+              <button>官方</button>
+              <p>「琉焰华舞」宵宫头像征集活动作品展示合集</p>
+            </div>
+            <div class="neirongjuti">
+              <p>旅行者们好呀！这里是提瓦特徒步团o((>ω< ))o</p>
+                  <p>「琉焰华舞」宵宫头像征集活动将于今日开奖，今天徒步团给大家整理了一些作品，快来看看吧~</p>
+                  <img src="./images/pinglun/pinglunquxiaog.jpg" alt="">
+                  <ul>
+                    <li class="iconfont icon-shezhi">&nbsp;43万</li>
+                    <li class="iconfont icon-pinglun">&nbsp;1404</li>
+                    <li class="iconfont icon-aixin">&nbsp;19万</li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="col-lg-9">
+          <div class="pinglunqu">
+            <div class="jutipinglunqu">
+              <div class="touxiangs"><img src="./images/pinglun/toux1.png" alt=""></div>
+              <div class="dengji">Lv18</div>
+              <div class="pinglunheader">
+                <ul>
+                  <li class="">06-09-官方</li>
+                  <li class="">原神</li>
+                  <button onclick = "window.location.href = './denglu.html'">已关注</button>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-9">
+          <div class="neirong">
+            <div class="tongzhi">
+              <button>官方</button>
+              <p>「浮世笑百姿」八重神子表情包征集活动作品展示合集</p>
+            </div>
+            <div class="neirongjuti">
+              <p>旅行者们好呀！这里是提瓦特徒步团o((>ω< ))o</p>
+                  <p>「浮世笑百姿」八重神子表情包征集活动将于今日开奖，今天徒步团给大家整理了一些作品，快来看看吧~</p>
+                  <img src="./images/pinglun/shenzi.jfif" alt="">
+
+                  <ul>
+                    <li class="iconfont icon-shezhi">&nbsp;8万</li>
+                    <li class="iconfont icon-pinglun">&nbsp;2609</li>
+                    <li class="iconfont icon-aixin">&nbsp;4万</li>
+                  </ul>
+            </div>
+
+
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="col-lg-9">
+          <div class="pinglunqu">
+            <div class="jutipinglunqu">
+              <div class="touxiangs"><img src="./images/pinglun/toux2.png" alt=""></div>
+              <div class="dengji">Lv26</div>
+              <div class="pinglunheader">
+                <ul>
+                  <li class="">06-05-攻略</li>
+                  <li class="">原神</li>
+                  <button onclick = "window.location.href = './denglu.html'">关注</button>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-9">
+          <div class="neirong">
+            <div class="tongzhi">
+              <button>攻略</button>
+              <p>神工天巧 | 关卡挑战·秘境搭建 攻略合集</p>
+            </div>
+            <div class="neirongjuti">
+              <p>各位旅行者大家好~</p>
+              <p>「神工天巧·宝录之章」活动已经开启。bot为大家带来了活动的关卡挑战与秘境搭建攻略。</p>
+              <img src="./images/pinglun/shengongtianqiao1.jfif" alt="">
+              <img src="./images/pinglun/shengongtianqiao2.jfif" alt="">
+              <img src="./images/pinglun/shengongtianqiao3.jfif" alt="">
+              <ul>
+                <li class="iconfont icon-shezhi">&nbsp;26万</li>
+                <li class="iconfont icon-pinglun">&nbsp;1752</li>
+                <li class="iconfont icon-aixin">&nbsp;1299</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="col-lg-9">
+          <div class="pinglunqu">
+            <div class="jutipinglunqu">
+              <div class="touxiangs"><img src="./images/pinglun/toux4.png" alt=""></div>
+              <div class="dengji">Lv16</div>
+              <div class="pinglunheader">
+                <ul>
+                  <li class="">06-06-官方</li>
+                  <li class="">原神</li>
+                  <button onclick = "window.location.href = './denglu.html'">关注</button>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-9">
+          <div class="neirong">
+            <div class="tongzhi">
+              <button>官方</button>
+              <p>【有奖活动】「神工天巧」晒截图活动开启！</p>
+            </div>
+            <div class="neirongjuti">
+              <p>姆，旅行者们好~</p>
+              <p>在蒙德郊外，宏朗又发现了那一座奇异的秘境，这座秘境的内部结构似乎会随人的心意变化。在他的拜托下，旅行者进入了这座秘境开始调查…</p>
+              <img src="./images/pinglun/shengongtianqiao1.jfif" alt="">
+              <ul>
+                <li class="iconfont icon-shezhi">&nbsp;7万</li>
+                <li class="iconfont icon-pinglun">&nbsp;414</li>
+                <li class="iconfont icon-aixin">&nbsp;6343</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 5 -->
+        <div class="col-lg-9">
+          <div class="pinglunqu">
+            <div class="jutipinglunqu">
+              <div class="touxiangs"><img src="./images/pinglun/toux5.png" alt=""></div>
+              <div class="dengji">Lv08</div>
+              <div class="pinglunheader">
+                <ul>
+                  <li class="">06-10-同人图</li>
+                  <li class="">原神</li>
+                  <button onclick = "window.location.href = './denglu.html'">关注</button>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-9">
+          <div class="neirong">
+            <div class="tongzhi">
+              <button>作者</button>
+              <p>【魈宝生贺】(¯﹃¯)终于完事了</p>
+            </div>
+            <div class="neirongjuti">
+              <p>【姑且叠个甲，这张图无cp向或者全员cb向（防杠）】</p>
+              <p>这张图做了点海报作为miyosummer无料赠送，关注就可以领取~欢迎大家来玩~</p>
+              <img src="./images/pinglun/xiaobaoshengri.jpg" alt="">
+              <ul>
+                <li class="iconfont icon-shezhi">&nbsp;3381</li>
+                <li class="iconfont icon-pinglun">&nbsp;35</li>
+                <li class="iconfont icon-aixin">&nbsp;859</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- <div class="col-lg-3">
+            <div class="huadongqu">
+              
+            </div>
+          </div>  -->
+        </div>
+
+
+        <!-- 6 -->
+        <div class="col-lg-9">
+          <div class="pinglunqu">
+            <div class="jutipinglunqu">
+              <div class="touxiangs"><img src="./images/pinglun/toux6.png" alt=""></div>
+              <div class="dengji">Lv13</div>
+              <div class="pinglunheader">
+                <ul>
+                  <li class="">06-11-同人图</li>
+                  <li class="">原神</li>
+                  <button onclick = "window.location.href = './denglu.html'">关注</button>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-9">
+          <div class="neirong">
+            <div class="tongzhi">
+              <button>作者</button>
+              <p>七七，听话~ 让我看看！</p>
+            </div>
+            <div class="neirongjuti">
+              <img src="./images/pinglun/qiiq.jpg" alt="">
+              <ul>
+                <li class="iconfont icon-shezhi">4205</li>
+                <li class="iconfont icon-pinglun">34</li>
+                <li class="iconfont icon-aixin">1144</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+
+    <ul class="pagination pagination-sm justify-content-center yema">
+      <li class="page-item"><a class="page-link" href="#">上一页</a></li>
+      <li class="page-item "><a class="page-link" href="#">1</a></li>
+      <li class="page-item active"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">4</a></li>
+      <li class="page-item"><a class="page-link" href="#">5</a></li>
+      <li class="page-item"><a class="page-link" href="#">6</a></li>
+      <li class="page-item"><a class="page-link" href="#">下一页</a></li>
+
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <div class="container guanlian">
+      <ul>
+        <span>其他官方账号:</span>
+        <li class="iconfont icon-weixin" onclick = "window.location.href = '#'"></li>
+        <li class="iconfont icon-QQ" onclick = "window.location.href = '#'"></li>
+        <li class="iconfont icon-weibo" onclick = "window.location.href = '#'"></li>
+        <li class="iconfont icon-gengduo1" onclick = "window.location.href = '#'"></li>
+      </ul>
+    </div>
+
+    <div class="container shengming">
+      <ul>
+        <li><a href="#">用户协议</a></li>
+        <li><a href="#">隐私政策</a></li>
+        <li><a href="#">成长关爱</a></li>
+        <li><a href="#">关于我们</a></li>
+        <li><a href="#">加入我们</a></li>
+      </ul>
+
+      <p>健康游戏忠告：抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。</p>
+      <span>© 2020 米哈游版权所有 | 上海米哈游影铁科技有限公司</span>
+    </div>
+
+  </footer>
+
+
+</body>
+<script>
+  window.onload = function () {
+    let timer = null;
+
+    const containerEl = document.querySelector("#gungping");
+    const ulEl = document.querySelector(".list");
+    const view = document.querySelector(".view");
+
+    let len = ulEl.offsetWidth;
+    let x = 0;
+    let speed = 0.3;//移动速度
+    containerEl.onmouseenter = function () {
+      speed = 0.05;//鼠标移入后速度
+    }
+    containerEl.onmouseleave = function () {
+      speed = 0.3;//鼠标离开后速度
+    }
+
+    function animationStart() {
+      timer = setInterval(() => {
+        x += speed;
+        if (x > len) {
+          x = 0;
+        }
+        view.style = `will-change:transform; transform:translateX(${-x}px)`;
+      });
+    }
+
+    animationStart();
+
+    $("#gungping").addEventListener("visibilitychange", function () {
+      if ($("#gungping").visibilityState === "hidden") {
+        clearInterval(timer);
+      }
+      else {
+        animationStart();
+      }
+    })
+
+
+  }
+
+ 
+</script>
+
+</html>
+
+<!--   留言区 
+     <div class="box">
+      <textarea id="context"></textarea>
+      <input type="button" id="btn" value="留言">
+  </div> 
+
+
+     -->

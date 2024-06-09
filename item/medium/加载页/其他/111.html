@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+.jindu div:nth-child(2){
+    position: absolute;
+    margin: auto;
+    width: 200px;
+    height: 10px;
+    border: 1px solid #ccc;
+}
+ .jindu div:nth-child(3){
+    position: absolute;
+    margin: auto;
+    width: 0;
+    height: 10px;
+    border: 1px solid #ccc;
+    background: blue;
+} 
+    </style>
+</head>
+
+<body>
+    <div class="jindu">
+        <span id="percent">0%</span>
+        <div></div>
+        <div id="jindutiao"></div>
+    </div>
+</body>
+<script src="./js/index.js"></script>
+<script>
+    const percentBox = document.querySelector("#percent");
+    const jindutiaoBox = document.querySelector("#jindutiao");
+    let percent = 0;//声明百分比
+    const time = setInterval(() => {
+        //Math.ceil() 取整
+        percent += Math.ceil(Math.random() * 30);
+        if (percent > 100) {
+            percent = 100;
+            clearInterval(time);
+        }
+        percentBox.innerHTML = percent + '%';
+        jindutiaoBox.style.width = `${percent * 2}px`;
+        // console.log( jindutiaoBox.style.Width);
+    }, 1000);
+
+</script>
+
+</html>

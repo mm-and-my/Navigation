@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,li{
+    list-style:circle;
+}
+a{
+    text-decoration: none;
+}
+.box{
+    /* background: pink; */
+    margin-top: 1vh;
+    text-align: left;
+    padding-left: 10vh;
+}
+.aaa{
+    color: #ccc;
+}

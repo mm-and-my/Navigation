@@ -1,0 +1,49 @@
+选择对应项目文件（鼠标右键）
+open git bash here
+
+设置名字邮箱
+git config --global user.name ""
+git config --global user.email ""
+
+查看信息
+git config -l
+
+创建本地仓库
+git init
+
+全选本地仓库文件
+git add *
+
+第一次进入
+git commit -m "first commit"
+
+改名为main
+git branch -m master main
+
+设置远程仓库地址(从github上复制)
+git remote add origin https://github.com/mm-and-my/daohang3.git
+
+开始上传
+git push -u origin main
+
+--错误unable to get local issuer certificate
+
+关闭验证功能
+git config --global http.sslVerify false
+开启验证功能
+git config --global http.sslVerify true
+
+选择账户并授权即可
+
+
+-- 本地服务html配置（github）
+
+--settings
+--pages
+--source--选择 github actions
+--选择 html静态
+--保存--保存--等待配置--复制链接
+
+
+
+

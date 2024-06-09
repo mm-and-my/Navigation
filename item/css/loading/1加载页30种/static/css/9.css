@@ -1,0 +1,236 @@
+.loadinger {
+    background-color: #222;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 55;
+    margin-top: 0px;
+    top: 0px;
+    left: 0px;
+}
+
+#loadinger-center {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#loadinger-center-absolute {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 150px;
+    width: 150px;
+    margin-top: -75px;
+    margin-left: -75px;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.objecter {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 65px;
+    top: 65px;
+    border: 3px solid;
+}
+
+.objecter:nth-child(2n+0) {
+    margin-right: 0px;
+}
+
+#objecter_one {
+    -webkit-animation: objecter_one 2s infinite;
+    animation: objecter_one 2s infinite;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+    background-color: #4285f4;
+}
+
+#objecter_two {
+    -webkit-animation: objecter_two 2s infinite;
+    animation: objecter_two 2s infinite;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+    background-color: #ea4335;
+}
+
+#objecter_three {
+    -webkit-animation: objecter_three 2s infinite;
+    animation: objecter_three 2s infinite;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+    background-color: #fbbc05;
+}
+
+#objecter_four {
+    -webkit-animation: objecter_four 2s infinite;
+    animation: objecter_four 2s infinite;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    background-color: #34a853;
+}
+
+#objecter_five {
+    -webkit-animation: objecter_five 2s infinite;
+    animation: objecter_five 2s infinite;
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+    background-color: #f218c6;
+}
+
+#objecter_six {
+    -webkit-animation: objecter_six 2s infinite;
+    animation: objecter_six 2s infinite;
+    -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+    background-color: #ff0000;
+}
+
+#objecter_seven {
+    -webkit-animation: objecter_seven 2s infinite;
+    animation: objecter_seven 2s infinite;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+    background-color: #3f48cc;
+}
+
+#objecter_eight {
+    -webkit-animation: objecter_eight 2s infinite;
+    animation: objecter_eight 2s infinite;
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+    background-color: #83f150;
+}
+
+#objecter_big {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 50px;
+    top: 50px;
+    -webkit-animation: objecter_big 2s infinite;
+    animation: objecter_big 2s infinite;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    background-color: #b6bac7;
+}
+
+@-webkit-keyframes objecter_big {
+    50% {
+        -webkit-transform: scale(0.5);
+    }
+}
+
+@keyframes objecter_big {
+    50% {
+        transform: scale(0.5);
+        -webkit-transform: scale(0.5);
+    }
+}
+
+@-webkit-keyframes objecter_one {
+    50% {
+        -webkit-transform: translate(-65px, -65px);
+    }
+}
+
+@keyframes objecter_one {
+    50% {
+        transform: translate(-65px, -65px);
+        -webkit-transform: translate(-65px, -65px);
+    }
+}
+
+@-webkit-keyframes objecter_two {
+    50% {
+        -webkit-transform: translate(0, -65px);
+    }
+}
+
+@keyframes objecter_two {
+    50% {
+        transform: translate(0, -65px);
+        -webkit-transform: translate(0, -65px);
+    }
+}
+
+@-webkit-keyframes objecter_three {
+    50% {
+        -webkit-transform: translate(65px, -65px);
+    }
+}
+
+@keyframes objecter_three {
+    50% {
+        transform: translate(65px, -65px);
+        -webkit-transform: translate(65px, -65px);
+    }
+}
+
+@-webkit-keyframes objecter_four {
+    50% {
+        -webkit-transform: translate(65px, 0);
+    }
+}
+
+@keyframes objecter_four {
+    50% {
+        transform: translate(65px, 0);
+        -webkit-transform: translate(65px, 0);
+    }
+}
+
+@-webkit-keyframes objecter_five {
+    50% {
+        -webkit-transform: translate(65px, 65px);
+    }
+}
+
+@keyframes objecter_five {
+    50% {
+        transform: translate(65px, 65px);
+        -webkit-transform: translate(65px, 65px);
+    }
+}
+
+@-webkit-keyframes objecter_six {
+    50% {
+        -webkit-transform: translate(0, 65px);
+    }
+}
+
+@keyframes objecter_six {
+    50% {
+        transform: translate(0, 65px);
+        -webkit-transform: translate(0, 65px);
+    }
+}
+
+@-webkit-keyframes objecter_seven {
+    50% {
+        -webkit-transform: translate(-65px, 65px);
+    }
+}
+
+@keyframes objecter_seven {
+    50% {
+        transform: translate(-65px, 65px);
+        -webkit-transform: translate(-65px, 65px);
+    }
+}
+
+@-webkit-keyframes objecter_eight {
+    50% {
+        -webkit-transform: translate(-65px, 0);
+    }
+}
+
+@keyframes objecter_eight {
+    50% {
+        transform: translate(-65px, 0);
+        -webkit-transform: translate(-65px, 0);
+    }
+}

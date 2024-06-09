@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>万年历</title>
+
+    <style>
+        @media screen and (min-width:500px) and (max-width:1600px) {
+            body {
+                zoom: 78%;
+            }
+        }
+
+        * {
+            background-color: rgb(248, 248, 232);
+        }
+
+        #show {
+            width: 1500px;
+            margin: auto;
+            padding: 50px 10px 50px 10px;
+            margin-left: 50px;
+
+        }
+
+        table {
+            width: 350px;
+            height: 500px;
+            margin: 10px;
+            float: left;
+            text-align: center;
+            font-size: 12px;
+            margin-top: 20px;
+            font-size: 12px;
+        }
+
+        th {
+            background-color: rgb(119, 123, 230);
+            font-weight: bolder;
+        }
+
+        .red {
+            color: red;
+
+        }
+
+        #year {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        #nian{
+            width: 80px;
+            height: 45px;
+            font-size: 22px;
+            text-align: center;
+            border-radius: 15%;
+            border: 1px solid red;
+            color:blue;
+            background-color: rgb(241, 239, 239);
+        }
+        p{
+            font-family: "宋体";
+            font-size: 26px;
+            color: rgb(244, 77, 61);
+            font-weight: bold;
+            
+        }
+
+        #nianfen {
+            font-family: "楷体", Arial, Helvetica, sans-serif;
+            font-size: 26px;
+            margin-top: 25px;
+        }
+
+        td {
+            padding: 10px 3px 10px 3px;
+            font-size: 6px;
+        }
+
+        #yangshi1 {
+            border: 1px solid #ccc;
+            height: 30px;
+            width: 30px;
+        }
+
+        #yangshi2 {
+            font-family: "楷体", Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            background-color: rgb(154, 154, 244);
+            margin-top: 500px;
+        }
+
+        .yangshi3 {
+            font-family: "宋体", Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            color: blue;
+            font-weight: bold;
+        }
+
+        .yangshi4 {
+            font-family: "宋体", Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  <p><select name="nian" id="nian"></select></p> -->
+    <div id="year">
+        <p>年份：<select name="nian" id="nian">
+        </select></p>
+        <div id="nianfen"></div>
+    </div>
+
+    <div id="show"></div>
+
+</body>
+<script src="./js/china.js"></script>
+
+<script>
+
+    var no = calendarFormatter.solar2lunar(2023, 04, 11);
+    console.log(no);
+
+    /* function opt(obj, min, max) {
+        for (let i = min; i <= max; i++) {
+            var opt = new Option(i, i);
+            obj.add(opt);
+        }
+    }
+    var nianmin = 1950;
+    var nianmax = 2100;
+    var nianobj = document.querySelector('#nian');
+    opt(nianobj, nianmin, nianmax); */
+
+    var nian = document.querySelector("#nian");
+    for (let i = 1950; i <= 2100; i++) {
+        var nianss = new Date();
+        if (nianss.getFullYear() == i) {
+            var opt = new Option(i, i, true, true)
+        }
+        else {
+            var opt = new Option(i, i)
+        }
+        nian.add(opt);
+    }
+    nian.onchange = function () {
+        document.querySelector('#show').innerHTML = calender(nian.value);
+    }
+
+    function calender(year) {
+        var html = '';
+        var w = new Date(year, 0).getDay();
+        for (let m = 1; m <= 12; m++) {
+            html += '<table>';
+            html += `<tr id = ${"yangshi1"}><th colspan='7' id = ${"yangshi2"}>${year}年${m}月<th></tr>`;
+            html += `<tr><td class = ${"yangshi3"}>一</td><td class = ${"yangshi3"}>二</td><td class = ${"yangshi3"}>三</td><td class = ${"yangshi3"}>四</td><td class = ${"yangshi3"}>五</td><td class = ${"yangshi4"}>六</td><td class = ${"yangshi4"}>日</td></tr>`;
+            var max = new Date(year, m, 0).getDate();
+            html += '<tr>';
+            for (let d = 1; d <= max; d++) {
+                if (d == 1 && w != 1) {
+                    let blank = w == 0 ? 6 : w - 1;
+                    html += `<td colspan="${blank}"></td>`;
+                }
+
+                var nl = calendarFormatter.solar2lunar(year, m, d);
+                html += `<td class = "${w == 6 || w == 0 ? 'red' : ''}">${d}
+                     <br>${nl.IMonthCn} 
+                    <br>${nl.IDayCn}</td>`;
+
+                var nianfen1 = nl.Animal;
+                var nianfen2 = nl.gzYear;
+                /* console.log(nl.Animal);
+                console.log(nl.gzYear); */
+                document.querySelector('#nianfen').innerHTML = `${nianfen2}年，[${nianfen1}]`;
+
+                if (w == 0 && d != max) {
+                    html += '</tr><tr>';
+                }
+                else if (d == max) {
+                    html += '</tr>'
+                }
+                w = (w + 1) > 6 ? 0 : w + 1;
+
+            }
+            html += '</table>';
+        }
+        return html;
+    }
+
+
+    /* document.querySelector('#show').innerHTML = calender(nianmin);
+    nian.onclick = function () {
+        var nians = document.querySelector('#nian').value;
+        document.querySelector('#show').innerHTML = calender(nians);
+    } */
+    document.querySelector('#show').innerHTML = calender(nian.value);
+
+
+
+
+</script>
+
+</html>

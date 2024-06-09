@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jisuanqi</title>
+    <style>
+        *{background-color:rgb(243, 226, 226) ;}
+        p{
+            font-family: '楷体';
+            font-size: 16px;
+            color: rgb(255, 77, 0);
+            background-color:rgb(235, 235, 235) ;
+        }
+        #a,#b{
+            margin-top: 6px;
+        }
+        #btn1,#btn2,#btn3,#btn4{
+            border-color:rgb(199, 197, 197);
+            background-color:rgb(235, 235, 235);
+            margin-top: 7px;
+            padding-left: 25px;
+            padding-right: 25px;
+           
+        }
+        #result,#chong{
+            margin-top: 9px;
+        }
+        #chong{
+            background-color:rgb(235, 235, 235);
+        }
+        #result{
+            background-color: rgb(241, 238, 238);
+        }
+        #biao{
+            background-color: rgb(235, 235, 235);
+            border: 1px solid blue;
+            border-radius: 5px;
+            height: 250px;
+            width: 400px;
+            text-align: center;
+            margin-top: 10%;
+            margin-left: 32%;
+        }
+#a,#b{
+    background-color: rgb(203, 202, 202);
+    border-radius: 5px;
+
+}
+    </style>
+</head>
+
+<body>
+    <form action="" id="biao" >
+        <p>请输入数字1：<input type="number" name="a" id="a"></p>
+        <p>请输入数字2：<input type="number" name="b" id="b"></p>
+        <input type="button" value="加" id="btn1" onclick="calc(add)">
+        <input type="button" value="减" id="btn2" onclick="calc(jian)">
+        <input type="button" value="乘" id="btn3" onclick="calc(cheng)">
+        <input type="button" value="除" id="btn4" onclick="calc(chu)">
+        <p>结果为：<input type="text" name="result" id="result"></p>
+        <input type="reset" value="重置" id="chong">
+    </form>
+    <script>
+        document.querySelector('#a');
+        a.focus();
+        function add(num1, num2) {
+            return num1 + num2;
+        }
+        function jian(num1, num2) {
+            return num1 - num2;
+        }
+        function cheng(num1, num2) {
+            return num1 * num2;
+        }
+        function chu(num1, num2) {
+            if(num2==0){
+                alert('除数不能为0，请重新输入');
+            }
+            return num1 / num2;
+        }
+       
+        function calc(fn) {
+            var a = parseFloat(document.querySelector('#a').value);
+            var b = parseFloat(document.querySelector('#b').value);
+            document.querySelector('#result').value = fn(a, b);
+        }
+        document.querySelector('#chong');
+      chong.onclick=function(){
+        a.focus();
+        a.select();
+      }
+    </script>
+</body>
+
+</html>

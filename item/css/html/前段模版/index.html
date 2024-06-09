@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="author" content="order by dede58.com/">
+<title>eleui前端页面</title>
+<script type="text/javascript">
+    var bs = {
+        versions: function() {
+            var u = navigator.userAgent, app = navigator.appVersion;
+            return {//移动终端浏览器版本信息
+                trident: u.indexOf('Trident') > -1, //IE内核
+                presto: u.indexOf('Presto') > -1, //opera内核
+                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), //是否为移动终端
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+                iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
+                iPad: u.indexOf('iPad') > -1, //是否iPad
+                webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+            };
+        } (),
+        language: (navigator.browserLanguage || navigator.language).toLowerCase()
+    }
+    if (bs.versions.mobile) {
+        if (bs.versions.iPad) { }
+        else if (bs.versions.android || bs.versions.iPhone || bs.versions.ios) {
+            window.location.href = "http://XXX";
+        }
+    }
+</script>
+<style>
+canvas{ position:absolute; top:0; left:0; z-index:2; }
+
+
+</style>
+<link href="css/animate.min.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link href="css/nav.css" rel="stylesheet" type="text/css">
+
+<link href="css/fwslider.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery(1).js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/fwslider.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="js/Top1.js"></script>
+    <script src="js/Message.js"></script>
+    <script src="js/layer.min.js"></script>
+</head>
+<body>
+
+
+<div class="logo wow fadeInDown"></div>
+
+<div class="phone_head wow fadeInDown"><img src="images/phone.png" alt="phone">XXX</div>
+
+<div class="nav wow fadeInDown">     
+<ul class="sy1_ul">
+    <li class="sy1_li"><a href="#"><img src="images/home.png" alt="home"></a></li>
+    
+    <li class="sy1_li"> <a class="sy1_tit" href="#">产品及解决方案</a>
+        <ul class="sy2_ul">
+        	<li class="sy2_li_1">
+            	<dl>
+            	<dt style="color:#ff3300;">解决方案</dt>
+                <dd><a href="#">整合式互联网营销</a></dd>
+                <dd><a href="#">移动互联网入住</a></dd>
+                <dd><a href="#">直销信息管理系统</a></dd>
+                <dd><a href="#">P2P网贷管理系统</a></dd>
+                <dd><a href="#">产品众筹系统</a></dd>
+                <dd><a href="#">ECShop商城系统</a></dd>
+                <dd><a href="#">O2O商城系统</a></dd>
+                <dd><a href="#">分销商城</a></dd>
+                <dd><a href="#">政府信息门户解决方案</a></dd>
+                <dd><a href="#">企业形象网站解决方案</a></dd>
+                <dd><a href="#">网站无障碍系统解决方案</a></dd>
+                </dl>
+            </li>
+            <li class="sy2_li_1">
+            	<dl class="project_btn">
+            	<dt>产品</dt>
+                <dd><a href="#"><img src="./service-1.png" alt="">营销型网站建设</a></dd>
+                <dd><a href="#"><img src="./service-2.png" alt="">SEO优化</a></dd>
+                <dd><a href="#"><img src="./service-3.png" alt="">微信公众平台</a></dd>
+                <dd><a href="#"><img src="./service-4.png" alt="">腾讯社交广告</a></dd>
+                <dd><a href="#"><img src="./service-5.png" alt="">手机网站建设</a></dd>
+                <dd><a href="#"><img src="./service-6.png" alt="">响应式网站建设</a></dd>
+                <dd><a href="#"><img src="./service-1.png" alt="">直销软件</a></dd>
+                </dl>
+            </li>
+            <li class="sy2_li_1">
+            	<dl class="service_btn">
+            	<dt>增值服务</dt>
+                <dd><a href="#" class="icon1">域名注册</a></dd>
+                <dd><a href="#" class="icon2">服务器租用及托管</a></dd>
+                <dd><a href="#" class="icon3">网站免费备案</a></dd>
+                <dd><a href="#" class="icon4">TQ网站在线客服</a></dd>
+                <dd><a href="#" class="icon5">API端口接入</a></dd>
+                <dd><a href="#" class="icon6">企业标识设计</a></dd>
+                </dl>
+            </li>
+        </ul>
+    </li>  
+      
+  <li class="sy1_li">
+        <a class="sy1_tit " href="#">案例</a>
+        <ul class="sy2_ul">
+            <li class="sy2_li_2"><a href="#" class="bg1"><h3>订制案例</h3><p>查看更多</p></a></li>
+            <li class="sy2_li_2"><a href="#" class="bg2"><h3>模板案例</h3><p>查看更多</p></a></li>
+            <li class="sy2_li_2"><a href="#" class="bg3"><h3>微信案例</h3><p>查看更多</p></a></li>
+            <li class="sy2_li_2"><a href="#" class="bg4"><h3>手机案例</h3><p>查看更多</p></a></li>
+        </ul>
+    </li>
+    
+    <li class="sy1_li">
+        <a class="sy1_tit " href="#">新闻</a>
+        <ul class="sy2_ul">
+            <li class="sy2_li_3">
+                <a href="#">最新公告</a>
+                <a href="#">员工活动</a>
+                <a href="#">我们的观点</a>
+                <a href="#">建站技术</a>
+                <a href="#">SEO文章</a>
+            </li>
+            <li class="sy2_li_3_2" id="top1">
+                <div><span>07</span>2016-04</div>
+                <h3><a href="#">陕西TI科技联盟有限公司致全体员工的一封信</a></h3>
+                <p>尊敬的各位员工朋友们：首先，我代表公司向大家说一声“感谢”。感谢大家为公司发展所付出的辛苦和努力，是你们的汗水和智慧换来百航的今天。</p>
+                <a class="enter" href="javascript:">more</a>
+            </li>
+        </ul>
+    </li>
+
+    
+	<li class="sy1_li"> <a class="sy1_tit " href="#">关于我们</a>
+        <ul class="sy2_ul">
+        	<li class="sy2_li_4">
+            	<ul>
+                	<li><img src="images/map.png" alt="phone"><h4>联系电话</h4><p>XXX</p></li>
+                    <li><img src="images/map.png" alt="email"><h4>企业邮箱</h4><p>XXX<br>XXX</p></li>
+                    <li><img src="images/map.png" alt="add"><h4>公司地址</h4><p>XXX<br></p></li>
+                </ul>
+            </li>
+        	<li class="sy2_li_4">
+            	<a href="#">公司简介</a>
+                <a href="#">相关资质</a>
+                <a href="#">发展历程</a>
+                <a href="#">合作伙伴</a>
+                <a href="#">联系我们</a>
+            </li>
+        </ul>
+	</li>
+    
+</ul>
+</div>
+
+<script type="text/javascript">
+	window.onload = function(){
+		var config = {
+			vx: 1,
+			vy: 1,
+			height: 2,
+			width: 2,
+			count: 100,
+			color: "255, 204, 0",
+			stroke: "255, 204, 0",
+			dist: 6000,
+			e_dist: 20000,
+			max_conn: 10
+		}
+		CanvasParticle(config);
+	}	
+</script>
+
+<script type="text/javascript" src="js/canvas-particle.js"></script>
+
+<div id="banner">
+  <div id="fwslider" style="height: 980px;">
+    <div class="slider_container">
+      <div class="slide slide_item1" style="display: none; z-index: 0; opacity: 1;"> <img src="images/1.jpg" alt="focus"></div>
+      <div class="slide slide_item2" style="opacity: 1; z-index: 0; display: none;"> <img src="images/2.jpg" alt="focus"></div>
+      <div class="slide slide_item3" style="z-index: 0; opacity: 1; display: none;"> <img src="images/3.jpg" alt="focus"></div>
+      <div class="slide slide_item3" style="z-index: 1; opacity: 1; display: block;"> <img src="images/4.jpg" alt="focus"></div>
+    </div>
+    <div class="timers" style="width: 225px;"><div class="timer"><div class="progress" style="width: 100%;"></div></div><div class="timer"><div class="progress" style="width: 100%;"></div></div><div class="timer"><div class="progress" style="width: 100%;"></div></div><div class="timer"><div class="progress" style="width: 92.82%; overflow: hidden;"></div></div></div>
+    <div class="slidePrev" style="left: 0px; top: 440px;"></div>
+    <div class="slideNext" style="right: 0px; top: 440px;"></div>
+  </div>
+</div>
+
+
+
+<div>
+
+<div class="service_title">
+	<div class="line-1 wow fadeInLeft"></div>
+    <div class="line-2 wow fadeInRight"></div>
+	<h2 class="wow fadeInDown">我们能做什么</h2>
+	<em class="wow fadeInDown">what  can  we  do&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em>
+    <p class="wow fadeInDown">让您知道如何利用互联网找到创新营销模式，找到高质量的目标客户</p>
+</div>
+
+<div class="service wow fadeInUp">
+    <div class="hd">
+        <a class="next">〉</a>        
+        <a class="prev">〈</a>
+    </div>
+    <div class="bd">
+        <div class="tempWrap"><ul class="picList">
+            <li style="float: left; width: 318px;">
+                <h2>营销型网站建设</h2>
+                <img src="images/service-1.png">
+                <p>一个好的营销型网站可以带给您什么<br>推广易，流量多  见效快，询盘高</p>
+                <a href="#">了解更多</a>
+            </li>
+            <li style="float: left; width: 318px;">
+                <h2>SEO优化</h2>
+                <img src="images/service-2.png">
+                <p>一个好的营销型网站可以带给您什么<br>推广易，流量多  见效快，询盘高</p>
+                <a href="#">了解更多</a>
+            </li>
+            <li style="float: left; width: 318px;">
+                <h2>微信公众平台</h2>
+                <img src="images/service-3.png">
+                <p>一个好的营销型网站可以带给您什么<br>推广易，流量多  见效快，询盘高</p>
+                <a href="#">了解更多</a>
+            </li>
+            <li style="float: left; width: 318px;">
+                <h2>腾讯社交广告</h2>
+                <img src="images/service-6.png">
+                <p>推广移动应用 推广本地生活服务 推广品牌活动<br>增加在线销量 获得潜在优质粉丝关注</p>
+                <a href="#">了解更多</a>
+            </li>
+            <li style="float: left; width: 318px;">
+                <h2>手机网站建设</h2>
+                <img src="images/service-4.png">
+                <p>一个好的营销型网站可以带给您什么<br>推广易，流量多  见效快，询盘高</p>
+                <a href="#">了解更多</a>
+            </li>
+            <li style="float: left; width: 318px;">
+                <h2>响应式网站建设</h2>
+                <img src="images/service-5.png">
+                <p>一个好的营销型网站可以带给您什么<br>推广易，流量多  见效快，询盘高</p>
+                <a href="#">了解更多</a>
+            </li>
+            <li style="float: left; width: 318px;">
+                <h2>直销软件</h2>
+                <img src="images/service-1.png">
+                <p>一个好的营销型网站可以带给您什么<br>推广易，流量多  见效快，询盘高</p>
+                <a href="#">了解更多</a>
+            </li>
+        </ul></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+jQuery(".service").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:4,trigger:"click"});
+</script>
+
+</div>
+
+<div class="case_content">
+	<h2 class="wow fadeInDown animated">15年累计4000家企业的选择<br>客户的认可是TI科技联盟持续进步和发展的原动力</h2>
+    <ul>
+    	<li class="wow fadeInUp animated">
+        	<img src="images/case_icon_1.png" alt="pc">
+            <h4>网&nbsp;&nbsp;&nbsp;&nbsp;站&nbsp;&nbsp;&nbsp;&nbsp;案&nbsp;&nbsp;&nbsp;&nbsp;例</h4>
+            <h3>WEB SITE CASES</h3>
+            <a href="#">查看更多</a>
+        </li>
+        <li class="wow fadeInUp animated">
+        	<img src="images/case_icon_2.png" alt="pc">
+            <h4>手&nbsp;&nbsp;&nbsp;&nbsp;机&nbsp;&nbsp;&nbsp;&nbsp;案&nbsp;&nbsp;&nbsp;&nbsp;例</h4>
+            <h3>MOBILE SITE CASES</h3>
+            <a href="#">查看更多</a>
+        </li>
+    </ul>
+</div>
+
+<div style="width:100%; margin:0 auto; height:980px; overflow:hidden; background:url(images/bg_program.jpg) center top no-repeat;">
+
+    <div class="service_title">
+        <div class="line-1 wow fadeInLeft animated"></div>
+        <div class="line-2 wow fadeInRight animated"></div>
+        <h2 class="wow fadeInDown animated">行业解决方案</h2>
+        <em class="wow fadeInDown animated">Industry Solutions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em>
+        <p class="wow fadeInUp animated">深入的认识和了解电商企业的各种要素和市场核心需求，提供专业的服务和高效的解决方案。</p>
+    </div>
+
+	<div class="program">
+        <div class="hd wow fadeInDown animated">
+            <ul><li class="on">整合式全网营销</li><li>移动互联网入驻</li><li>直销信息管理系统</li></ul>
+        </div>
+        <div class="bd">
+            <ul>
+                <li class="wow fadeInUp animated">
+                	<div class="imgbox"><img src="images/program_icon_1.png" alt="program"></div><h2>统筹策划方案</h2><p>通过与客户沟通深层挖掘产品和服务的优点和<br>特色制作出指针对于您的网站与营销策划方案。</p>
+                </li>
+                <li class="wow fadeInUp animated" data-wow-delay="0.2s">
+                	<div class="imgbox"><img src="images/program_icon_2.png" alt="program"></div><h2>全网平台建设</h2><p>根据策划方案制作包括营销型网站、移动手机站、<br>微信公众平台，全网终端打通，实现互联网与移动<br>互联网的布局</p>
+                </li>
+                <li class="wow fadeInUp animated" data-wow-delay="0.4s">
+                	<div class="imgbox"><img src="images/program_icon_3.png" alt="program"></div><h2>跟踪迭代运营</h2><p>跟踪客户营销效果，收集营销数据，根据数据分析<br>迭代更新营销方案，实现高转化率</p>
+                </li>
+                <li class="readmore wow fadeInUp animated"><a href="#">了 解 更 多</a></li>
+            </ul>
+            
+            
+        </div>
+    </div>
+    <script type="text/javascript">jQuery(".program").slide();</script>
+
+</div>
+
+
+<div style="width:100%; margin:0 auto; height:660px; overflow:hidden; background:url(images/bg_content.jpg) center top no-repeat;">
+
+	<div class="service_title title_color_fff">
+        <div class="line-1 title_bg_fff wow fadeInLeft animated"></div>
+        <div class="line-2 title_bg_fff wow fadeInRight animated"></div>
+        <h2 class="wow fadeInDown animated">您是否还为这些问题而感到困惑？</h2>
+        <em class="wow fadeInDown animated">Are you confused ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em>
+        <p class="title_color_fff wow fadeInUp animated">无策划、不建站，帮你做定位、挖卖点、塑价值，让您的网络营销事半功倍</p>
+    </div>
+    
+    <ul class="advantage">
+    	<li class="wow fadeInUp animated"><h2>定位不清</h2><p>想要一套有效果的网络营销执行方案</p></li>
+        <li class="wow fadeInUp animated"><h2>不懂推广</h2><p>想快速掌握网络营销推广秘籍</p></li>
+        <li class="wow fadeInUp animated"><h2>设计太差</h2><p>想做一个能自动赚钱的网站</p></li>
+        <li class="wow fadeInUp animated"><h2>选择太难</h2><p>想找一家有实力的网络营销服务商太难</p></li>
+    </ul>
+    <div class="advantage_more wow zoomIn animated""><a href="#">马上咨询帮您解决所有疑惑</a></div>
+
+</div>
+
+
+<div>
+	
+    <div class="newshome" id="newsList">
+        <ul class="wow fadeInUp animated">
+            <li class="newsimg">
+                <div class="newsdate"><span>08</span>2016-09</div>
+                <a href="#"><img src="images/news-pic.jpg" alt="news"></a>
+            </li>
+            <li class="newstxt">
+                <a href="#">
+                    <h2>TI科技联盟2021年春节放假通知</h2>
+                    <em>————————&nbsp;&nbsp;&nbsp;&nbsp;VIEW　369</em>
+                    <p>2015年春节即将到来，根据国务院关于法定节，根据国务院关于法定节，根据国务院关于法定节假日据国务院关于法定节，根据国务院关于法定节假日的规定和TI科技联盟工作实际情况，现将...</p>
+                </a>
+            </li>
+        </ul>
+
+    
+    </div>   
+    
+</div>
+
+
+    <div class="message wow fadeInUp animated">
+        <h2>填写您的项目需求给我们。</h2>
+        <div class="input"><input type="text" placeholder=" * 姓名" id="names" class="text1"><input type="text" placeholder=" * 联系电话" id="tel" class="text2"><input type="text" placeholder=" * 描述您的需求，说明您需要的产品。" id="message" class="text3"><input type="button" value="提交项目需求" id="btnPost" class="submit"></div>
+        <p>*请认真填写需求信息，我们会在24小时内与您取得联系。</p>
+    </div>
+
+
+<div class="footer wow fadeInUp animated">
+
+	<div class="foottxt">
+    	<div class="footcontact">
+       	
+			<ul class="ad"><li class="i1">站式互联网服务</li><li class="i15">年互联网营销经验</li><li class="i4000">家用户信赖之选</li></ul>
+			<img class="logo_foot" src="images/logo.png" alt="logo">
+            <em>eleui.cn 前端元素- Copyright©2020-至今 沪ICP备20001327号</em>
+        </div>
+        <h2>XXX</h2>
+        <p>CONTENT PHONE</p>
+        <h4>XXX)</h4>
+        <p>ADDRESS</p>        
+        <ul>        	
+            <li>
+            	<div>                
+            	<a href="javascript:"><img src="images/qq.png" alt="qq"></a>
+                <a href="javascript:"><img src="images/map.png" alt="map"></a>
+                <a href="javascript:" id="ewm-bt"><img src="images/wechat.png" alt="map"><div id="ewm"><img src="images/ewm.jpg" alt="二维码"></div></a>
+                </div>
+            </li>
+            <li class="foot_menu">
+            	<h3>行业解决方案</h3>
+                <p>
+                	<a href="#">整合式全网营销</a>
+                    <a href="#">移动互联网入驻</a>
+                    <a href="#">直销信息管理系统</a>
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div class="footicp">eleui.cn 前端元素- Copyright©2020-至今 沪ICP备20001327号</div>
+
+</div>
+    <script>
+        function getpic(param) {
+            if (param.length > 5) {
+                return param;
+            }
+            else {
+                return "src/images/news_img.jpg";
+            }
+        }
+    $(function () {
+        $.extend({
+            GetTopNews: function () {
+                $.getJSON(
+                    "/inc/GetTopNewsList.ashx",
+                    {
+                        classid: 1
+                    },
+                    function (data) {
+                        var oul = $("#newsList");
+                        oul.html("");
+                        $.each(data, function (i) {
+                            $("#newsList").append("<ul class=\"wow fadeInUp\">" +
+        	"<li class=\"newsimg\">" +
+            	"<div class=\"newsdate\"><span>" + getDateDay(data[i].c_Posttime) + "</span>" + getDateDate(data[i].c_Posttime) + "</div>" +
+            	"<a href='/Detail/" + data[i].c_id + "' target='_blank'><img style='width:261px;height:180px' src='" + getpic(data[i].c_Titpic) + "' alt=\"news\" /></a>" +
+            "</li>" +
+            "<li class=\"newstxt\">" +
+            	"<a href='/Detail/" + data[i].c_id + "' target='_blank'>" +
+            	"<h2>" + data[i].c_Title + "</h2>" +
+               " <em>————————&nbsp;&nbsp;&nbsp;&nbsp;VIEW　" + data[i].c_Click + "</em>" +
+                "<p>" + data[i].c_Keyword + "</p>" +
+               " </a>" +
+           " </li> </ul>");
+                        });
+                    }
+                );
+            }
+        });
+        $.GetTopNews();
+    });
+
+    </script>
+<script type="text/javascript" src="js/wow.min.js"></script>
+<script>
+if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+	new WOW().init();
+};
+</script>
+<script>
+	var finished = true;
+	function loadData() {
+		$("html,body").animate({scrollTop:$("#content_top").offset().top},1000);//1000是ms
+	}
+	window.onscroll  = function() {
+		if(finished) {
+			finished = false;
+			loadData();
+		}
+	}
+	
+	$(function () {
+		$("#ewm-bt").hover(
+		  function () {
+			  $(this).stop(true, false).find('#ewm').fadeIn(400);
+		  },
+		  function () {
+			  $(this).stop(true, false).find('#ewm').fadeOut(400);
+		  }
+		 );		 
+		
+	});
+	
+//	setTimeout(function(){//2秒后显示ʾ
+//		$("#mydiv").fadeIn();
+//	}, 1000);
+//	setTimeout(function(){//5秒后隐藏
+//		$("#mydiv").fadeOut();
+//	}, 10000);
+//	$(".closemydiv").click(
+//		function(){
+//			$("#mydiv").fadeOut();	
+//		}
+//	);
+
+
+</script>	
+
+<script type="text/javascript" src="js/nav.js"></script>
+
+
+<canvas width="1855" height="909" style="position: absolute; top: 0px; left: 0px;"></canvas>
+</body>
+</html>

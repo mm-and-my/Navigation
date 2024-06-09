@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>denglu</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/jquery-3.7.0.min.js"></script>
+    <style>
+                #bodydenglu {
+                background-image: url(./images/bg1.jpg);
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                background-color: #464646;
+            }
+    </style>
+</head>
+
+<body id="bodydenglu">
+    <div class="box_form">
+        <form>
+            <img src="./images/9.jpeg" alt="">
+            <div class="inputBox">
+                <input type="text" required id="text1">
+                <span>账号</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="password" required>
+                <span>密码</span>
+                <i></i>
+            </div>
+            <div class="links">
+                <a href="#">忘记密码？</a>
+                <a href="#">注册</a>
+            </div>
+            <input type="submit" value="登录" onclick="window.location.href = './index.html'">
+        </form>
+    </div>
+</body>
+<script>
+    $("#text1").focus().select();
+</script>
+</html>

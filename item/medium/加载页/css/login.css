@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width:751px) {
+	.container{
+		position: relative;
+		overflow: hidden;
+		width: 750px;
+		height: 100%;
+	}
+}
+
+@media screen and (max-width:751px) {
+	.container{
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.default {
+    /* background: yellow; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_login {
+    background: url(../images/loading/bg.png);
+    background-size: 100% 100%;
+    flex-direction: column;
+    gap: 4vw;
+    z-index:999;
+}
+.loading_number{
+    position: relative;
+    color: white;
+	font-size: 3vw;
+}
+.loading_banner {
+	position: relative;
+	width: 80%;
+	height: 6vw;
+	background-image: url(../images/loading/进度条.png);
+	background-size: 100% 100%;
+}
+.loading_banner_move{
+    background: url(../images/loading/小恐龙.png);
+    background-size: 100% 100%;
+    position: absolute;
+    width: 10vw;
+	height: 12vw;
+    top: -50%;
+	left: -10%;
+}
+@keyframes yanhua_scale {
+	0%,50%,100%{
+		transform: scale(1);
+		opacity: 1;
+	}
+	25%{
+		transform: scale(.6);
+		opacity: .3;
+	}
+	75%{
+		transform: scale(1.5);		
+		opacity: 1;
+	}
+}
+
+@keyframes baozhu_scale {
+	0%,50%,100%{
+		transform: scale(1);
+	}
+	25%{
+		transform: scale(.8);
+	}
+	75%{
+		transform: scale(1.2);
+	}
+}
+.yanhua {
+	position: absolute;
+	width: 10vw;
+	animation: yanhua_scale 3s linear 0s infinite normal forwards;
+}
+.baozhu{
+	position: absolute;	
+	width: 10vw;
+	animation: baozhu_scale 3s linear 0s infinite normal forwards;
+}
+.show {
+	opacity: 1;
+	transition: all 2s linear; 
+}
+.yanhua1 {
+	left: 10vw;
+	top: 30vw;
+	width: 14vw;
+	animation-delay: -3s;
+}
+ 
+.yanhua2 {
+	left: 40vw;
+	top: 50vw;
+	width: 15vw;
+	animation-delay: -5s;
+} 
+
+.yanhua3 {
+	left: 70vw;
+	top: 110vw;
+	width: 12vw;
+	animation-delay: -7s;
+}
+
+.yanhua4 {
+	left: 20vw;
+	top: 115vw;
+	width: 13vw;
+	animation-delay: -9s;
+}
+
+.yanhua5 {
+	left: 80vw;
+	top: 30vw;
+	width: 12vw;
+	animation-delay: -11s;
+}
+.baozhu1 {
+	left: 20vw;
+	bottom: 25vw;
+	width: 17vw;
+}
+
+.baozhu2 {
+	left: 66vw;
+	bottom: 25vw;
+	width: 14vw;
+}

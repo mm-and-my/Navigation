@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>简易留言板DOM节点</title>
+    <style>
+        .box {
+            width: 500px;
+            margin: auto;
+        }
+        #context {
+            width: 100%;
+            height: 200px;
+        }
+        .box ul li {
+            width: 100%;
+            margin: auto;
+            line-height: 30px;
+            margin-bottom: 3px;
+            padding: 4px;
+            word-break: break-all;
+            list-style-type:none;
+        }
+        .box ul li a {
+            float: right;
+        }
+        .box ul li:nth-child(odd) {
+            background-color: rgba(249, 110, 110, 0.379);
+        }
+        .box ul li:nth-child(even) {
+            background-color: rgb(129, 129, 237);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <textarea id="context"></textarea>
+        <input type="button" id="btn" value="留言">
+        <ul>
+            <li>dd<a href="#">删除</a></li>
+
+        </ul>
+    </div>
+
+</body>
+<script>
+    var text = document.querySelector('#context');
+    var ul = document.querySelector(".box ul");
+    document.querySelector('#btn').onclick = function () {
+        if(text.value == ""){
+            alert('填写的留言内容不能为空白');
+            text.focus();
+            return false;
+        }
+        else{
+        var li = document.createElement('li');
+        li.innerHTML = `${text.value}<a href="#">删除</a>`;
+        ul.insertBefore(li, ul.childNodes[0]);
+    }
+        var a = document.querySelectorAll(".box ul li a");
+        for (let i = 0; i < a.length; i++) {
+            a[i].onclick = function () {
+                if(confirm("您是否要删除")){
+                    ul.removeChild(this.parentNode);
+                }
+               
+            }
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>猜猜那个键可以进来：<input type="text" name="tet" id="tet"></p>
+    <div id="show">您按的是：</div>
+</body>
+
+<script>
+    var text = document.querySelector('#tet');
+    var show = document.querySelector('#show');
+    document.addEventListener("keyup", function (e) {
+
+
+        if (e.keyCode == '13') {
+            text.focus();
+            text.select();
+            show.innerHTML = `您按的是：${e.key}`;
+        }
+        else {
+            /*  alert('你按的键不对'); */
+            show.innerHTML = `您按的是：${e.key}`;
+        }
+    })
+
+
+</script>
+
+</html>

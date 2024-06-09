@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/huangxingjindutiao.css">
+</head>
+
+<body>
+    <div class="a">
+        <svg>
+            <circle cx="70" cy="70" r="70" class="c" />
+            <circle id="circle" cx="70" cy="70" r="70" class="c" />
+        </svg>
+        <div class="b">
+            <h3>
+                <span id="percent">0</span>
+                <span>%</span>
+            </h3>
+        </div>
+    </div>
+</body>
+<script>
+    const percentBox = document.querySelector("#percent");
+    const circle = document.querySelector("#circle");
+    let percent = 0;//声明百分比
+    //每间隔1.5s，进度条随机增加一个随机百分比
+    const timer = setInterval(() => {
+        percent += Math.ceil(Math.random() * 30);
+        if (percent > 100) {
+            percent = 100;
+            clearInterval(timer);
+        }
+        //设置样式
+        percentBox.innerHTML = percent;
+        circle.style.strokeDashoffset = `calc(440 - 440 * (${percent}) / 100)`;
+    }, 1500);
+</script>
+
+</html>

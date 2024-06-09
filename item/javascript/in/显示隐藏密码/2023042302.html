@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pwd {
+            width: 200px;
+            position: relative;
+        }
+
+        #password {
+            width: 200px;
+            height: 50px;
+            font-size: 24px;
+        }
+
+        .pwd img {
+            position: absolute;
+            right: 0;
+            top: 0;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="pwd">
+        <input type="password" name="" id="password">
+        <img src="./images/close.png" alt="">
+    </div>
+    <script>
+        document.querySelector('.pwd>img').onclick = function () {
+            var a = document.querySelector('#password').type;
+            console.log(a);
+            if (a == 'password') {
+                document.querySelector('#password').type = "text";
+                this.src = './images/open.png';
+            }
+            else{
+                document.querySelector('#password').type = "password";
+                this.src = './images/close.png';
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

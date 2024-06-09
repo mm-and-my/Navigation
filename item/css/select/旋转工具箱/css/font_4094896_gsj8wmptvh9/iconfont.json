@@ -1,0 +1,72 @@
+{
+  "id": "4094896",
+  "name": "6",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "77828",
+      "name": "收藏",
+      "font_class": "shoucang",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "765354",
+      "name": "购物车",
+      "font_class": "shouye",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "829225",
+      "name": "礼物",
+      "font_class": "liwu",
+      "unicode": "e685",
+      "unicode_decimal": 59013
+    },
+    {
+      "icon_id": "3456457",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e70f",
+      "unicode_decimal": 59151
+    },
+    {
+      "icon_id": "4055804",
+      "name": "房子",
+      "font_class": "fangzi",
+      "unicode": "e8ff",
+      "unicode_decimal": 59647
+    },
+    {
+      "icon_id": "4954935",
+      "name": "金额",
+      "font_class": "jine",
+      "unicode": "e658",
+      "unicode_decimal": 58968
+    },
+    {
+      "icon_id": "5387527",
+      "name": "加号",
+      "font_class": "jiahao",
+      "unicode": "eaf3",
+      "unicode_decimal": 60147
+    },
+    {
+      "icon_id": "7638986",
+      "name": "功能",
+      "font_class": "gongneng",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "8288885",
+      "name": "信封",
+      "font_class": "xinfeng",
+      "unicode": "e857",
+      "unicode_decimal": 59479
+    }
+  ]
+}

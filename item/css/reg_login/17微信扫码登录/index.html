@@ -1,0 +1,340 @@
+<html>
+    <head>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/ele.js"></script>
+    </head>
+    <body>
+        <div class="m-regForm m-regForm-new">
+            <div class="textLine">
+                <span>注册用户</span>
+                <span class="number">26,473,790<span class="font12">+</span></span>
+                <span class="sep"></span>
+                <span>安全运行</span>
+                <span class="number">4100<span class="font12">天+</span></span>
+                <span class="sep"></span>
+                <span>覆盖行业</span>
+                <span class="number">100<span class="font12">+</span></span>
+            </div>
+            <div class="regBox" style="height: 440px;">
+                <div class="u-borderTop u-borderTop-new">
+                    
+                    <div class="wxRegTips" style="display: none;">
+                        <div class="wxRegTip" onclick="changeLoginType(2);">
+                            <span class="wxRegDesc">
+                                <span class="login_WeChatI" title="微信登录"></span>
+                                微信注册
+                                <span class="tipTriangle"></span>
+                                <span class="tipTriangle2"></span>
+                            </span>
+                        </div>
+                        <span><a class="login_WeChatCode" href="javascript:;" onclick="changeLoginType(2);" title="微信登录"></a></span>
+                    </div>
+                    <div class="userRegTips" style="display: block;">
+                        <div class="userRegDesc" onclick="userReg()">
+                            手机/邮箱注册
+                            <span class="tipTriangle"></span>
+                            <span class="tipTriangle2"></span>
+                        </div>
+                        <span style=""><a class="login_UersCode" onclick="userReg()" href="javascript:;"></a></span>
+                    </div>
+                    
+                </div>
+        
+                
+                <div class="weChatTipsDiv" style="">
+                    <div class="weChatIcon3"></div>
+                    <div class="weChatTit">微信扫码注册</div>
+                </div>
+                <div class="weChatContent" style="">
+                    <div class="wxLoginCode" style="transform: translate(0px, 0px);">
+                        <span class="scanGuideTips"><span class="login_WeChatScanner" title="微信登录"></span>打开微信，扫一扫注册</span>
+                        <div class="wxLoginIframe" style="margin-top:0px;width: 100%;height: 100%"><iframe src="img/MakeQRCode.png" style="height: 280px; width: 200px; border: none;margin-left: 20px;"></iframe></div>
+                        <div class="wxQrCode-shade-container" style="display: none;">
+                            <div class="refresh-icon"></div>
+                            <span class="refresh-tips">二维码已失效，请刷新重扫</span>
+                            <div class="wxQrCode-shade"></div>
+                        </div>
+                    </div>
+                    <div class="scanGuide" style="display: none;"></div>
+                </div>
+                
+        
+                <div class="content" id="contentId" style="display: none;">
+                    <div class="u-input form-item-acct">
+                        <input type="text" placeholder="请输入手机号或邮箱" autocomplete="new-password" id="acct" maxlength="50">
+                        <span class="msg" style="display: none;">
+                            <i></i><font></font>
+                        </span>
+                    </div>
+                    <div class="u-input form-item-password hide">
+                        <input type="password" placeholder="密码为4-20位英文+数字" autocomplete="new-password" id="pwd" onpaste="return false;" maxlength="20">
+                        <i class="vis z-on"></i>
+                        <span class="msg" style="display: none;">
+                            <i></i><font></font>
+                        </span>
+                    </div>
+                    <div class="u-input form-item-code" id="verifyCodeLine">
+                        <input class="short" type="text" placeholder="请输入验证码" autocomplete="off" id="verifyCode" maxlength="4">
+                        <span class="code-btn" id="verifyCodeBtn">获取验证码</span>
+                        <span class="msg" style="display: none;">
+                            <i></i>
+                            <div class="code-msg">
+                                <font id="verifyCodeMsg"></font>
+                                <div class="code-msg-tips">收不到？<span class="code-msg-tips-lh">验证码获取指引</span>
+                                    <div class="code-msg-tips-hover">
+                                        您可查看手机短信-骚扰拦截，找回被屏蔽的验证码;<br>
+                                        或者尝试下述操作后重新获取验证码：<br>
+                                        1.手机号码是否填写正确<br>
+                                        2.确认手机号码无欠费<br>
+                                        3.打开“飞行模式”，2秒后关闭“飞行模式”<br>
+                                        或者致电客服：400-039-90000
+                                    </div>
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                    
+        
+                    
+                    <div class="m-mobiVerify" style="display: none;">
+                        <div class="title">
+                            <span class="line"></span>
+                            <font>应《网络安全法》要求，请用手机号验证实名</font>
+                        </div>
+                        <div class="u-input form-item-phone">
+                            <input type="text" placeholder="请输入手机号进行验证" autocomplete="new-password" id="mobile" maxlength="11">
+                            <span class="msg" style="display: none;">
+                                <i></i><font></font>
+                            </span>
+                        </div>
+                        <div class="u-input form-item-code" id="mailVerifyCodeLine">
+                            <input class="short" type="text" placeholder="请输入短信验证码" autocomplete="off" id="mobileCode" maxlength="4">
+                            <span class="code-btn" id="mobileCodeBtn">获取验证码</span>
+                            <span class="msg" style="display: none;">
+                                <i></i>
+                                <div class="code-msg">
+                                    <font id="mobileCodeMsg"></font>
+                                    <div class="code-msg-tips">收不到？<span class="code-msg-tips-lh">验证码获取指引</span>
+                                        <div class="code-msg-tips-hover">
+                                            您可查看手机短信-骚扰拦截，找回被屏蔽的验证码;<br>
+                                            或者尝试下述操作后重新获取验证码：<br>
+                                            1.手机号码是否填写正确<br>
+                                            2.确认手机号码无欠费<br>
+                                            3.打开“飞行模式”，2秒后关闭“飞行模式”<br>
+                                            或者致电客服：400-039-90000
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    
+        
+                    
+                    
+                    <div class="regService">
+                        <label>
+                            <label class="u-checkBox">
+                                <input type="checkbox" id="agree" checked="checked"><i></i>
+                            </label>
+                            我同意<a href="http://www.eleui.cn" target="_blank" rel="nofollow" class="regService_a">《前端元素平台注册协议》</a>
+                        </label>
+                        <div id="regServiceMsg" class="regServiceMsg"></div>
+                    </div>
+                    
+                </div>
+                <div class="bottomBar" style="display: none;">
+                    <font class="msg" id="regMsg"></font>
+                    <button class="u-bigBtn" id="regBtn">免费注册</button>
+                </div>
+                
+                <div class="toLogin" style="position: relative;">
+                    已有帐号？<a hidefocus="true" href="javascript:;" onclick="mRegForm.login();">直接登录</a>
+                </div>
+                
+            </div>
+        </div>
+        <script type="text/javascript">
+
+
+      //关注微信公众号注册轮询
+        window.clearInterval(focusWeChatCheck);
+	    var focusWeChatCheck = window.setInterval(refreshCount, 900);
+        $(function(){
+
+            $(".weChatContent").hover(function(){},function(){
+	   	       $(".scanGuide").css("display", "none");
+		       if(Ele.isIE8()){
+			      $(".wxLoginCode").css("left", "0px");
+		        }else{
+			       $(".wxLoginCode").css("transform", "translate(0px, 0px)");
+		        }
+	         });
+             $(".wxLoginCode").hover(function(){
+		          if(Ele.isIE8()){
+			         $(".wxLoginCode").css("left", "-149px");
+		          }else{
+			        $(".wxLoginCode").css("transform", "translate(-149px, 0px)");
+	          	  }
+		          $(".scanGuide").css("display", "block");
+	         },function(){});
+            
+
+
+
+
+        })
+        function userReg(){
+	   	    changeLoginType(1);
+		    window.clearInterval(focusWeChatCheck);
+	    }
+        function changeLoginType(i, visit){
+	  	   if(i==1){//帐号登录
+			  $('.contentIframe').hide();//二维码影藏
+			  $('#contentId').show();//帐号框显示
+			  $('.bottomBar').show();//注册入口
+			  $('.wxRegTips').show();//右上角
+			  $('.userRegTips').hide();
+			  $('.regBox').css("height","auto");
+			  $(".weChatContent").hide();
+			  $(".weChatTipsDiv").hide();
+		   }else{//微信登录
+			 
+			  if(true) {
+				 $('.m-regForm .toLogin').css("position", "relative");//登录css调整
+			 	 wxLoginCodeMove();
+				 bindWeChat();
+			   }else{
+				wxLoginCodeMove();
+				focusWeChat()
+			   }
+			   $('.wxRegTips').hide();//右上角wx登录文案影藏，图标显示
+			   $('.userRegTips').show();//右上角user登录文案显示，图标影藏
+			   $('#contentId').hide();//帐号输入影藏
+			   $('.bottomBar').hide();//注册影藏
+			   $('.regBox').css("height", "440px");//固定高度
+			   $(".weChatContent").show();//微信框展示
+			   $(".weChatTipsDiv").show();//头部微信文案展示
+            }
+		
+	      }
+          
+	function wxLoginCodeMove() {
+		if(Ele.isIE8()){
+			$(".wxLoginCode").css("left", "-149px");
+		}else{
+			$(".wxLoginCode").css("transform", "translate(-149px, 0px)");
+		}
+		$(".scanGuide").css("display", "block");
+		setTimeout(function(){
+			$(".scanGuide").css("display", "none");
+			if(Ele.isIE8()){
+				$(".wxLoginCode").css("left", "0px");
+			}else{
+				$(".wxLoginCode").css("transform", "translate(0px, 0px)");
+			}
+		},1500);
+	}
+    function bindWeChat(){
+
+		//创建一个iframe，访问微信授权二维码
+		var urlForSetCookie = "微信二维码链接";
+		var $iframe = $('<iframe>');
+		$iframe.attr("src", urlForSetCookie);
+		//视觉不可见
+		$iframe.css({
+			height: '280px',
+			width: '600px',
+			border: 'none'
+		});
+		if(Ele.isIE8()){
+			$iframe.attr("frameborder", "0");
+		}
+
+		// 如果是初始化显示微信扫码注册且是首次获取二维码
+		if (true && ((bindWeChat.getCodeNum = bindWeChat.getCodeNum ? ++bindWeChat.getCodeNum : 1) == 1)) {
+			window.onload = function () {
+				$('.wxLoginIframe').empty();
+				$('.wxLoginIframe').append($iframe);
+				$('.wxLoginIframe').show();
+			};
+		} else {
+			$('.wxLoginIframe').empty();
+			$('.wxLoginIframe').append($iframe);
+			$('.wxLoginIframe').show();
+		}
+
+		if(true){
+		
+		}
+
+		//两分钟后提示重新获取二维码
+		$('.wxQrCode-shade-container').hide();
+		var time = 120000;
+		window.clearTimeout(refreshWxQrCode);
+		var refreshWxQrCode = window.setTimeout(function () {
+			Portal.logDog(4000259,3);
+			$('.wxQrCode-shade-container').show()
+		}, time);
+
+		
+	}
+    function focusWeChat(){
+		
+		window.clearInterval(focusWeChatCheck);
+		focusWeChatCheck = window.setInterval(refreshCount, 900);
+
+		//两分钟后提示重新获取二维码
+		$('.wxQrCode-shade-container').hide();
+		var time = 120000;
+		window.clearTimeout(refreshWxQrCode);
+		var refreshWxQrCode = window.setTimeout(function(){
+			
+			window.clearInterval(focusWeChatCheck);
+			$('.wxQrCode-shade-container').show();
+		}, time);
+	}
+	function refreshCount() {
+		if(true || $(".weChatContent").css('display') =='none' || $(".weChatContent").css("display")=='none' ){
+			window.clearInterval(refreshCount);
+			return false;
+		}
+		getFocusWeChatImg();
+	}
+
+    function getFocusWeChatImg(){
+	
+		
+		// $.ajax({
+		// 	type: "post",//使用post方法访问后台
+		// 	url: '/ajax/reg_h.jsp',
+		// 	data:{
+		// 		"cmd":"getFocusWeChatInfo",
+		// 		"weChatType":weChatType,
+		// 		"ticketId": fkRegTicketId
+		// 	},
+		// 	error: function(){
+		// 		Fai.ing('服务繁忙，请稍候重试',false);
+		// 	},
+		// 	success: function(result){
+		// 		var data = jQuery.parseJSON(result);
+		// 		if(data.success){
+		// 			if(data.focus){
+		// 				//跳转
+		// 			
+		// 			}else{
+		// 				//继续
+			
+
+		// 			}
+		// 		}else{
+		// 			// console.log(data.msg);
+		// 		}
+		// 	}
+		// });
+	}
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qqSelectPhone</title>
+    <style>
+        .title {
+            width: 600px;
+            font-size: 22px;
+            color: blue;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px #000;
+            text-align: center;
+        }
+
+        .hengxian {
+            width: 100%;
+            height: 20px;
+            background: rgb(141, 141, 225);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            margin-top: 500px;
+
+        }
+
+        .hengxian2 {
+            width: 90%;
+            height: 12px;
+            background: rgb(88, 234, 139);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            margin-top: 4px;
+        }
+
+        .inputclass {
+            height: 30px;
+            width: 600px;
+            text-align: center;
+            border-radius: 5px;
+
+        }
+
+        .btn {
+            display: block;
+            width: 400px;
+            margin: auto;
+            height: 30px;
+            border-radius: 5px;
+            color: #000;
+            font-weight: bold;
+            font-size: 16px;
+            text-shadow: 1px 1px 1px #fff;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            color: red;
+        }
+
+        .btn_p {
+            width: 600px;
+        }
+
+        #show2,
+        #show {
+            width: 600px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            margin: 10px 0;
+            position: absolute;
+            margin-left: 20px;
+
+        }
+
+        #show {
+            margin-top: 400px;
+        }
+
+        #show2 {
+            margin-top: 30px;
+        }
+
+        #show2>a {
+            text-decoration: none;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .aaa {
+            text-decoration: none;
+        }
+
+        .a1 {
+            /* background: red; */
+            width: 600px;
+            padding: 20px;
+            position: absolute;
+            top: 50px;
+            left: 20px;
+        }
+
+        .a2 {
+            /* background: blue; */
+            width: 600px;
+            padding: 20px;
+            position: absolute;
+            top: 50px;
+            right: 20px;
+        }
+
+        #show3,
+        #show4 {
+            position: absolute;
+            right: 20px;
+            /* background: yellow; */
+            top: 430px;
+            width: 600px;
+            text-align: center;
+            margin-left: 30px;
+        }
+
+        #show4 {
+            top: 580px;
+        }
+
+        .showhengxian {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://zy.xywlapi.cc/" class="aaa" target='_blank'>API调用网站</a>
+    <div class="a1">
+        <p class="title">QQ---Select---Phone</p>
+        <p><input type="number" placeholder="qqAccount" id="text" class="inputclass"></p>
+        <p class="btn_p"><input type="button" value="提交" id="btn" class="btn"></p>
+        <p class="title">Phone---Select---Weibo</p>
+        <p><input type="text" id="phoneSelect" placeholder="phone" class="inputclass"></p>
+        <p class="btn_p"><input type="button" value="查找" id="btn2" class="btn"></p>
+    </div>
+
+
+    <div class="a2">
+        <p class="title">Phone---Select---QQ</p>
+        <p><input type="number" placeholder="phoneAccount" id="text2" class="inputclass"></p>
+        <p class="btn_p"><input type="button" value="提交" id="btn3" class="btn"></p>
+        <p class="title">weiboID---Select---Phone</p>
+        <p><input type="number" placeholder="weiboidAccount" id="text3" class="inputclass"></p>
+        <p class="btn_p"><input type="button" value="提交" id="btn4" class="btn"></p>
+    </div>
+
+
+
+    <div id="show"></div>
+    <div class="hengxian showhengxian">
+        <div class="hengxian2"></div>
+    </div>
+    <div id="show2"></div>
+    <div id="show3"></div>
+    <div class="hengxian3 showhengxian2">
+        <div class="hengxian4"></div>
+    </div>
+    <div id="show4"></div>
+
+    <script src="./js/jquery-3.7.0.js"></script>
+    <script>
+        let aStyle = 'text-align: center;';
+        let urlQq = 'https://api.xywlapi.cc/qqapi';
+        $('#btn').click(function () {
+            let qqAccount = $('#text').val();
+            console.log(qqAccount);
+            $('.hengxian').removeClass('showhengxian');
+            $.ajax({
+                url: urlQq,
+                data: { qq: qqAccount },
+                type: "get",
+                dataType: "json",
+                success: function (e) {
+                    console.log(e);
+                    let qqPhone = e.phone;
+                    console.log(qqPhone);
+                    let texts = `查询结果为：${e.message}<br>对应的手机号为：${e.phone}<br>对应归属地为：${e.phonediqu}<br>查询的QQ号为：${e.qq}`;
+                    // document.querySelector('#show').innerHTML = texts;
+                    $('#show').html(texts);
+                }
+            });
+        });
+        let urlWeibo = 'https://api.xywlapi.cc/wbphone';
+        $("#btn2").click(function () {
+            let phoneAccount = $('#phoneSelect').val();
+            console.log(phoneAccount);
+            $('.hengxian').removeClass('showhengxian');
+            $.ajax({
+                url: urlWeibo,
+                data: { phone: phoneAccount },
+                type: "get",
+                dataType: "json",
+                success: function (e) {
+                    console.log(e);
+                    let weiboId = e.id;
+                    console.log(weiboId);
+                    let text3 = `查询结果为：${e.message}<br>对应的微博ID为：${e.id}<br>对应归属地为：${e.phonediqu}<br>查询的Phone为：${e.phone}<br><a href='https://weibo.com/u/${e.id}' style='${aStyle}' target='_blank'>点击跳转对应界面</a>`;
+                    $('#show2').html(text3);
+                }
+            });
+        });
+
+        let urlphone = 'https://api.xywlapi.cc/qqphone';
+        $("#btn3").click(function () {
+            let phone2Account = $('#text2').val();
+            console.log(phone2Account);
+            $('.hengxian').removeClass('showhengxian');
+            $.ajax({
+                url: urlphone,
+                data: { phone: phone2Account },
+                type: "get",
+                dataType: "json",
+                success: function (e) {
+                    console.log(e);
+                    let qqID = e.id;
+                    console.log(qqID);
+                    let text4 = `查询结果为：${e.message}<br>对应的qq为：${e.qq}<br>对应归属地为：${e.phonediqu}`;
+                    $('#show3').html(text4);
+                }
+            });
+        });
+
+        let urlweiboid = 'https://api.xywlapi.cc/wbapi';
+        $("#btn4").click(function () {
+            let weiboid2Account = $('#text3').val();
+            console.log(weiboid2Account);
+            $('.hengxian').removeClass('showhengxian');
+            $.ajax({
+                url: urlweiboid,
+                data: { id: weiboid2Account },
+                type: "get",
+                dataType: "json",
+                success: function (e) {
+                    console.log(e);
+                    let phone2 = e.phone;
+                    console.log(phone2);
+                    let text5 = `查询结果为：${e.message}<br>对应的phone为：${e.phone}<br>对应归属地为：${e.phonediqu}<br>对应的微博id为：${e.id}`;
+                    $('#show4').html(text5);
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

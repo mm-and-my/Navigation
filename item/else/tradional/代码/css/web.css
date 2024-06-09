@@ -1,0 +1,334 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'liuti';
+    src: url(../font/柳体.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+.nav {
+    background: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.nav>ul {
+    position: absolute;
+    top: 0;
+    background: rgb(132, 132, 157);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.nav>ul>li {
+    background-color: rgba(17, 17, 17, 0.75);
+    width: 100%;
+    height: 8vh;
+    line-height: 8vh;
+    display: block;
+    /* cursor: pointer; */
+}
+
+.nav>ul>li>a {
+    width: 100%;
+    display: block;
+    font-family: 'liuti';
+    font-size: 1.3em;
+    cursor: pointer;
+    color: #fff;
+    /* text-shadow: 0px 0px 2px #fff; */
+}
+
+.router-link-exact-active {
+    text-shadow: 0 0px 10px #69e0ff, 0 0 20px #69e0ff;
+}
+
+.nav>ul>li>a:hover {
+    background: rgb(91, 91, 129);
+    cursor: pointer;
+}
+
+/* word */
+.model {
+    margin-top: 8vh;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    text-shadow: 2px 2px 1px #fff;
+    font-size: 2em;
+}
+
+.bg>p {
+    font-family: 'liuti';
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.bg_one {
+    background-image: url(../images/xisu/1.jpg);
+    height: 100vh;
+}
+
+.bg_second {
+    background-image: url(../images/xisu/2.jpg);
+    height: 100vh;
+}
+
+.bg_three {
+    background-image: url(../images/xisu/3.jpeg);
+    height: 100vh;
+}
+
+.bg_four {
+    background-image: url(../images/xisu/4.jpg);
+    height: 100vh;
+}
+
+.bg_five {
+    background-image: url(../images/xisu/5.jpg);
+    height: 100vh;
+}
+
+.bg_six {
+    background-image: url(../images/xisu/6.jpg);
+    height: 100vh;
+}
+
+.bg_seven {
+    background-image: url(../images/xisu/7.jpg);
+    height: 100vh;
+}
+
+.bg_eight {
+    background-image: url(../images/xisu/8.jpeg);
+    height: 100vh;
+}
+
+.bg_nice {
+    background-image: url(../images/xisu/9.PNG);
+    height: 100vh;
+}
+
+.model>.content_index {
+    font-family: 'liuti';
+    width: 100%;
+    height: 30vh;
+    padding: 0 100px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    line-height: 30px;
+    text-align: center;
+}
+
+.else {
+    background-color: #767676;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.else>a {
+    width: 100%;
+    display: block;
+    font-family: 'liuti';
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.else>a:hover {
+    color: blue;
+    transition: all 1s;
+}
+
+
+.user_bg {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 92vh;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.login {
+    position: relative;
+    width: 100vh;
+    min-height: 20vh;
+    padding: 60px;
+    border-radius: 20px;
+    /* background: rgba(255, 255, 255, 0.25); */
+    display: flex;
+    flex-direction: column;
+    /* box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2); */
+    margin: auto;
+    top: 20vh;
+}
+
+.login .inputBox {
+    position: relative;
+}
+
+.login .inputBox input {
+    position: relative;
+    width: 100%;
+    padding: 15px 20px;
+    outline: none;
+    font-size: 1.25em;
+    color: #8f2c24;
+    border-radius: 5px;
+    background: #fff;
+    border: 1px solid rgb(53, 57, 107);
+    margin-bottom: 30px;
+}
+
+.login .inputBox ::placeholder {
+    color: #8f2c24;
+}
+
+.login .inputBox #btn {
+    position: relative;
+    border: none;
+    outline: none;
+    background: rgb(53, 57, 107);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.25em;
+    font-weight: 500;
+}
+
+.login .inputBox #btn:hover {
+    transition: all 1s;
+    background: orange;
+    color: rgb(53, 57, 107);
+}
+
+.story_bg {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 92vh;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.8;
+}
+.story{
+    width: 80%;
+    /* background: blue; */
+    font-family: 'liuti';
+    font-size: 1.3em;
+    margin: auto;
+    top: 20vh;
+   
+}
+.story>p{
+   top: 20vh;
+   padding-top: 10vh;
+}
+/* index */
+.containerss{
+    width: 100vw;
+    height: 92vh;
+    position: relative;
+    overflow: hidden;
+  }
+  .pic {
+    width: 240px;
+    height: 160px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    box-shadow: 0 30px 50px #505050;
+    background-size: cover;
+    background-position: center;
+    transition: 1s;
+  }
+  .pic:nth-child(1),
+  .pic:nth-child(2){
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(0);
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .pic:nth-child(3){
+    left: 70%;
+  }
+  .pic:nth-child(4){
+    left:calc(70% + 250px);
+  }
+  .pic:nth-child(5){
+    left:calc(70% + 500px);
+  }
+  .pic:nth-child(n+6){
+    left:calc(70% + 750px);
+    opacity: 0;
+  }
+
+  .buttons{
+    width: 100%;
+    position: absolute;
+    bottom: 50px;
+    /* margin-left: -50px; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .buttons div {
+    font-family: 'liuti';
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0 25px;
+    transition: .5s;
+    cursor: pointer;
+    user-select: none;
+    font-size: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  }

@@ -1,0 +1,406 @@
+/* 大于651px，小于1300px */
+/* @media screen and (min-width:651px) and (max-width:1300px) {
+    .box_next>.box_next_ul>li>a {
+        font-size: 3.5vh;
+    }
+
+    .box_next>.box_next_ul>li>a:hover {
+        font-size: 4vh;
+    }
+} */
+@font-face {
+    font-family: 'liuti';
+    src: url(../font/柳体.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@media screen and (max-width:1450px) {
+    .leftbox {
+        bottom: 1vh;
+    }
+}
+@media screen and (min-width:1451px) {
+    .leftbox {
+        bottom: 15vh;
+    }
+}
+
+/* 大于1301px */
+@media screen and (min-width:1201px) {
+
+    /* 连接字体大小 */
+    .box_next>.box_next_ul>li>a {
+        font-size: 3vh;
+    }
+
+    /* 每项标题字体大小 */
+    .box_next>.box_next_h4 {
+        font-size: 5vh;
+    }
+
+    /* 鼠标进去动画效果字体大小 */
+    .box_next>.box_next_ul>li>a:hover {
+        font-size: 3.5vh;
+
+    }
+
+    /* 鼠标字体大小动画效果 */
+    @keyframes fontabig {
+
+        0%,
+        50%,
+        100% {
+            color: #fff;
+        }
+
+        25%,
+        75% {
+            color: #ed6ea0;
+            text-shadow: 1px 1px 2px #000;
+            font-size: 5vh;
+        }
+
+
+    }
+
+    /* 制作者名字 */
+    .myname {
+        font-size: 2vh;
+        height: 6vh;
+        line-height: 6vh;
+    }
+}
+
+/* 小于1301px */
+@media screen and (max-width:1200px) {
+
+    /* 连接字体大小 */
+    .box_next>.box_next_ul>li>a {
+        font-size: 2vh;
+    }
+
+    /* 每项标题字体大小 */
+    .box_next>.box_next_h4 {
+        font-size: 3vh;
+    }
+
+    /* 鼠标进去动画效果字体大小 */
+    .box_next>.box_next_ul>li>a:hover {
+        font-size: 1vh;
+    }
+
+    /* 鼠标字体大小动画效果 */
+    @keyframes fontabig {
+
+        0%,
+        50%,
+        100% {
+            color: #fff;
+        }
+
+        25%,
+        75% {
+            color: red;
+            font-size: 2.5vh;
+        }
+    }
+
+    /* 制作者名字 */
+    .myname {
+        font-size: 1.5vh;
+        height: 4vh;
+        line-height: 4vh;
+    }
+}
+
+/* 标题动画效果 */
+@keyframes fonth4big {
+
+    0%,
+    50% {
+        background: linear-gradient(90deg, #64b3f4, #c2e59a);
+    }
+
+    75%,
+    100% {
+        background: linear-gradient(-180deg, #b3ffab, #12fff7);
+    }
+}
+
+/* 每项链接盒子 */
+.box_next {
+    /* background: pink;  */
+    background: #afd2e1;
+    position: relative;
+    /* text-align: center; */
+}
+
+/* 每项盒子标题 */
+.box_next>.box_next_h4 {
+    font-family: 'liuti', "楷体";
+    /* 渐变类型、渐变色方向、颜色值、渐变位置 */
+    /* background: linear-gradient(-90deg,#92fe9d,#00c9ff); */
+    /* background: linear-gradient(-180deg,#ddd6f3,#faaca8); */
+    /* background: linear-gradient(-180deg,#b3ffab,#12fff7); */
+    background: linear-gradient(90deg, #64b3f4, #c2e59a);
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    text-align: center;
+    /* display: flex;
+    justify-content: center; */
+    /* cursor: pointer;  */
+    transition: all 2s;
+}
+
+.box_next>.box_next_ul {
+    width: 100%;
+    /* float: left; */
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+/* 每项单独链接 */
+.box_next>.box_next_ul>li {
+    width: 20%;
+    height: 8vh;
+    line-height: 8vh;
+    /* display: block; */
+    text-align: center;
+    /* background: linear-gradient(-90deg,#a1c4fd,#c2e9fb); */
+    /* background: linear-gradient(180deg,#84fab0,#8fd3f4); */
+    background: #afd2e1;
+}
+
+/* 每项单独链接 */
+.box_next>.box_next_ul>li>a {
+    color: #4c221b;
+    text-shadow: 1px 1px 2px #fff;
+    font-family: 'liuti', "楷体";
+    /* font-size: 2.5vh; */
+    font-weight: bold;
+    display: block;
+    width: 97%;
+    height: 7.4vh;
+    line-height: 6.9vh;
+}
+
+/* 每项单独链接鼠标效果 */
+.box_next>.box_next_ul>li>a:hover {
+    cursor: pointer;
+    /* border-bottom: 0.4vh solid red; */
+    border-right: 0.4vh solid #177cb0;
+    border-left: 0.4vh solid #177cb0;
+    /* border-top: 0.4vh solid red; */
+    /* background: linear-gradient(90deg, #808080, #17ae7e); */
+    background: linear-gradient(180deg, #84fab0, #8fd3f4);
+    /* font-size: 3.5vh; */
+    color: #fff;
+    border-radius: 2vh;
+    animation: fontabig 3s linear 0s forwards infinite;
+    /* transition: all 1s; */
+}
+
+.box_next>.box_next_ul>li>a:hover::before {
+    content: "";
+    display: block;
+    border-top: 0.4vh solid #177cb0;
+    top: 0;
+    border-radius: 2vh;
+}
+
+.box_next>.box_next_ul>li>a:hover::after {
+    content: "";
+    display: block;
+    padding: 0;
+    border-bottom: 0.4vh solid #177cb0;
+    bottom: 0vh;
+    border-radius: 2vh;
+}
+
+/* .box_next>.box_next_ul>li>a:hover::after{
+    content: "";
+    display: block;
+    border-top: 0.2vh solid #9b4400;
+    bottom: 0;
+} */
+/* 隐藏 */
+.show {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+}
+
+/* 侧边栏 */
+.chebian>.qiuti {
+    position: fixed;
+    width: 6vh;
+    height: 6vh;
+    background: linear-gradient(180deg, #b7f8db, #50a7c2);
+    z-index: 99999;
+    /* background: #a1afc9; */
+    border-radius: 50%;
+}
+
+/* 侧边栏球体内文字链接 */
+.qiuti>a {
+    font-family: 'liuti', "楷体";
+    /* background: red; */
+    display: block;
+    width: 6vh;
+    height: 4.5vh;
+    border-radius: 50%;
+    position: relative;
+    font-size: 3vh;
+    color: #000;
+    text-shadow: 1px 1px 2px #fff;
+    text-align: center;
+    /*  left: 1.5vh;
+    top: 1.5vh;  */
+    padding-top: 1.5vh;
+}
+
+.qiuti:hover {
+    background: linear-gradient(90deg, #df89b5, #bfd9fe);
+    transition: all 1s;
+    cursor: pointer;
+}
+
+/* 直线 */
+.zhixian {
+    width: 0.8vh;
+    height: 2.2vh;
+    background: #50a7c2;
+    position: fixed;
+}
+
+/* 顶部 */
+.chebian>.dinbu {
+    bottom: 28vh;
+    right: 0;
+}
+
+.zhixian1 {
+    height: 3vh;
+    bottom: 25.5vh;
+    right: 2.5vh;
+}
+
+/* 中部 */
+.zhongbu1 {
+    bottom: 20vh;
+    right: 0;
+}
+
+.zhongbu1>a {
+    font-size: 2vh;
+    /*   left: 1.1vh;
+    top: 1.8vh; */
+}
+
+.zhixian2 {
+    bottom: 18vh;
+    right: 2.5vh;
+}
+
+.zhongbu2 {
+    bottom: 12vh;
+    right: 0;
+}
+
+.zhixian3 {
+    bottom: 10vh;
+    right: 2.5vh;
+}
+
+/* 底部 */
+.chebian>.dibu {
+    bottom: 4vh;
+    right: 0;
+}
+
+/* h3鼠标动画 */
+.shubiao {
+    cursor: pointer;
+}
+
+.shubiao:hover {
+    /* animation: fonth4big 1s linear 0s forwards 1; */
+    /* background: orange; */
+    /* background: linear-gradient(-180deg,#b3ffab,#12fff7); */
+    /* color: red; */
+    /* animation: fonth4big 1s linear 0s ; */
+    transition: all 0.5s;
+    color: #ed6ea0;
+}
+
+/* 制作者区域 */
+.myname {
+    font-family: 'liuti', "楷体";
+    width: 10vh;
+    /* background: pink; */
+    position: fixed;
+    z-index: 9999999;
+    text-align: center;
+    color: #d4fe79;
+    text-shadow: 1px 1px 2px #000;
+    cursor: pointer;
+}
+
+.myname:hover {
+    color: #000;
+    text-shadow: 1px 1px 2px #fff;
+    transition: all 1s;
+}
+
+.leftbox {
+    /* background: blueviolet; */
+    width: 10vh;
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    border-radius: 10px;
+}
+
+.leftbox>ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.leftbox>ul>li {
+    /* background: pink; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftbox>ul>li>a {
+    font-family: 'liuti', "楷体";
+    display: block;
+    width: 100%;
+    background: #50a7c2;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.leftbox>ul>li>a:hover {
+    color: #fff;
+    background: linear-gradient(90deg, #df89b5, #bfd9fe);
+    text-shadow: 1px 1px 2px #000;
+}
+
+.leftbox>ul>i {
+    display: block;
+    width: 0.5vh;
+    height: 0.5vh;
+    background: #50a7c2;
+}

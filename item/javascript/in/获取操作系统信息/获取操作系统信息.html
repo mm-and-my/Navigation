@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+  var a = window.navigator.userAgent;
+  console.log(a);
+  //通过indexOf()找到返回在此字符串中第一次出现指定字符的索引，找不到返回-1
+  if (a.indexOf('Window')!=-1) {
+      alert(`欢迎您Window用户,您的屏幕尺寸为${screen.availHeight}*${screen.availWidth}`);
+  }
+  else if (a.indexOf('Android')!=-1) {
+      alert('欢迎您Android用户');
+  }
+  else if (a.indexOf('iPhone')!=-1) {
+      alert('欢迎您iPhone用户');
+  }
+  else if (a.indexOf('iPad')!=-1) {
+      alert('欢迎您iPad用户');
+  }
+  else {
+      alert('欢迎您用户');
+  }
+</script>
+</body>
+</html>

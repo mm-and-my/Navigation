@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>api</title>
+    <script src="./js/jquery-3.7.0.js"></script>
+</head>
+
+<body>
+    <textarea name="fy" id="fy" cols="30" rows="10"></textarea>
+    <input type="button" value="翻译" id="btn">
+    <p id="show"></p>
+</body>
+<script>
+    var url = "https://api.vvhan.com/api/fy";
+    $("#btn").click(function () {
+        /* $.get(url, { text: $("#fy").val() }, function (e) {
+            $("#show").text(e.data.fanyi);
+        }, "json"); */
+
+        $.ajax({
+            url: url,
+            data: { text: $("#fy").val() },
+            type: "get",
+            dataType: "json",
+            success: function (e) {
+                $("#show").text(e.data.fanyi);
+            }
+        });
+    });
+</script>
+
+</html>

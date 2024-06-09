@@ -1,0 +1,165 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+/* @media screen and (min-width:751px) {
+	.container {
+		position: relative;
+		overflow: hidden;
+		width: 750px;
+		height: 100%;
+	}
+}
+
+@media screen and (max-width:751px) {
+	.container {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		height: 100%;
+	}
+} */
+
+@keyframes yanhua_scale {
+
+	0%,
+	50%,
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	25% {
+		transform: scale(.6);
+		opacity: .3;
+	}
+
+	75% {
+		transform: scale(1.5);
+		opacity: 1;
+	}
+}
+
+@keyframes warring_text {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes left_move {
+	0% {
+		left: -50%;
+	}
+
+	100% {
+		left: 50%;
+	}
+}
+
+.default {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.show {
+	opacity: 1;
+	transition: all 2s linear;
+}
+
+.yanhua {
+	position: absolute;
+	width: 10vw;
+	animation: yanhua_scale 3s linear 0s infinite normal forwards;
+}
+
+button {
+	border: none;
+	outline: none;
+	background-color: transparent;
+}
+
+.container_waring {
+	background-image: url(../images/warring/bg.png);
+	background-size: 100% 100%;
+	flex-direction: column;
+	gap: 4vw;
+	z-index: 100;
+}
+
+.container_waring>.warring_text {
+	position: absolute;
+	left: 22vw;
+	top: 64vw;
+	width: 55vw;
+	font-size: 4vw;
+	font-family: "黑体";
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 6vw;
+	line-height: 5.6vw;
+}
+
+.container_waring>.warring_text>p {
+	opacity: 0;
+	animation: warring_text 1.5s linear var(--i) 1 normal forwards;
+}
+.warring_btn {
+	position: absolute;
+	background-image: url(../images/base/button.png);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	font-family: "微软雅黑";
+	color: #ffe9be;
+	font-size: 5vw;
+	line-height: 14vw;
+	padding: 4vw 11vw;
+	bottom: 20vw;
+	left: 50%;
+	transform: translateX(-50%); 
+	animation: left_move 1s linear 0s 1 normal forwards;
+}
+.warring_yanhua1 {
+	top: 2vw;
+	left: 10vw;
+	width: 15vw;
+}
+.warring_yanhua2 {
+	top: 2vw;
+	left: 50vw;
+	width: 13vw;
+}
+
+.warring_yanhua3 {
+	top: 60vw;
+	left: 3vw;	
+	width: 15vw;
+}
+.warring_yanhua4 {
+	top: 70vw;
+	right: 0vw;
+	width: 10vw;
+}
+.warring_yanhua5 {
+	top: 140vw;
+	left: 0vw;
+	width: 12vw;
+}

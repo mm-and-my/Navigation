@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<!--清理缓存-->
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" href="https://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css">
+		<link rel="stylesheet" href="bootstrap/layer/mobile/need/layer.css" />
+		<link rel="stylesheet" type="text/css" href="css/xzcommon.css" />
+		<link rel="stylesheet" href="css/gxShopMall.css?v=202005280244" />
+		<title>jquery手机端购物车——前端元素www.eleui.cn</title>
+	</head>
+
+	<body style="background: none;">
+		<div class="cartList">
+			<div class="cartCenter">
+				<div class="cartItem" style="overflow: hidden;">
+					<div class="ticket_list ">
+						<div style="width: 82.8%;float: left; position: relative;">
+							<div class="ticket_box">
+								<div class="itemLeft">
+									<img src="img/selectn.png" alt="" />
+								</div>
+								<div class="itemRight">
+									<div class="rightImg">
+										<img src="img/ceshibg.png" alt="" />
+									</div>
+									<div class="rightInfo">
+										<div class="title">洪恩双语绘本VIP年卡</div>
+										<div class="payCount">
+											<div class="countInp">
+												<div class="inpLeft"><span><i>¥<i class="itemMoney">10</i></i> /件 </span></div>
+												<div class="inpRight"><input type="text" value="7" /><em>件</em></div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div style="right: 22px;" class="swipe_rdiv">
+							<span>&nbsp;&nbsp; 删除 &nbsp;&nbsp;</span>
+						</div>
+					</div>
+					
+					<div class="ticket_list ">
+						<div style="width: 82.8%;float: left; position: relative;">
+							<div class="ticket_box">
+								<div class="itemLeft">
+									<img src="img/selectn.png" alt="" />
+								</div>
+								<div class="itemRight">
+									<div class="rightImg">
+										<img src="img/ceshibg.png" alt="" />
+									</div>
+									<div class="rightInfo">
+										<div class="title">洪恩双语绘本VIP年卡</div>
+										<div class="payCount">
+											<div class="countInp">
+												<div class="inpLeft"><span><i>¥<i class="itemMoney">10</i></i> /件 </span></div>
+												<div class="inpRight"><input type="text" value="3" /><em>件</em></div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div style="right: 22px;" class="swipe_rdiv">
+							<span>&nbsp;&nbsp; 删除 &nbsp;&nbsp;</span>
+						</div>
+					</div>
+					
+					<div class="ticket_list ">
+						<div style="width: 82.8%;float: left; position: relative;">
+							<div class="ticket_box">
+								<div class="itemLeft">
+									<img src="img/selectn.png" alt="" />
+								</div>
+								<div class="itemRight">
+									<div class="rightImg">
+										<img src="img/ceshibg.png" alt="" />
+									</div>
+									<div class="rightInfo">
+										<div class="title">洪恩双语绘本VIP年卡</div>
+										<div class="payCount">
+											<div class="countInp">
+												<div class="inpLeft"><span><i>¥<i class="itemMoney">3.3</i></i> /件 </span></div>
+												<div class="inpRight"><input type="text" value="5" /><em>件</em></div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div style="right: 22px;" class="swipe_rdiv">
+							<span>&nbsp;&nbsp; 删除 &nbsp;&nbsp;</span>
+						</div>
+					</div>
+					
+					<div class="ticket_list ">
+						<div style="width: 82.8%;float: left; position: relative;">
+							<div class="ticket_box">
+								<div class="itemLeft">
+									<img src="img/selectn.png" alt="" />
+								</div>
+								<div class="itemRight">
+									<div class="rightImg">
+										<img src="img/ceshibg.png" alt="" />
+									</div>
+									<div class="rightInfo">
+										<div class="title">洪恩双语绘本VIP年卡</div>
+										<div class="payCount">
+											<div class="countInp">
+												<div class="inpLeft"><span><i>¥<i class="itemMoney">5</i></i> /件 </span></div>
+												<div class="inpRight"><input type="text" value="20" /><em>件</em></div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div style="right: 22px;" class="swipe_rdiv">
+							<span>&nbsp;&nbsp; 删除 &nbsp;&nbsp;</span>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+
+			<div class="allChecked">
+				<div class="checkedLeft">
+					<p id="allCheck"><img src="img/selectn.png" alt="" /><span>全选</span> </p>
+					<p>注：商品不支持退款</p>
+				</div>
+				<div class="checkedRight">
+					<span>合计：<i>¥<em id="allMoney">0</em></i></span>
+					<button id="settlement">结算 (<em id="allCount">0</em>)</button>
+				</div>
+			</div>
+
+			<!--底部-->
+			<div class="qwFooter">
+				<div class="achievement">
+					<img src="img/indexq.png" alt="" />
+					<p>首页</p>
+				</div>
+				<div class="giftVouchet">
+					<img src="img/gwch.png" alt="" />
+					<p>购物车</p>
+				</div>
+				<div class="mine">
+					<img src="img/mineq.png" alt="" />
+					<p>我的</p>
+				</div>
+			</div>
+
+		</div>
+
+		<script src="https://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.js"></script>
+		<script src="bootstrap/layer/layer.js"></script>
+		<script src="js/rem.js"></script>
+		<script>
+			$("#settlement").bind('click', function() {
+				console.log("结算")
+			});
+			
+			//删除购物车
+			var upload = "";
+			$("body").on("swipeleft", ".ticket_list", function() {
+
+			$(this).addClass('swipe').siblings().removeClass('selected');
+			$(this).find(".swipe_rdiv").on("click", function() {
+			
+            upload =  layer.load(1, {shade: 0.1})
+			danMoney = 0;
+				$(this).parents(".ticket_list").remove();
+				for(var i=0;i<$(".cartList .cartItem .ticket_list .aa").length;i++){
+						danMoney += Number($(".cartList .cartItem .ticket_list .aa").eq(i).parents('.ticket_list').find('.itemMoney').html()) * Number($(".cartList .cartItem .ticket_list .aa").eq(i).parents('.ticket_list').find('input').val());
+					};
+					$("#allCount").html($(".cartList .cartItem .ticket_list .aa").length);
+					$("#allMoney").html(Number(danMoney));
+					layer.close(upload);
+			});
+			}).on("swiperight", ".ticket_list", function() {
+				$(this).removeClass('swipe');
+			});
+			
+			//单个选
+			var danSel = true;
+			var danMoney=0;
+			$(".cartList").delegate('.itemLeft img','click',function(){
+				danMoney=0;
+				if($(this).attr('src') == 'img/selecty.png'){
+					$(this).attr('src','img/selectn.png');
+					$(this).removeClass('aa');
+					selects = true;
+					$("#allCheck").children('img').attr('src','img/selectn.png');
+					for(var i=0;i<$(".cartList .cartItem .ticket_list .aa").length;i++){
+						danMoney += Number($(".cartList .cartItem .ticket_list .aa").eq(i).parents('.ticket_list').find('.itemMoney').html()) * Number($(".cartList .cartItem .ticket_list .aa").eq(i).parents('.ticket_list').find('input').val());
+					};
+					$("#allCount").html($(".cartList .cartItem .ticket_list .aa").length);
+					$("#allMoney").html(Number(danMoney));
+					
+					
+				}else if($(this).attr('src') == 'img/selectn.png'){
+					danMoney = 0;
+					$(this).attr('src','img/selecty.png');
+					$(this).addClass('aa');
+					if($(".cartList .cartItem .ticket_list").length == $(".cartList .cartItem .ticket_list .aa").length){
+						$("#allCheck").children('img').attr('src','img/selecty.png');
+					}
+					for(var i=0;i<$(".cartList .cartItem .ticket_list .aa").length;i++){
+						danMoney += Number($(".cartList .cartItem .ticket_list .aa").eq(i).parents('.ticket_list').find('.itemMoney').html()) * Number($(".cartList .cartItem .ticket_list .aa").eq(i).parents('.ticket_list').find('input').val());
+					};
+					$("#allCount").html($(".cartList .cartItem .ticket_list .aa").length);
+					$("#allMoney").html(Number(danMoney));
+				};
+				
+			});
+			
+			//input失去焦点
+			$("input").blur(function(){
+				danMoney = 0;
+				for(var i=0;i<$(".cartList .cartItem .ticket_list .aa").length;i++){
+					danMoney += Number($(".cartList .cartItem .ticket_list .aa").eq(i).parents('.ticket_list').find('.itemMoney').html()) * Number($(".cartList .cartItem .ticket_list .aa").eq(i).parents('.ticket_list').find('input').val());
+				};
+				$("#allCount").html($(".cartList .cartItem .ticket_list .aa").length);
+				$("#allMoney").html(Number(danMoney));
+			});
+			
+			//全选
+			var selects = true;
+			var allMoney=0;
+			$("#allCheck").bind('click',function(){
+				if(selects == true){
+					$(this).children('img').attr('src','img/selecty.png');
+					$("#allCount").html($(".cartList .cartItem .ticket_list").length);
+					for(var i=0;i<$(".cartList .cartItem .ticket_list").length;i++){
+						allMoney += Number($(".cartList .cartItem .ticket_list").eq(i).find('.itemMoney').html()) * Number($(".cartList .cartItem .ticket_list").eq(i).find('input').val());
+					};
+					$("#allMoney").html(Number(allMoney))
+					//全部选择
+					$(".cartCenter .cartItem .itemLeft img").attr('src','img/selecty.png');
+					$(".cartCenter .cartItem .itemLeft img").addClass('aa');
+					selects = false;
+				}else{
+					$(this).children('img').attr('src','img/selectn.png');
+					$("#allCount").html(0);
+					allMoney = 0;
+					$("#allMoney").html(allMoney)
+					//取消全部选择
+					$(".cartCenter .cartItem .itemLeft img").attr('src','img/selectn.png');
+					$(".cartCenter .cartItem .itemLeft img").removeClass('aa');
+					selects = true;
+				};
+			});
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

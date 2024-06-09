@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>响应式JS渐变背景倒计时效果-前端元素eleui.cn</title>
+    <link rel="icon" type="image/x-icon" href="static/css/color_circle.png">
+ <link href="static/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="color_picker">
+        <div class="cp_wrapper">
+            <input type="color" id="gradient_color_one" value="#543ab7">
+            <label for="gradient_color_one"><img src="static/picture/color_circle.gif" class="color_picker_image"></label>
+        </div>
+    </div>
+    <div class="header">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <!--Content before waves-->
+        <div class="inner-header flexCol">
+            <!--Just the logo.. Don't mind this-->
+            <h1 class="h1">waves</h1>
+            <div class="countdown">
+                <div>
+                    <span id="months" class="number months"></span>
+                    <span>Months</span>
+                </div>
+                <div>
+                    <span id="days" class="number days"></span>
+                    <span>Days</span>
+                </div>
+                <div>
+                    <span id="hours" class="number hours"></span>
+                    <span>Hours</span>
+                </div>
+                <div>
+                    <span id="minutes" class="number minutes"></span>
+                    <span>Minutes</span>
+                </div>
+                <div>
+                    <span id="seconds" class="number seconds"></span>
+                    <span>Seconds</span>
+                </div>
+            </div>
+        </div>
+
+        <!--Waves Container-->
+        <div>
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 24 150 28" preserveaspectratio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)"></use>
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff"></use>
+                </g>
+            </svg>
+        </div>
+        <!--Waves end-->
+
+    </div>
+    <!--Header ends-->
+    <!--Content starts-->
+    <div class="content flex">
+        <p>We Are Currently Working On An Amazing Website.
+            <br>
+            Stay Tune.
+        </p>
+    </div>
+    <div id="subscribe" class="content flex">
+        <form method="POST" action="subscribe.php">
+            <p><input type="text" name="Email" size="20" value="" placeholder="Subscribe your e-mail Id"><input type="button" value="Submit" name="Submit"></p>
+        </form>
+    </div>
+    <!--Content ends-->
+<script src="static/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-size: 2em;
+            color: #000;
+        }
+        span{
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <p>使用注册表编辑器</p>
+    <p>按下 Win + R键打开“运行”对话框，输入"<span>regedit</span>"并按下回车键打开注册表编辑器。</p><br>
+    <p>在注册表编辑器中，导航至路径“<span>\HKEY_CLASSES_ROOT\Directory\Background\shell</span>”。</p><br>
+    <p>在“shell”或相关文件类型子键下，将看到一个或多个子键，表示右键菜单中的项目。</p><br>
+    <p> 若要隐藏特定菜单项，可以在相应的子键下创建一个名为“<span>LegacyDisable</span>”的新 <span>DWORD</span>值，并将其值设置为<span>1</span>。</p><br>
+</body>
+
+</html>

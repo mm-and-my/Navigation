@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gunping</title>
+    <link rel="stylesheet" href="./css/gunping.css">
+</head>
+<body>
+    <div class="container">
+        <div class="view">
+            <div class="list">
+                <li class="item">
+                    <img src="./images/1.jpeg" alt="">
+                    <div class="mask"><button>现在就看<span class="icon"></span></button></div>
+                </li>
+                <li class="item">
+                    <img src="./images/2.jpeg" alt="">
+                    <div class="mask"><button>现在就看<span class="icon"></span></button></div>
+                </li>
+                <li class="item">
+                    <img src="./images/3.jpeg" alt="">
+                    <div class="mask"><button>现在就看<span class="icon"></span></button></div>
+                </li>
+                <li class="item">
+                    <img src="./images/4.jpeg" alt="">
+                    <div class="mask"><button>现在就看<span class="icon"></span></button></div>
+                </li>
+                <li class="item">
+                    <img src="./images/5.jpeg" alt="">
+                    <div class="mask"><button>现在就看<span class="icon"></span></button></div>
+                </li>
+                <li class="item">
+                    <img src="./images/6.jpeg" alt="">
+                    <div class="mask"><button>现在就看<span class="icon"></span></button></div>
+                </li>
+                <li class="item">
+                    <img src="./images/7.jpeg" alt="">
+                    <div class="mask"><button>现在就看<span class="icon"></span></button></div>
+                </li>
+                <li class="item">
+                    <img src="./images/8.jpeg" alt="">
+                    <div class="mask"><button>现在就看<span class="icon"></span></button></div>
+                </li>
+                <li class="item">
+                    <img src="./images/9.jpeg" alt="">
+                    <div class="mask"><button>现在就看<span class="icon"></span></button></div>
+                </li>
+                <li class="item">
+                    <img src="./images/10.jpeg" alt="">
+                    <div class="mask"><button>现在就看<span class="icon"></span></button></div>
+                </li>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- <script src="./js/gunping.js"></script> -->
+<script>
+window.onload = function () {
+    let timer = null;
+
+    const containerEl = document.querySelector(".container");
+    const ulEl = document.querySelector(".list");
+    const view = document.querySelector(".view");
+
+    let len = ulEl.offsetWidth;
+    let x = 0;
+    let speed = 0.5;
+    containerEl.onmouseenter = function () {
+        speed = 0.2;
+    }
+    containerEl.onmouseleave = function () {
+        speed = 0.5;
+    }
+
+    function animationStart() {
+        timer = setInterval(() => {
+            x += speed;
+            if (x > len) {
+                x = 0;
+            }
+            view.style = `will-change:transform; transform:translateX(${-x}px)`;
+        });
+    }
+
+    animationStart();
+
+    document.addEventListener("visibilitychange" , function(){
+        if(document.visibilityState === "hidden"){
+            clearInterval(timer);
+        }
+        else{
+            animationStart();
+        }
+    })
+}
+</script>
+</html>

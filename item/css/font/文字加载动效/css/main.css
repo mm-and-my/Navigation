@@ -1,0 +1,108 @@
+﻿
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+ul,li{
+    list-style: none;
+}
+body{
+    background: rgba(8,48,75,1);
+}
+
+
+
+
+
+/* 拥堵列表css样式 */
+
+.yd-right{
+    width: 24vw;
+    height: 50vh;
+    background-color:rgba(0,0,0,0.6);
+    position:absolute;
+    z-index: 2;
+    top: 10%;
+    left:40%;
+    color: #ffffff;
+}
+.el-tabs--card>.el-tabs__header .el-tabs__nav{
+    border: none !important;
+}
+.header-table{
+    color: #ffffff;
+    text-align: center;
+    border-bottom: 1px solid #cccccc;
+}
+.header-table tbody tr{
+     height: 30px;
+
+}
+.header-table tbody tr td{
+     width: 6vw;
+}
+.center-table{
+    text-align: center;
+}
+
+/*滑入动画效果*/
+.center-table tbody tr:nth-child(1){
+    animation: movein 0.3s 0.12s both;
+}
+.center-table tbody tr:nth-child(2){
+    animation: movein 0.3s 0.24s both;
+}
+.center-table tbody tr:nth-child(3){
+    animation: movein 0.3s 0.36s both;
+}
+.center-table tbody tr:nth-child(4){
+    animation: movein 0.3s 0.48s both;
+}
+.center-table tbody tr:nth-child(5){
+    animation: movein 0.3s 0.6s both;
+}
+.center-table tbody tr:nth-child(6){
+    animation: movein 0.3s 0.72s both;
+}
+.center-table tbody tr:nth-child(7){
+    animation: movein 0.3s 0.84s both;
+}
+.center-table tbody tr:nth-child(8){
+    animation: movein 0.3s 0.96s both;
+}
+.center-table tbody tr:nth-child(9){
+    animation: movein 0.3s 1.08s both;
+}
+.center-table tbody tr:nth-child(10){
+    animation: movein 0.3s 1.2s both;
+}
+.center-table tbody tr{
+    transform: translateX(0px);
+    transition: 0.3s ease;
+}
+@keyframes movein{
+    from{
+        transform: translateX(360px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1
+    }
+}
+/*滑入动画效果*/
+
+.center-table tbody tr:hover td{
+    background: rgba(255,255,255,0.6);
+    cursor: pointer;
+    
+}
+.center-table tbody tr{
+    height: 4vh;
+}
+.center-table tbody tr td{
+    width: 6vw;
+}
+
+

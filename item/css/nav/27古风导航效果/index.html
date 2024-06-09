@@ -1,0 +1,60 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery古典风格鼠标滑过动画菜单导航</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+</head>
+<body class="keBody">
+<h1 class="keTitle">jQuery古典风格鼠标滑过动画菜单导航</h1>
+<div class="kePublic">
+
+<ul class="menu" id="menu">
+  <li class="current"><span class="ipod_1 aaa"></span><a href="#" target="_blank"><img src="images/7.png" /></a></li>
+  <li><span class="ipod_2"></span><a href="#" target="_blank"><img src="images/6.png" /></a></li>
+  <li><span class="ipod_3"></span><a href="#" target="_blank"><img src="images/5.png" /></a></li>
+  <li><span class="ipod_4"></span><a href="#" target="_blank"><img src="images/4.png" /></a></li>
+  <li><span class="ipod_5"></span><a href="#" target="_blank"><img src="images/3.png" /></a></li>
+</ul>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script> 
+<script type="text/javascript">
+$(function(){
+
+	var d=1000;
+	
+	$('#menu span').each(function(){
+		$(this).stop().animate({
+			'top':'-122px'
+		},d+=250);
+	});
+	$('#menu .aaa').each(function(){
+		$(this).stop().animate({
+			'top':'0px'
+		},d+=250);
+	});
+	$('#menu .aaa').each(function(){
+		$(this).stop().animate({
+			'top':'0px'
+		});
+	});
+	$('#menu > li').hover(function(){
+		var $this = $(this);
+		$('a',$this).addClass('hover');
+		$('span',$this).stop().animate({'top':'0px'},300).css({'zIndex':'-1'});
+	},function(){
+		if(!$(this).hasClass("current"))
+		{
+		var $this = $(this);
+		$('a',$this).removeClass('hover');
+		$('span',$this).stop().animate({'top':'-122px'},800).css({'zIndex':'-1'});
+		}
+	});
+	
+});
+</script>
+
+</div>
+
+</body>
+</html>

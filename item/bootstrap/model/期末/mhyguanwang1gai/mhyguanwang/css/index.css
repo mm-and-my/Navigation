@@ -1,0 +1,248 @@
+/* <768 */
+.m-2,
+.p-2 {
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: #dbdbdb;
+}
+
+/* nav----------------------------------------------------------------- */
+.logo img {
+    width: 23vw;
+    height: 4.5vw !important;
+    margin-left: -20px;
+}
+
+.juzho {
+    font-size: 1.6vw;
+    font-family: "楷体";
+    padding-left: 3vw;
+}
+
+.juzho>ul:nth-child(1) {
+    color: red;
+}
+
+.juzho>ul>li {
+    /* margin-left: 4vw; */
+    position: relative;
+    text-align: center;
+    font-size: 3vw;
+}
+
+.juzho>ul>li a:hover {
+    background: linear-gradient(360deg, rgba(245, 232, 232, 0.2), rgba(238, 238, 241, 0.2));
+    border-radius: 1%;
+    color: red;
+}
+
+/* .juzho>ul>li:nth-child(1):before {
+    content: "";
+    display: block;
+    background: red;
+    width: 67px;
+    height: 5px;
+    position: absolute;
+    margin-top: 4.3vw;
+}  */
+.lilei a {
+    color: #a3a2a2;
+    font-family: "楷体";
+    font-size: 2.4vw;
+    margin-right: 2.666667vw;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.lilei i {
+    font-size: 2vw;
+}
+
+.lilei a:hover {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+/* header------------------------------------------------------------------ */
+.xinwen {
+    background: url(../images/jiuguanbeijing.jpg) top center no-repeat;
+    background-size: 100%;
+    margin-top: 2.666667vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.xinwenleft {
+    background: blue;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.xinwenright>ul:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.xinwenright>ul:nth-child(1)>li {
+    /* background: #ccc; */
+    width: 8vw;
+    line-height: 2.666667vw;
+    text-align: center;
+    margin-top: 1vw;
+
+}
+
+.xinwenright>ul>li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3vw;
+}
+
+.xinwenright>ul>li a:hover {
+    background: linear-gradient(360deg, rgba(245, 232, 232, 0.2), rgba(238, 238, 241, 0.2));
+
+}
+
+.xinwenright>ul:nth-child(2)>li {
+    border-bottom: 2px solid #ccc;
+    line-height: 2vw;
+    padding-top: 2vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.xinwenright>ul:nth-child(2)>li>p {
+    flex-wrap: nowrap;
+    overflow: hidden;
+    margin: auto;
+    width: 8vw;
+    font-size: 1.5vw;
+}
+
+.rowkozhi {
+    margin: 40px auto;
+    font-size: 1vw;
+}
+
+.jieshao {
+    padding-bottom: 10%;
+    height: 0;
+    margin-top: 1.5vw;
+    margin-bottom: 1vw;
+}
+
+.jieshao img {
+    height: 100%;
+    width: 100%;
+    filter: grayscale(100%);
+    cursor: pointer;
+    transition: all 3s;
+
+}
+
+.jieshao span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    text-align: center;
+    background: rgba(119, 179, 243, 0.4);
+    color: #101010;
+    cursor: pointer;
+
+}
+
+/* footer---------------------------------------------------------------------- */
+.guanlian {
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 5vw;
+
+}
+
+.guanlian>ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2vw;
+}
+
+.guanlian>ul>span {
+    color: #fff;
+    margin-right: 3vw;
+    line-height: 4vw;
+}
+
+.guanlian>ul>li {
+    font-size: 2.8vw;
+    line-height: 2.5vw;
+    color: #fff;
+    padding-right: 3vw;
+    padding-top: 10px;
+    cursor: pointer;
+
+}
+
+.shengming {
+    display: block;
+    background: #ccc;
+    width: auto;
+    margin-top: 2vw;
+
+}
+
+.shengming>ul {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shengming>ul>li {
+    font-size: 2vw;
+    line-height: 2.666667vw;
+    color: #fff;
+    padding-right: 3vw;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.shengming>ul>li a {
+    text-decoration: none;
+    color: black;
+    line-height: 2vw;
+}
+
+.shengming>p {
+    text-align: center;
+}
+
+.shengming>span {
+    display: flex;
+    justify-content: center;
+}

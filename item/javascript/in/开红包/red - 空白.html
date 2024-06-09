@@ -1,0 +1,89 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>开红包</title>
+	<style>
+		.red {
+			width: 260px;
+			height: 370px;
+			float: left;
+			margin: 10px;
+			cursor: pointer;
+			position: relative;
+			overflow: hidden;
+		}
+
+		@keyframes hongbao {
+			0% {
+				transform: rotate(0deg) scale(2, 2);
+			}
+
+			100% {
+				transform: rotate(720deg) scale(1, 1);
+			}
+		}
+
+		.red img {
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			animation: hongbao 3s ease-out;
+			z-index: 5;
+			transition: all 3s;
+		}
+
+		.red span {
+			width: 100%;
+			font-size: 42px;
+			font-weight: bold;
+			display: block;
+			text-align: center;
+			margin-top: 150px;
+			color: red;
+			position: absolute;
+			opacity: 0;
+			transition: all 8s;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="box">
+		<div class="red"><img src="./images/red.jpg" /><span>开奖结果</span></div>
+		<div class="red"><img src="./images/red.jpg" /><span>开奖结果</span></div>
+		<div class="red"><img src="./images/red.jpg" /><span>开奖结果</span></div>
+		<div class="red"><img src="./images/red.jpg" /><span>开奖结果</span></div>
+		<div class="red"><img src="./images/red.jpg" /><span>开奖结果</span></div>
+	</div>
+
+</body>
+<script>
+	var arr = [
+		'10块钱',
+		'20块钱',
+		'30块钱',
+		'40块钱',
+		'50块钱',
+	]
+	var arrss = function () {
+		return 0.5 - Math.random();
+	}
+	arr.sort(arrss);
+	console.log(arr);
+
+
+	var jian = document.querySelectorAll('.red');
+	for (let i = 0; i < jian.length; i++) {
+		jian[i].onclick = function () {
+			this.querySelector('img').style.bottom = '250px';
+			this.querySelector('span').innerHTML = arr[i];
+			this.querySelector('span').style.opacity = 1;
+		}
+
+	}
+</script>
+
+</html>
