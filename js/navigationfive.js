@@ -164,3 +164,20 @@ const setmyname = '制作者:' + store.state.myname;
 const setouttime = '最后修改时间:' + "\n" + store.state.outtime;
 console.log(`%c${setmyname}`, 'color:blue;font-size:2em;font-family:liuti,"楷体";');
 console.log(`%c${setouttime}`, 'color:red;font-size:2em;font-family:liuti,"楷体";');
+
+// ip方块实现显示和隐藏
+$('#ipimgbox').click(function (e) {
+    // $('.ipimgout').addClass('ipimgshow');
+    console.log('IP查看插件已关闭');
+    if ($('.ipimg').hasClass('ipimgshow')) {
+        $('.ipimg').removeClass('ipimgshow');
+        $('.ipimgbox').text('X');
+        $('.ipimgbox').prop('title', '关闭IP区域框');
+
+    }
+    else {
+        $('.ipimg').addClass('ipimgshow');
+        $('.ipimgbox').text('√');
+        $('.ipimgbox').prop('title', '显示IP区域框');
+    }
+});
