@@ -685,7 +685,7 @@ const tips = Vue.component('my-component15', {
                 { 'title': '谷歌翻译问题', 'url': 'https://zhuanlan.zhihu.com/p/571190754?utm_id=0&eqid=a943ec120032fe69000000046464d1a5' },
                 { 'title': '新窗口打开', 'url': './item/tips/jQuery在新窗口打开.html' },
                 { 'title': '移动端书签', 'url': './item/tips/谷歌移动端书签.html' },
-                { 'title': '云', 'url': './item/tips/naozhong/index.html' },
+                //{ 'title': '云', 'url': './item/tips/naozhong/index.html' },
                 { 'title': 'QQ查电话', 'url': './item/tips/Api/qqSelectPhone.html' },
                 { 'title': 'Adobe下载链接', 'url': './item/tips/办公软件下载链接.html' },
                 { 'title': 'Wifi管理文档', 'url': './item/tips/WiFi/Wifi管理文档.pdf' },
