@@ -614,10 +614,34 @@ html {
 .ipimg {
     position: fixed;
     right: 0;
-    background: pink;
+    /* background: pink; */
     border-radius: 10px;
     width: 300px;
     top: 10px;
+}
+
+.ipimgbox {
+    content: "11111";
+    display: block;
+    background: #ebeaea;
+    width: 20px;
+    height: 20px;
+    z-index: 99999999;
+    position: fixed;
+    right: 10px;
+    top: 20px;
+    text-align: center;
+    color: #000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.ipimgbox:hover {
+    color: red;
+}
+
+.ipimgshow {
+    display: none;
 }
 
 
